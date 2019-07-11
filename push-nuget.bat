@@ -1,6 +1,8 @@
-dotnet pack -c Release
+dotnet pack -c Release --include-symbols
 cd bin\Release
-nuget push *.symbols.nupkg
+dotnet nuget push -s https://api.nuget.org/v3/index.json *.symbols.nupkg
 del *.symbols.nupkg
-nuget push *.nupkg
+dotnet nuget push -s https://api.nuget.org/v3/index.json *.nupkg
 del *.nupkg
+cd ..
+cd ..
