@@ -2,6 +2,8 @@
 
 Namespace | Пространство имён: Platform.Disposables
 
+Package at NuGet | Пакет в NuGet: https://www.nuget.org/packages/Platform.Disposables/0.0.1
+
 ## Examples | Примеры
 
 ```C#
