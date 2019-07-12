@@ -22,10 +22,4 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Update="Disposable.Static.cs">
-      <DependentUpon>Disposable.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
 </Project>

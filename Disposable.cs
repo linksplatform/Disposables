@@ -21,55 +21,41 @@ namespace Platform.Disposables
         protected override void DisposeCore(bool manual, bool wasDisposed) => OnDispose(manual);
     }
 
-    public partial class Disposable<T> : Disposable
+    public partial class Disposable
     {
-        public readonly T Object;
-
-        public Disposable(T @object) => Object = @object;
-
-        public Disposable(T @object, Action disposed) : base(disposed) => Object = @object;
-
-        public Disposable(T @object, Action<T> disposed)
+        public static bool TryDispose<T>(ref T @object)
         {
-            Object = @object;
-            OnDispose += manual => disposed(Object);
+            try
+            {
+                if (@object is DisposableBase disposableBase)
+                {
+                    if (!disposableBase.IsDisposed)
+                    {
+                        disposableBase.Dispose();
+                        @object = default;
+                        return true;
+                    }
+                }
+                else
+                {
+                    if (@object is System.IDisposable disposable)
+                    {
+                        disposable.Dispose();
+                        @object = default;
+                        return true;
+                    }
+                }
+
+            }
+            catch (Exception)
+            {
+            }
+
+            return false;
         }
 
-        public Disposable(T @object, DisposedDelegate disposed)
-            : base(disposed) => Object = @object;
+        public static bool TryDispose<T>(T @object) => TryDispose(ref @object);
 
-        public static implicit operator Disposable<T>(T @object) => new Disposable<T>(@object);
-
-        public static implicit operator T(Disposable<T> disposable) => disposable.Object;
-
-        protected override void DisposeCore(bool manual, bool wasDisposed)
-        {
-            base.DisposeCore(manual, wasDisposed);
-
-            TryDispose(Object);
-        }
-    }
-
-    public class Disposable<TPrimary, TAuxiliary> : Disposable<TPrimary>
-    {
-        protected readonly TAuxiliary AuxiliaryObject;
-
-        public Disposable(TPrimary @object)
-            : base(@object)
-        {
-        }
-
-        public Disposable(TPrimary @object, TAuxiliary auxiliaryObject) : this(@object) => AuxiliaryObject = auxiliaryObject;
-
-        public static implicit operator TPrimary(Disposable<TPrimary, TAuxiliary> autoDisposable) => autoDisposable.Object;
-
-        public static implicit operator TAuxiliary(Disposable<TPrimary, TAuxiliary> autoDisposable) => autoDisposable.AuxiliaryObject;
-
-        protected override void DisposeCore(bool manual, bool wasDisposed)
-        {
-            base.DisposeCore(manual, wasDisposed);
-
-            TryDispose(AuxiliaryObject);
-        }
+        public static void DisposeIfDisposable<T>(T @object) => TryDispose(ref @object);
     }
 }
