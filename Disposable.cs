@@ -45,7 +45,6 @@ namespace Platform.Disposables
                         return true;
                     }
                 }
-
             }
             catch (Exception)
             {
