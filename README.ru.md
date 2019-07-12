@@ -1,14 +1,14 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/disposables/badge)](https://www.codefactor.io/repository/github/linksplatform/disposables)
 
-# Disposables ([русская версия](https://github.com/LinksPlatform/Disposables/blob/master/README.ru.md))
+# Disposables ([english version](https://github.com/LinksPlatform/Disposables/blob/master/README.md))
 
-Forked from: https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables
+Ответвление от: https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables
 
-Namespace: Platform.Disposables
+Пространство имён: Platform.Disposables
 
-Package at NuGet: https://www.nuget.org/packages/Platform.Disposables
+Пакет в NuGet: https://www.nuget.org/packages/Platform.Disposables
 
-## Examples
+## Примеры
 
 ```C#
 using Platform.Disposables;
@@ -19,7 +19,7 @@ namespace Examples
     {
         protected override void DisposeCore(bool manual, bool wasDisposed)
         {
-            // Dispose logic
+            // Логика высвобождения памяти
         }
     }
 }
@@ -42,7 +42,7 @@ namespace Examples
 
         private void Disposed(bool manual)
         {
-            // Dispose logic
+            // Логика высвобождения памяти
         }
     }
 }
