@@ -1,12 +1,12 @@
-# Disposables
+# Disposables ([русская версия](https://github.com/LinksPlatform/Disposables/blob/master/README.ru.md))
 
-Forked from | Ответвление от: https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables
+Forked from: https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables
 
-Namespace | Пространство имён: Platform.Disposables
+Namespace: Platform.Disposables
 
-Package at NuGet | Пакет в NuGet: https://www.nuget.org/packages/Platform.Disposables
+Package at NuGet: https://www.nuget.org/packages/Platform.Disposables
 
-## Examples | Примеры
+## Examples
 
 ```C#
 using Platform.Disposables;
@@ -17,8 +17,7 @@ namespace Examples
     {
         protected override void DisposeCore(bool manual, bool wasDisposed)
         {
-            // en: Dispose logic
-            // ru: Логика высвобождения памяти
+            // Dispose logic
         }
     }
 }
@@ -33,22 +32,15 @@ namespace Examples
     {
         private readonly Disposable _disposable;
 
-        public DisposableUsageExample()
-        {
-            _disposable = new Disposable(Disposed);
-        }
+        public DisposableUsageExample() => _disposable = new Disposable(Disposed);
 
         public void Dispose() => _disposable.Dispose();
 
-        ~DisposableUsageExample()
-        {
-            _disposable.Destruct();
-        }
+        ~DisposableUsageExample() => _disposable.Destruct();
 
         private void Disposed(bool manual)
         {
-            // en: Dispose logic
-            // ru: Логика высвобождения памяти
+            // Dispose logic
         }
     }
 }
