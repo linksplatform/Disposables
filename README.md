@@ -1,5 +1,7 @@
 # Disposables
 
+Forked from | Ответвление от: https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables
+
 Namespace | Пространство имён: Platform.Disposables
 
 Package at NuGet | Пакет в NuGet: https://www.nuget.org/packages/Platform.Disposables
