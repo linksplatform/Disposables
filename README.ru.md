@@ -13,7 +13,7 @@ using Platform.Disposables;
 
 namespace Examples
 {
-    internal class DisposableBaseUsageExample : DisposableBase
+    public class DisposableBaseUsageExample : DisposableBase
     {
         protected override void DisposeCore(bool manual, bool wasDisposed)
         {
@@ -28,7 +28,7 @@ using Platform.Disposables;
 
 namespace Examples
 {
-    internal class DisposableUsageExample : System.IDisposable
+    public class DisposableUsageExample : System.IDisposable
     {
         private readonly Disposable _disposable;
 
