@@ -7,7 +7,6 @@
     <VersionPrefix>0.0.1</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <AssemblyName>Platform.Disposables</AssemblyName>
     <PackageId>Platform.Disposables</PackageId>
     <PackageTags>Disposable;DisposableBase;Disposables;IDisposable</PackageTags>
