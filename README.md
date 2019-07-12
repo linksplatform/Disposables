@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/disposables/badge)](https://www.codefactor.io/repository/github/linksplatform/disposables)
+
 # Disposables ([русская версия](https://github.com/LinksPlatform/Disposables/blob/master/README.ru.md))
 
 Forked from: https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables
