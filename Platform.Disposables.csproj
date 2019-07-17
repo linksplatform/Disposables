@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.Disposables Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.Disposables</AssemblyTitle>
-    <VersionPrefix>0.0.1</VersionPrefix>
+    <VersionPrefix>0.0.2</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Platform.Disposables</AssemblyName>
@@ -19,6 +19,8 @@
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
 </Project>
