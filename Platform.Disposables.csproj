@@ -10,9 +10,9 @@
     <AssemblyName>Platform.Disposables</AssemblyName>
     <PackageId>Platform.Disposables</PackageId>
     <PackageTags>Disposable;DisposableBase;Disposables;IDisposable</PackageTags>
-    <PackageIconUrl>https://raw.githubusercontent.com/LinksPlatform/Documentation/master/doc/Avatar-rainbow.png</PackageIconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/18469f4d033ee9a5b7b84caab9c585acab2ac519/doc/Avatar-rainbow-icon-64x64.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/linksplatform/Disposables</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/linksplatform/Disposables/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>git://github.com/linksplatform/Disposables</RepositoryUrl>
@@ -21,6 +21,14 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReleaseNotes>Added EnsureExtensions for IDisposable objects.
+Disposing logic reorganized.
+Now all exceptions correctly ignored.
+Closes three issues.</PackageReleaseNotes>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Platform.Exceptions" Version="0.1.0" />
+  </ItemGroup>
 
 </Project>

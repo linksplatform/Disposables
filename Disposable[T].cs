@@ -4,7 +4,7 @@ namespace Platform.Disposables
 {
     public partial class Disposable<T> : Disposable
     {
-        public readonly T Object;
+        protected readonly T Object;
 
         public Disposable(T @object) => Object = @object;
 

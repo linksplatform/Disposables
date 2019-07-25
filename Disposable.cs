@@ -1,4 +1,5 @@
 ﻿using System;
+using Platform.Exceptions;
 
 namespace Platform.Disposables
 {
@@ -46,10 +47,10 @@ namespace Platform.Disposables
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception exception)
             {
+                exception.Ignore();
             }
-
             return false;
         }
 

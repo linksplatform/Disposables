@@ -2,11 +2,11 @@
 
 # Disposables ([русская версия](https://github.com/LinksPlatform/Disposables/blob/master/README.ru.md))
 
-Forked from: https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables
+Forked from: [Konard/LinksPlatform/Platform/Platform.Helpers/Disposables](https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables)
 
 Namespace: Platform.Disposables
 
-Package at NuGet: https://www.nuget.org/packages/Platform.Disposables
+Package at NuGet: [Platform.Disposables](https://www.nuget.org/packages/Platform.Disposables)
 
 ## Examples
 

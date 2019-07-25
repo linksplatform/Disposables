@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using System.Threading;
+using Platform.Exceptions;
 
 namespace Platform.Disposables
 {
     /// <summary>
-    /// Provides a base implementation for IDisposable interface with the basic logic necessary to increase the likelihood of correct memory release.
-    /// Предоставляет базовую реализацию для интерфейса IDisposable с основной логикой необходимой для повышения вероятности корректного высвобождения памяти.
+    /// Provides a base implementation for IDisposable interface with the basic logic necessary to increase the likelihood of correct unmanaged resources release.
+    /// Предоставляет базовую реализацию для интерфейса IDisposable с основной логикой необходимой для повышения вероятности корректного высвобождения неуправляемых ресурсов.
     /// </summary>
-    /// <remarks>
-    /// TODO: Попробовать реализовать компилируемый автоматический вариант DisposeCore (находить все типы IDisposable, IDisposal и автоматически вычищать их).
-    /// </remarks>
     public abstract class DisposableBase : IDisposable
     {
         private static readonly Process CurrentProcess = Process.GetCurrentProcess();
@@ -40,8 +37,17 @@ namespace Platform.Disposables
 
         public void Destruct()
         {
-            if (!IsDisposed)
-                Dispose(false);
+            try
+            {
+                if (!IsDisposed)
+                {
+                    Dispose(false);
+                }
+            }
+            catch (Exception exception)
+            {
+                exception.Ignore();
+            }
         }
 
         private void OnProcessExit(object sender, EventArgs e)
@@ -56,37 +62,41 @@ namespace Platform.Disposables
         {
             var originalDisposedValue = Interlocked.CompareExchange(ref _disposed, 1, 0);
             var wasDisposed = originalDisposedValue > 0;
-
+            if (!wasDisposed)
+            {
+                TryUnsubscribeFromProcessExitedEvent();
+            }
+            if (!AllowMultipleDisposeCalls && manual)
+            {
+                Ensure.Always.NotDisposed(this, ObjectName, "Multiple dispose calls are now allowed. Override AllowMultipleDisposeCalls property to modify behaviour.");
+            }
             if (AllowMultipleDisposeAttempts || !wasDisposed)
             {
-                try
-                {
-                    if (!wasDisposed)
-                    {
-                        if (CurrentProcess != null)
-                            CurrentProcess.Exited -= OnProcessExit;
-                        //else
-                        //    Process.GetCurrentProcess().Exited -= OnProcessExit;
-                    }
-
-                    DisposeCore(manual, wasDisposed);
-                }
-                catch (Exception)
-                {
-                    if (!AllowMultipleDisposeAttempts || manual) throw;
-                }
+                DisposeCore(manual, wasDisposed);
             }
-            else if (!AllowMultipleDisposeCalls && manual)
-                throw new ObjectDisposedException(ObjectName);
+        }
+
+        private bool TryUnsubscribeFromProcessExitedEvent()
+        {
+            try
+            {
+                if (CurrentProcess != null)
+                {
+                    CurrentProcess.Exited -= OnProcessExit;
+                }
+                else
+                {
+                    Process.GetCurrentProcess().Exited -= OnProcessExit;
+                }
+                return true;
+            }
+            catch (Exception exception)
+            {
+                exception.Ignore();
+                return false;
+            }
         }
 
         protected abstract void DisposeCore(bool manual, bool wasDisposed);
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        protected virtual void EnsureNotDisposed()
-        {
-            if (_disposed > 0)
-                throw new ObjectDisposedException(ObjectName);
-        }
     }
 }

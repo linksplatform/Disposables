@@ -2,11 +2,11 @@
 
 # Disposables ([english version](https://github.com/LinksPlatform/Disposables/blob/master/README.md))
 
-Ответвление от: https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables
+Ответвление от: [Konard/LinksPlatform/Platform/Platform.Helpers/Disposables](https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables)
 
 Пространство имён: Platform.Disposables
 
-Пакет в NuGet: https://www.nuget.org/packages/Platform.Disposables
+Пакет в NuGet: [Platform.Disposables](https://www.nuget.org/packages/Platform.Disposables)
 
 ## Примеры
 
