@@ -3,6 +3,8 @@
 
 # Disposables ([русская версия](https://github.com/LinksPlatform/Disposables/blob/master/README.ru.md))
 
+This library helps to make objects disposable in fast and easy ways. It also extends the `System.IDisposable` with `IsDisposed` property and `Destruct` method.
+
 Namespace: Platform.Disposables
 
 Forked from: [Konard/LinksPlatform/Platform/Platform.Helpers/Disposables](https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables)
@@ -83,7 +85,7 @@ namespace Examples
             {
                 int[] array = disposableArray;
 
-                // use your object object
+                // use your object here
 
             } // call to onArrayDispose here
         }
