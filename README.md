@@ -5,7 +5,7 @@
 
 This library helps to make objects disposable in a fast, short, easy and safe way.
 
-`Platform.Disposables.DisposableBase` abstract class tries to dispose the object even if `Dispose` method was not called at both on instance destruction and `OnProcessExit` whatever comes first. And takes care your disposal logic executes only once by default, and if you really need it, you can allow multiple calls and attempts to dispose, by overriding corresponding properties.
+`Platform.Disposables.DisposableBase` abstract class tries to dispose the object even if `Dispose` method was not called, at both on instance destruction and `OnProcessExit` whatever comes first. And takes care your disposal logic executes only once by default, and if you really need it, you can allow multiple calls and attempts to dispose, by overriding corresponding properties.
 
 The `Platform.Disposables.IDisposable` interface extends the `System.IDisposable` with `IsDisposed` property and `Destruct` method. The `Destruct` method is designed to never throw exceptions, that makes it safe to use in class destructors. All ignored exceptions are available at `Platform.Exceptions.IgnoredExceptions` if you need to debug them.
 
