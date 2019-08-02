@@ -1,6 +1,12 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/disposables/badge)](https://www.codefactor.io/repository/github/linksplatform/disposables)
 
-# Disposables ([english version](https://github.com/LinksPlatform/Disposables/blob/master/README.md))
+# Disposables ([english version](README.md))
+
+Эта библиотека помогает сделать объекты высвобождаемыми быстрым, коротким, простым и безопасным способом. 
+
+Абстрактный класс `Platform.Disposables.DisposableBase` пытается удалить объект, даже если метод `Dispose` не вызывался, любо при вызове деструктора экземпляра, либо при возникновении события `OnProcessExit`, в зависимости от того, что произойдет раньше. И позаботится о том, чтобы логика удаления по умолчанию выполнялась только один раз, но, если она вам действительно нужна, вы можете разрешить несколько вызовов и попыток удаления, переопределив соответствующие свойства. 
+
+Интерфейс `Platform.Disposables.IDisposable` расширяет `System.IDisposable` добавляя свойство `IsDisposed` и метод `Destruct`. Метод `Destruct` предназначен для того, чтобы не генерировать исключения, что делает его безопасным для использования в деструкторах классов. Все игнорируемые исключения доступны в `Platform.Exceptions.IgnoredExceptions`, если вам нужно их отладить.
 
 Пространство имён: Platform.Disposables
 
@@ -10,6 +16,8 @@
 
 ## Примеры
 
+Если вы можете использовать наследование в вашем классе. Например, если у вас нет другого наследуемого базового класса.
+
 ```C#
 using Platform.Disposables;
 
@@ -17,13 +25,15 @@ namespace Examples
 {
     public class DisposableBaseUsageExample : DisposableBase
     {
-        protected override void DisposeCore(bool manual, bool wasDisposed)
+        protected override void Dispose(bool manual, bool wasDisposed)
         {
-            // Логика высвобождения памяти
+            // Логика высвобождения
         }
     }
 }
 ```
+
+Если вы не можете использовать наследование в вашем классе. Например, если у вас есть другой базовый класс от которого унаследован ваш класс.
 
 ```C#
 using Platform.Disposables;
@@ -40,9 +50,40 @@ namespace Examples
 
         ~DisposableUsageExample() => _disposable.Destruct();
 
-        private void Disposed(bool manual)
+        private void Disposed(bool manual, bool wasDisposed)
         {
-            // Логика высвобождения памяти
+            // Логика высвобождения
+        }
+    }
+}
+```
+
+Если у вас нет доступа к внутренней структуре класса объекта. Вы можете использовать высвобождаемый контейнер для вашего объекта. Контейнер может быть преобразован обратно в переданный объект в любое время.
+
+```C#
+using Platform.Disposables;
+
+namespace Examples
+{
+    public class Examples
+    {
+        public static void UseAndDispose()
+        {
+            var array = new int[] { 1, 2, 3 };
+            Disposable<int[]> disposableArray = (array, () => array = null);
+            WorkWithObjectAndDispose(disposableArray);
+            // Здесь array == null
+        }
+
+        private static void WorkWithObjectAndDispose(Disposable<int[]> disposableArray)
+        {
+            using (disposableArray)
+            {
+                int[] array = disposableArray;
+
+                // Используйте ваш объект здесь
+
+            } // Здесь вызывается () => array = null
         }
     }
 }
