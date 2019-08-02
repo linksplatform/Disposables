@@ -66,7 +66,7 @@ namespace Platform.Disposables
             var wasDisposed = originalDisposedValue > 0;
             if (!wasDisposed)
             {
-                TryUnsubscribeFromProcessExitedEvent();
+                UnsubscribeFromProcessExitedEventIfPossible();
             }
             if (wasDisposed && !AllowMultipleDisposeCalls && manual)
             {
@@ -78,7 +78,7 @@ namespace Platform.Disposables
             }
         }
 
-        private bool TryUnsubscribeFromProcessExitedEvent()
+        private void UnsubscribeFromProcessExitedEventIfPossible()
         {
             try
             {
@@ -90,12 +90,10 @@ namespace Platform.Disposables
                 {
                     Process.GetCurrentProcess().Exited -= OnProcessExit;
                 }
-                return true;
             }
             catch (Exception exception)
             {
                 exception.Ignore();
-                return false;
             }
         }
     }
