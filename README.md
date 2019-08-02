@@ -67,11 +67,10 @@ namespace Examples
             var array = new int[] { 1, 2, 3 };
             void onArrayDispose(bool manual, bool wasDisposed)
             {
-                for (int i = 0; i < array.Length; i++)
+                if (!wasDisposed)
                 {
-                    array[i] = 0;
+                    array = null;
                 }
-                array = null;
             }
             var disposableArray = new Disposable<int[]>(array, onArrayDispose);
             WorkWithObjectAndDispose(disposableArray);
