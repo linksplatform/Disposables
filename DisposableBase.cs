@@ -11,7 +11,7 @@ namespace Platform.Disposables
     /// </summary>
     public abstract class DisposableBase : IDisposable
     {
-        private static readonly Process CurrentProcess = Process.GetCurrentProcess();
+        private static readonly Process _currentProcess = Process.GetCurrentProcess();
 
         private volatile int _disposed;
 
@@ -26,8 +26,12 @@ namespace Platform.Disposables
         protected DisposableBase()
         {
             _disposed = 0;
-            CurrentProcess.Exited += OnProcessExit;
+            _currentProcess.Exited += OnProcessExit;
         }
+
+        ~DisposableBase() => Destruct();
+
+        protected abstract void Dispose(bool manual, bool wasDisposed);
 
         public void Dispose()
         {
@@ -56,8 +60,6 @@ namespace Platform.Disposables
             Destruct();
         }
 
-        ~DisposableBase() => Destruct();
-
         private void Dispose(bool manual)
         {
             var originalDisposedValue = Interlocked.CompareExchange(ref _disposed, 1, 0);
@@ -72,7 +74,7 @@ namespace Platform.Disposables
             }
             if (AllowMultipleDisposeAttempts || !wasDisposed)
             {
-                DisposeCore(manual, wasDisposed);
+                Dispose(manual, wasDisposed);
             }
         }
 
@@ -80,9 +82,9 @@ namespace Platform.Disposables
         {
             try
             {
-                if (CurrentProcess != null)
+                if (_currentProcess != null)
                 {
-                    CurrentProcess.Exited -= OnProcessExit;
+                    _currentProcess.Exited -= OnProcessExit;
                 }
                 else
                 {
@@ -96,7 +98,5 @@ namespace Platform.Disposables
                 return false;
             }
         }
-
-        protected abstract void DisposeCore(bool manual, bool wasDisposed);
     }
 }

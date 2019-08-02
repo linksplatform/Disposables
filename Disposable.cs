@@ -1,61 +1,48 @@
 ﻿using System;
-using Platform.Exceptions;
 
 namespace Platform.Disposables
 {
-    public delegate void DisposedDelegate(bool manual);
-
-    public partial class Disposable : DisposableBase
+    /// <summary>
+    /// Represents disposable object that contains OnDispose event which is raised when the object itself is disposed.
+    /// Представляет высвобождаемый объект, который содержит событие OnDispose, которое возникает при высвобождении самого объекта.
+    /// </summary>
+    public class Disposable : DisposableBase
     {
-        private static readonly DisposedDelegate EmptyDelegate = manual => { };
+        private static readonly Disposal _emptyDelegate = (manual, wasDisposed) => { };
 
-        public event DisposedDelegate OnDispose = EmptyDelegate;
+        public event Disposal OnDispose;
 
-        public Disposable()
+        public Disposable(Action disposed)
         {
+            OnDispose = (manual, wasDisposed) =>
+            {
+                if (!wasDisposed)
+                {
+                    disposed();
+                }
+            };
         }
 
-        public Disposable(Action disposed) => OnDispose = m => disposed();
+        public Disposable(Disposal disposed) => OnDispose = disposed;
 
-        public Disposable(DisposedDelegate disposed) => OnDispose = disposed;
+        public Disposable() => OnDispose = _emptyDelegate;
 
-        protected override void DisposeCore(bool manual, bool wasDisposed) => OnDispose(manual);
-    }
+        public static implicit operator Disposable(Action action) => new Disposable(action);
 
-    public partial class Disposable
-    {
-        public static bool TryDispose<T>(ref T @object)
+        public static implicit operator Disposable(Disposal disposal) => new Disposable(disposal);
+
+        protected override void Dispose(bool manual, bool wasDisposed) => OnDispose(manual, wasDisposed);
+
+        protected void RaiseOnDisposeEvent(bool manual, bool wasDisposed) => OnDispose(manual, wasDisposed);
+
+        public static bool TryDisposeAndResetToDefault<T>(ref T @object)
         {
-            try
+            var result = @object.TryDispose();
+            if (result)
             {
-                if (@object is DisposableBase disposableBase)
-                {
-                    if (!disposableBase.IsDisposed)
-                    {
-                        disposableBase.Dispose();
-                        @object = default;
-                        return true;
-                    }
-                }
-                else
-                {
-                    if (@object is System.IDisposable disposable)
-                    {
-                        disposable.Dispose();
-                        @object = default;
-                        return true;
-                    }
-                }
+                @object = default;
             }
-            catch (Exception exception)
-            {
-                exception.Ignore();
-            }
-            return false;
+            return result;
         }
-
-        public static bool TryDispose<T>(T @object) => TryDispose(ref @object);
-
-        public static void DisposeIfDisposable<T>(T @object) => TryDispose(ref @object);
     }
 }
