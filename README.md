@@ -55,7 +55,7 @@ namespace Examples
 }
 ```
 
-If you do not have access to the internal structure of the object's class. You can use a disposable object container. The container is convertable to the passed object back at any time.
+If you do not have access to the internal structure of the object's class. You can use a disposable object container. The container is convertable back to the passed object at any time.
 
 ```C#
 using Platform.Disposables;
