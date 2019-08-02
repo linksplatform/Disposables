@@ -66,7 +66,7 @@ namespace Platform.Disposables
             {
                 TryUnsubscribeFromProcessExitedEvent();
             }
-            if (!AllowMultipleDisposeCalls && manual)
+            if (wasDisposed && !AllowMultipleDisposeCalls && manual)
             {
                 Ensure.Always.NotDisposed(this, ObjectName, "Multiple dispose calls are now allowed. Override AllowMultipleDisposeCalls property to modify behaviour.");
             }
