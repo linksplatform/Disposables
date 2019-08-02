@@ -22,7 +22,7 @@ namespace Examples
 {
     public class DisposableBaseUsageExample : DisposableBase
     {
-        protected override void DisposeCore(bool manual, bool wasDisposed)
+        protected override void Dispose(bool manual, bool wasDisposed)
         {
             // Dispose logic
         }
