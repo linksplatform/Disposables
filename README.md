@@ -11,6 +11,8 @@ Package at NuGet: [Platform.Disposables](https://www.nuget.org/packages/Platform
 
 ## Examples
 
+If you can use inheritance in your class. For example if you don`t have other abstract base class inherited.
+
 ```C#
 using Platform.Disposables;
 
@@ -25,6 +27,8 @@ namespace Examples
     }
 }
 ```
+
+If you cannot use inheritance in your class. For example if you have other abstract base class inherited.
 
 ```C#
 using Platform.Disposables;
@@ -44,6 +48,45 @@ namespace Examples
         private void Disposed(bool manual)
         {
             // Dispose logic
+        }
+    }
+}
+```
+
+If you do not have access to the internal structure of the object's class. You can use a disposable object container.
+
+```C#
+using Platform.Disposables;
+
+namespace Examples
+{
+    public class Examples
+    {
+        public static void UseAndDispose()
+        {
+            var array = new int[] { 1, 2, 3 };
+            void onArrayDispose(bool manual, bool wasDisposed)
+            {
+                for (int i = 0; i < array.Length; i++)
+                {
+                    array[i] = 0;
+                }
+                array = null;
+            }
+            var disposableArray = new Disposable<int[]>(array, onArrayDispose);
+            WorkWithObjectAndDispose(disposableArray);
+            // here array == null
+        }
+
+        private static void WorkWithObjectAndDispose(Disposable<int[]> disposableArray)
+        {
+            using (disposableArray)
+            {
+                int[] array = disposableArray;
+
+                // use your object object
+
+            } // call to onArrayDispose here
         }
     }
 }
