@@ -3,7 +3,7 @@
 
 # Disposables ([русская версия](https://github.com/LinksPlatform/Disposables/blob/master/README.ru.md))
 
-This library helps to make objects disposable in fast and easy ways. It also extends the `System.IDisposable` with `IsDisposed` property and `Destruct` method.
+This library helps to make objects disposable in a fast, short and easy way. `Platform.Disposables.DisposableBase` tries to dispose the object even if `Dispose` method was not called at both on instance destruction and `OnProcessExit` whatever comes first. And takes care your disposal logic executes only once by default, and if you really need it, you can allow multiple calls and attempts to dispose, by overriding corresponding properties. The `Platform.Disposables.IDisposable` interface extends the `System.IDisposable` with `IsDisposed` property and `Destruct` method.
 
 Namespace: Platform.Disposables
 
