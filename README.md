@@ -67,14 +67,7 @@ namespace Examples
         public static void UseAndDispose()
         {
             var array = new int[] { 1, 2, 3 };
-            void onArrayDispose(bool manual, bool wasDisposed)
-            {
-                if (!wasDisposed)
-                {
-                    array = null;
-                }
-            }
-            var disposableArray = new Disposable<int[]>(array, onArrayDispose);
+            Disposable<int[]> disposableArray = (array, () => array = null);
             WorkWithObjectAndDispose(disposableArray);
             // here array == null
         }
@@ -87,7 +80,7 @@ namespace Examples
 
                 // use your object here
 
-            } // call to onArrayDispose here
+            } // call to () => array = null here
         }
     }
 }
