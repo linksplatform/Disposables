@@ -47,7 +47,7 @@ namespace Examples
 
         ~DisposableUsageExample() => _disposable.Destruct();
 
-        private void Disposed(bool manual)
+        private void Disposed(bool manual, bool wasDisposed)
         {
             // Dispose logic
         }
