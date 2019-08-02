@@ -9,7 +9,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Platform.Disposables</AssemblyName>
     <PackageId>Platform.Disposables</PackageId>
-    <PackageTags>Disposable;DisposableBase;Disposables;IDisposable</PackageTags>
+    <PackageTags>Disposable;DisposableBase;Disposable;Disposal;IDisposable</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/18469f4d033ee9a5b7b84caab9c585acab2ac519/doc/Avatar-rainbow-icon-64x64.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/linksplatform/Disposables</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
