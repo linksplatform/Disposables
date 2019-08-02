@@ -11,7 +11,7 @@ Package at NuGet: [Platform.Disposables](https://www.nuget.org/packages/Platform
 
 ## Examples
 
-If you can use inheritance in your class. For example if you don`t have other abstract base class inherited.
+If you can use inheritance in your class. For example if you don`t have other base class inherited.
 
 ```C#
 using Platform.Disposables;
@@ -28,7 +28,7 @@ namespace Examples
 }
 ```
 
-If you cannot use inheritance in your class. For example if you have other abstract base class inherited.
+If you cannot use inheritance in your class. For example if you have other base class inherited.
 
 ```C#
 using Platform.Disposables;
@@ -53,7 +53,7 @@ namespace Examples
 }
 ```
 
-If you do not have access to the internal structure of the object's class. You can use a disposable object container.
+If you do not have access to the internal structure of the object's class. You can use a disposable object container. The container is convertable to the passed object back at any time.
 
 ```C#
 using Platform.Disposables;
