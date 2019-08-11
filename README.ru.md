@@ -1,7 +1,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3fdafa7bb9334ea4ac4ce242039d278a)](https://app.codacy.com/app/drakonard/Disposables?utm_source=github.com&utm_medium=referral&utm_content=linksplatform/Disposables&utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/disposables/badge)](https://www.codefactor.io/repository/github/linksplatform/disposables)
 
-# Disposables ([english version](README.md))
+# [Disposables](https://github.com/linksplatform/Disposables) ([english version](README.md))
 
 Эта библиотека помогает сделать объекты высвобождаемыми быстрым, коротким, простым и безопасным способом. 
 
@@ -9,7 +9,7 @@
 
 Интерфейс `Platform.Disposables.IDisposable` расширяет `System.IDisposable` добавляя свойство `IsDisposed` и метод `Destruct`. Метод `Destruct` предназначен для того, чтобы не генерировать исключения, что делает его безопасным для использования в деструкторах классов. Все игнорируемые исключения доступны в `Platform.Exceptions.IgnoredExceptions`, если вам нужно их отладить.
 
-Пространство имён: Platform.Disposables
+Пространство имён: [Platform.Disposables](https://linksplatform.github.io/Disposables/api/Platform.Disposables.html)
 
 Ответвление от: [Konard/LinksPlatform/Platform/Platform.Helpers/Disposables](https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables)
 

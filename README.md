@@ -1,7 +1,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3fdafa7bb9334ea4ac4ce242039d278a)](https://app.codacy.com/app/drakonard/Disposables?utm_source=github.com&utm_medium=referral&utm_content=linksplatform/Disposables&utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/disposables/badge)](https://www.codefactor.io/repository/github/linksplatform/disposables)
 
-# Disposables ([русская версия](README.ru.md))
+# [Disposables](https://github.com/linksplatform/Disposables) ([русская версия](README.ru.md))
 
 This library helps to make objects disposable in a fast, short, easy and safe way.
 
@@ -9,7 +9,7 @@ This library helps to make objects disposable in a fast, short, easy and safe wa
 
 The `Platform.Disposables.IDisposable` interface extends the `System.IDisposable` with `IsDisposed` property and `Destruct` method. The `Destruct` method is designed to never throw exceptions, that makes it safe to use in class destructors. All ignored exceptions are available at `Platform.Exceptions.IgnoredExceptions` if you need to debug them.
 
-Namespace: Platform.Disposables
+Namespace: [Platform.Disposables](https://linksplatform.github.io/Disposables/api/Platform.Disposables.html)
 
 Forked from: [Konard/LinksPlatform/Platform/Platform.Helpers/Disposables](https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables)
 
