@@ -17,7 +17,7 @@ Package at NuGet: [Platform.Disposables](https://www.nuget.org/packages/Platform
 
 ## Examples
 
-If you can use inheritance in your class. For example if you don`t have other base class inherited.
+If you can use inheritance in your class. For example if you don't have other base class inherited.
 
 ```C#
 using Platform.Disposables;
