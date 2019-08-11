@@ -21,10 +21,17 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageReleaseNotes>Added EnsureExtensions for IDisposable objects.
-Disposing logic reorganized.
-Now all exceptions correctly ignored.
-Closes three issues.</PackageReleaseNotes>
+    <PackageReleaseNotes>Platform.Exceptions dependency updated from 0.1.0 to 0.1.1.
+DisposedDelegate renamed to Disposal and moved to separate file.
+Added additional implicit conversions for Disposable classes.
+Added more constructor overloads.
+Disposable.TryDispose renamed to Disposable.TryDisposeAndResetToDefault.
+Added GenericObjectExtensions and DisposableBaseExtensions.
+Abstract method DisposableBase.DisposeCore renamed to Dispose.
+Corrected disposal logic for Disposable containers.
+Disposable containers fields Object and AuxiliaryObject are now public properties.
+Added comments for classes.
+Refactoring, issues fix.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
