@@ -90,6 +90,16 @@ namespace Examples
 }
 ```
 
+## [Documentation](https://linksplatform.github.io/Disposables/)
+* Interface [IDisposable](https://linksplatform.github.io/Disposables/api/Platform.Disposables.IDisposable.html).
+* Abstract class [DisposableBase](https://linksplatform.github.io/Disposables/api/Platform.Disposables.DisposableBase.html).
+* Class [Disposable](https://linksplatform.github.io/Disposables/api/Platform.Disposables.Disposable.html).
+
+[PDF file](https://linksplatform.github.io/Disposables/Platform.Disposables.pdf) with code for e-readers.
+
+## Depend on
+* [Platform.Exceptions](https://github.com/linksplatform/Exceptions)
+
 # Mystery files
 * `.travis.yml` - Travis CI build configuration.
 * `docfx.json` and `toc.yml` - DocFX build configuration.
