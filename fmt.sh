@@ -34,6 +34,9 @@ echo """
 \\noindent{\\Large LinksPlatform's Platform.Disposables Class Library}
 """
 
+# Remove auto-generated code files
+find ./obj -type f -iname "*.cs" -delete
+
 # CSharp
 #find * -type f -iname '*.cs' -exec sh -c 'enconv "{}"' \;
 find . -type f -iname '*.cs' | sort -b | python fmt.py
