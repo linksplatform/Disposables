@@ -1,0 +1,673 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Platform.Disposables
+  name: Platform.Disposables
+  href: api/Platform.Disposables.html
+  commentId: N:Platform.Disposables
+  fullName: Platform.Disposables
+  nameWithType: Platform.Disposables
+- uid: Platform.Disposables.Disposable
+  name: Disposable
+  href: api/Platform.Disposables.Disposable.html
+  commentId: T:Platform.Disposables.Disposable
+  fullName: Platform.Disposables.Disposable
+  nameWithType: Disposable
+- uid: Platform.Disposables.Disposable.#ctor
+  name: Disposable()
+  href: api/Platform.Disposables.Disposable.html#Platform_Disposables_Disposable__ctor
+  commentId: M:Platform.Disposables.Disposable.#ctor
+  fullName: Platform.Disposables.Disposable.Disposable()
+  nameWithType: Disposable.Disposable()
+- uid: Platform.Disposables.Disposable.#ctor(Platform.Disposables.Disposal)
+  name: Disposable(Disposal)
+  href: api/Platform.Disposables.Disposable.html#Platform_Disposables_Disposable__ctor_Platform_Disposables_Disposal_
+  commentId: M:Platform.Disposables.Disposable.#ctor(Platform.Disposables.Disposal)
+  fullName: Platform.Disposables.Disposable.Disposable(Platform.Disposables.Disposal)
+  nameWithType: Disposable.Disposable(Disposal)
+- uid: Platform.Disposables.Disposable.#ctor(System.Action)
+  name: Disposable(Action)
+  href: api/Platform.Disposables.Disposable.html#Platform_Disposables_Disposable__ctor_System_Action_
+  commentId: M:Platform.Disposables.Disposable.#ctor(System.Action)
+  fullName: Platform.Disposables.Disposable.Disposable(System.Action)
+  nameWithType: Disposable.Disposable(Action)
+- uid: Platform.Disposables.Disposable.#ctor*
+  name: Disposable
+  href: api/Platform.Disposables.Disposable.html#Platform_Disposables_Disposable__ctor_
+  commentId: Overload:Platform.Disposables.Disposable.#ctor
+  isSpec: "True"
+  fullName: Platform.Disposables.Disposable.Disposable
+  nameWithType: Disposable.Disposable
+- uid: Platform.Disposables.Disposable.Dispose(System.Boolean,System.Boolean)
+  name: Dispose(Boolean, Boolean)
+  href: api/Platform.Disposables.Disposable.html#Platform_Disposables_Disposable_Dispose_System_Boolean_System_Boolean_
+  commentId: M:Platform.Disposables.Disposable.Dispose(System.Boolean,System.Boolean)
+  fullName: Platform.Disposables.Disposable.Dispose(System.Boolean, System.Boolean)
+  nameWithType: Disposable.Dispose(Boolean, Boolean)
+- uid: Platform.Disposables.Disposable.Dispose*
+  name: Dispose
+  href: api/Platform.Disposables.Disposable.html#Platform_Disposables_Disposable_Dispose_
+  commentId: Overload:Platform.Disposables.Disposable.Dispose
+  isSpec: "True"
+  fullName: Platform.Disposables.Disposable.Dispose
+  nameWithType: Disposable.Dispose
+- uid: Platform.Disposables.Disposable.OnDispose
+  name: OnDispose
+  href: api/Platform.Disposables.Disposable.html#Platform_Disposables_Disposable_OnDispose
+  commentId: E:Platform.Disposables.Disposable.OnDispose
+  fullName: Platform.Disposables.Disposable.OnDispose
+  nameWithType: Disposable.OnDispose
+- uid: Platform.Disposables.Disposable.op_Implicit(Platform.Disposables.Disposal)~Platform.Disposables.Disposable
+  name: Implicit(Disposal to Disposable)
+  href: api/Platform.Disposables.Disposable.html#Platform_Disposables_Disposable_op_Implicit_Platform_Disposables_Disposal__Platform_Disposables_Disposable
+  commentId: M:Platform.Disposables.Disposable.op_Implicit(Platform.Disposables.Disposal)~Platform.Disposables.Disposable
+  name.vb: Widening(Disposal to Disposable)
+  fullName: Platform.Disposables.Disposable.Implicit(Platform.Disposables.Disposal to Platform.Disposables.Disposable)
+  fullName.vb: Platform.Disposables.Disposable.Widening(Platform.Disposables.Disposal to Platform.Disposables.Disposable)
+  nameWithType: Disposable.Implicit(Disposal to Disposable)
+  nameWithType.vb: Disposable.Widening(Disposal to Disposable)
+- uid: Platform.Disposables.Disposable.op_Implicit(System.Action)~Platform.Disposables.Disposable
+  name: Implicit(Action to Disposable)
+  href: api/Platform.Disposables.Disposable.html#Platform_Disposables_Disposable_op_Implicit_System_Action__Platform_Disposables_Disposable
+  commentId: M:Platform.Disposables.Disposable.op_Implicit(System.Action)~Platform.Disposables.Disposable
+  name.vb: Widening(Action to Disposable)
+  fullName: Platform.Disposables.Disposable.Implicit(System.Action to Platform.Disposables.Disposable)
+  fullName.vb: Platform.Disposables.Disposable.Widening(System.Action to Platform.Disposables.Disposable)
+  nameWithType: Disposable.Implicit(Action to Disposable)
+  nameWithType.vb: Disposable.Widening(Action to Disposable)
+- uid: Platform.Disposables.Disposable.op_Implicit*
+  name: Implicit
+  href: api/Platform.Disposables.Disposable.html#Platform_Disposables_Disposable_op_Implicit_
+  commentId: Overload:Platform.Disposables.Disposable.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Platform.Disposables.Disposable.Implicit
+  fullName.vb: Platform.Disposables.Disposable.Widening
+  nameWithType: Disposable.Implicit
+  nameWithType.vb: Disposable.Widening
+- uid: Platform.Disposables.Disposable.RaiseOnDisposeEvent(System.Boolean,System.Boolean)
+  name: RaiseOnDisposeEvent(Boolean, Boolean)
+  href: api/Platform.Disposables.Disposable.html#Platform_Disposables_Disposable_RaiseOnDisposeEvent_System_Boolean_System_Boolean_
+  commentId: M:Platform.Disposables.Disposable.RaiseOnDisposeEvent(System.Boolean,System.Boolean)
+  fullName: Platform.Disposables.Disposable.RaiseOnDisposeEvent(System.Boolean, System.Boolean)
+  nameWithType: Disposable.RaiseOnDisposeEvent(Boolean, Boolean)
+- uid: Platform.Disposables.Disposable.RaiseOnDisposeEvent*
+  name: RaiseOnDisposeEvent
+  href: api/Platform.Disposables.Disposable.html#Platform_Disposables_Disposable_RaiseOnDisposeEvent_
+  commentId: Overload:Platform.Disposables.Disposable.RaiseOnDisposeEvent
+  isSpec: "True"
+  fullName: Platform.Disposables.Disposable.RaiseOnDisposeEvent
+  nameWithType: Disposable.RaiseOnDisposeEvent
+- uid: Platform.Disposables.Disposable.TryDisposeAndResetToDefault*
+  name: TryDisposeAndResetToDefault
+  href: api/Platform.Disposables.Disposable.html#Platform_Disposables_Disposable_TryDisposeAndResetToDefault_
+  commentId: Overload:Platform.Disposables.Disposable.TryDisposeAndResetToDefault
+  isSpec: "True"
+  fullName: Platform.Disposables.Disposable.TryDisposeAndResetToDefault
+  nameWithType: Disposable.TryDisposeAndResetToDefault
+- uid: Platform.Disposables.Disposable.TryDisposeAndResetToDefault``1(``0@)
+  name: TryDisposeAndResetToDefault<T>(ref T)
+  href: api/Platform.Disposables.Disposable.html#Platform_Disposables_Disposable_TryDisposeAndResetToDefault__1___0__
+  commentId: M:Platform.Disposables.Disposable.TryDisposeAndResetToDefault``1(``0@)
+  name.vb: TryDisposeAndResetToDefault(Of T)(ByRef T)
+  fullName: Platform.Disposables.Disposable.TryDisposeAndResetToDefault<T>(ref T)
+  fullName.vb: Platform.Disposables.Disposable.TryDisposeAndResetToDefault(Of T)(ByRef T)
+  nameWithType: Disposable.TryDisposeAndResetToDefault<T>(ref T)
+  nameWithType.vb: Disposable.TryDisposeAndResetToDefault(Of T)(ByRef T)
+- uid: Platform.Disposables.Disposable`1
+  name: Disposable<T>
+  href: api/Platform.Disposables.Disposable-1.html
+  commentId: T:Platform.Disposables.Disposable`1
+  name.vb: Disposable(Of T)
+  fullName: Platform.Disposables.Disposable<T>
+  fullName.vb: Platform.Disposables.Disposable(Of T)
+  nameWithType: Disposable<T>
+  nameWithType.vb: Disposable(Of T)
+- uid: Platform.Disposables.Disposable`1.#ctor(`0)
+  name: Disposable(T)
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1__ctor__0_
+  commentId: M:Platform.Disposables.Disposable`1.#ctor(`0)
+  fullName: Platform.Disposables.Disposable<T>.Disposable(T)
+  fullName.vb: Platform.Disposables.Disposable(Of T).Disposable(T)
+  nameWithType: Disposable<T>.Disposable(T)
+  nameWithType.vb: Disposable(Of T).Disposable(T)
+- uid: Platform.Disposables.Disposable`1.#ctor(`0,Platform.Disposables.Disposal)
+  name: Disposable(T, Disposal)
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1__ctor__0_Platform_Disposables_Disposal_
+  commentId: M:Platform.Disposables.Disposable`1.#ctor(`0,Platform.Disposables.Disposal)
+  fullName: Platform.Disposables.Disposable<T>.Disposable(T, Platform.Disposables.Disposal)
+  fullName.vb: Platform.Disposables.Disposable(Of T).Disposable(T, Platform.Disposables.Disposal)
+  nameWithType: Disposable<T>.Disposable(T, Disposal)
+  nameWithType.vb: Disposable(Of T).Disposable(T, Disposal)
+- uid: Platform.Disposables.Disposable`1.#ctor(`0,System.Action)
+  name: Disposable(T, Action)
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1__ctor__0_System_Action_
+  commentId: M:Platform.Disposables.Disposable`1.#ctor(`0,System.Action)
+  fullName: Platform.Disposables.Disposable<T>.Disposable(T, System.Action)
+  fullName.vb: Platform.Disposables.Disposable(Of T).Disposable(T, System.Action)
+  nameWithType: Disposable<T>.Disposable(T, Action)
+  nameWithType.vb: Disposable(Of T).Disposable(T, Action)
+- uid: Platform.Disposables.Disposable`1.#ctor(`0,System.Action{`0})
+  name: Disposable(T, Action<T>)
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1__ctor__0_System_Action__0__
+  commentId: M:Platform.Disposables.Disposable`1.#ctor(`0,System.Action{`0})
+  name.vb: Disposable(T, Action(Of T))
+  fullName: Platform.Disposables.Disposable<T>.Disposable(T, System.Action<T>)
+  fullName.vb: Platform.Disposables.Disposable(Of T).Disposable(T, System.Action(Of T))
+  nameWithType: Disposable<T>.Disposable(T, Action<T>)
+  nameWithType.vb: Disposable(Of T).Disposable(T, Action(Of T))
+- uid: Platform.Disposables.Disposable`1.#ctor*
+  name: Disposable
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1__ctor_
+  commentId: Overload:Platform.Disposables.Disposable`1.#ctor
+  isSpec: "True"
+  fullName: Platform.Disposables.Disposable<T>.Disposable
+  fullName.vb: Platform.Disposables.Disposable(Of T).Disposable
+  nameWithType: Disposable<T>.Disposable
+  nameWithType.vb: Disposable(Of T).Disposable
+- uid: Platform.Disposables.Disposable`1.Dispose(System.Boolean,System.Boolean)
+  name: Dispose(Boolean, Boolean)
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1_Dispose_System_Boolean_System_Boolean_
+  commentId: M:Platform.Disposables.Disposable`1.Dispose(System.Boolean,System.Boolean)
+  fullName: Platform.Disposables.Disposable<T>.Dispose(System.Boolean, System.Boolean)
+  fullName.vb: Platform.Disposables.Disposable(Of T).Dispose(System.Boolean, System.Boolean)
+  nameWithType: Disposable<T>.Dispose(Boolean, Boolean)
+  nameWithType.vb: Disposable(Of T).Dispose(Boolean, Boolean)
+- uid: Platform.Disposables.Disposable`1.Dispose*
+  name: Dispose
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1_Dispose_
+  commentId: Overload:Platform.Disposables.Disposable`1.Dispose
+  isSpec: "True"
+  fullName: Platform.Disposables.Disposable<T>.Dispose
+  fullName.vb: Platform.Disposables.Disposable(Of T).Dispose
+  nameWithType: Disposable<T>.Dispose
+  nameWithType.vb: Disposable(Of T).Dispose
+- uid: Platform.Disposables.Disposable`1.Object
+  name: Object
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1_Object
+  commentId: P:Platform.Disposables.Disposable`1.Object
+  fullName: Platform.Disposables.Disposable<T>.Object
+  fullName.vb: Platform.Disposables.Disposable(Of T).Object
+  nameWithType: Disposable<T>.Object
+  nameWithType.vb: Disposable(Of T).Object
+- uid: Platform.Disposables.Disposable`1.Object*
+  name: Object
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1_Object_
+  commentId: Overload:Platform.Disposables.Disposable`1.Object
+  isSpec: "True"
+  fullName: Platform.Disposables.Disposable<T>.Object
+  fullName.vb: Platform.Disposables.Disposable(Of T).Object
+  nameWithType: Disposable<T>.Object
+  nameWithType.vb: Disposable(Of T).Object
+- uid: Platform.Disposables.Disposable`1.op_Implicit(`0)~Platform.Disposables.Disposable{`0}
+  name: Implicit(T to Disposable<T>)
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1_op_Implicit__0__Platform_Disposables_Disposable__0_
+  commentId: M:Platform.Disposables.Disposable`1.op_Implicit(`0)~Platform.Disposables.Disposable{`0}
+  name.vb: Widening(T to Disposable(Of T))
+  fullName: Platform.Disposables.Disposable<T>.Implicit(T to Platform.Disposables.Disposable<T>)
+  fullName.vb: Platform.Disposables.Disposable(Of T).Widening(T to Platform.Disposables.Disposable(Of T))
+  nameWithType: Disposable<T>.Implicit(T to Disposable<T>)
+  nameWithType.vb: Disposable(Of T).Widening(T to Disposable(Of T))
+- uid: Platform.Disposables.Disposable`1.op_Implicit(Platform.Disposables.Disposable{`0})~`0
+  name: Implicit(Disposable<T> to T)
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1_op_Implicit_Platform_Disposables_Disposable__0____0
+  commentId: M:Platform.Disposables.Disposable`1.op_Implicit(Platform.Disposables.Disposable{`0})~`0
+  name.vb: Widening(Disposable(Of T) to T)
+  fullName: Platform.Disposables.Disposable<T>.Implicit(Platform.Disposables.Disposable<T> to T)
+  fullName.vb: Platform.Disposables.Disposable(Of T).Widening(Platform.Disposables.Disposable(Of T) to T)
+  nameWithType: Disposable<T>.Implicit(Disposable<T> to T)
+  nameWithType.vb: Disposable(Of T).Widening(Disposable(Of T) to T)
+- uid: Platform.Disposables.Disposable`1.op_Implicit(System.ValueTuple{`0,Platform.Disposables.Disposal})~Platform.Disposables.Disposable{`0}
+  name: Implicit((T, Disposal) to Disposable<T>)
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1_op_Implicit_System_ValueTuple__0_Platform_Disposables_Disposal___Platform_Disposables_Disposable__0_
+  commentId: M:Platform.Disposables.Disposable`1.op_Implicit(System.ValueTuple{`0,Platform.Disposables.Disposal})~Platform.Disposables.Disposable{`0}
+  name.vb: Widening((T, Disposal) to Disposable(Of T))
+  fullName: Platform.Disposables.Disposable<T>.Implicit(System.ValueTuple<T, Platform.Disposables.Disposal> to Platform.Disposables.Disposable<T>)
+  fullName.vb: Platform.Disposables.Disposable(Of T).Widening(System.ValueTuple(Of T, Platform.Disposables.Disposal) to Platform.Disposables.Disposable(Of T))
+  nameWithType: Disposable<T>.Implicit((T, Disposal) to Disposable<T>)
+  nameWithType.vb: Disposable(Of T).Widening((T, Disposal) to Disposable(Of T))
+- uid: Platform.Disposables.Disposable`1.op_Implicit(System.ValueTuple{`0,System.Action{`0}})~Platform.Disposables.Disposable{`0}
+  name: Implicit((T, Action<T>) to Disposable<T>)
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1_op_Implicit_System_ValueTuple__0_System_Action__0____Platform_Disposables_Disposable__0_
+  commentId: M:Platform.Disposables.Disposable`1.op_Implicit(System.ValueTuple{`0,System.Action{`0}})~Platform.Disposables.Disposable{`0}
+  name.vb: Widening((T, Action(Of T)) to Disposable(Of T))
+  fullName: Platform.Disposables.Disposable<T>.Implicit(System.ValueTuple<T, System.Action<T>> to Platform.Disposables.Disposable<T>)
+  fullName.vb: Platform.Disposables.Disposable(Of T).Widening(System.ValueTuple(Of T, System.Action(Of T)) to Platform.Disposables.Disposable(Of T))
+  nameWithType: Disposable<T>.Implicit((T, Action<T>) to Disposable<T>)
+  nameWithType.vb: Disposable(Of T).Widening((T, Action(Of T)) to Disposable(Of T))
+- uid: Platform.Disposables.Disposable`1.op_Implicit(System.ValueTuple{`0,System.Action})~Platform.Disposables.Disposable{`0}
+  name: Implicit((T, Action) to Disposable<T>)
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1_op_Implicit_System_ValueTuple__0_System_Action___Platform_Disposables_Disposable__0_
+  commentId: M:Platform.Disposables.Disposable`1.op_Implicit(System.ValueTuple{`0,System.Action})~Platform.Disposables.Disposable{`0}
+  name.vb: Widening((T, Action) to Disposable(Of T))
+  fullName: Platform.Disposables.Disposable<T>.Implicit(System.ValueTuple<T, System.Action> to Platform.Disposables.Disposable<T>)
+  fullName.vb: Platform.Disposables.Disposable(Of T).Widening(System.ValueTuple(Of T, System.Action) to Platform.Disposables.Disposable(Of T))
+  nameWithType: Disposable<T>.Implicit((T, Action) to Disposable<T>)
+  nameWithType.vb: Disposable(Of T).Widening((T, Action) to Disposable(Of T))
+- uid: Platform.Disposables.Disposable`1.op_Implicit*
+  name: Implicit
+  href: api/Platform.Disposables.Disposable-1.html#Platform_Disposables_Disposable_1_op_Implicit_
+  commentId: Overload:Platform.Disposables.Disposable`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Platform.Disposables.Disposable<T>.Implicit
+  fullName.vb: Platform.Disposables.Disposable(Of T).Widening
+  nameWithType: Disposable<T>.Implicit
+  nameWithType.vb: Disposable(Of T).Widening
+- uid: Platform.Disposables.Disposable`2
+  name: Disposable<TPrimary, TAuxiliary>
+  href: api/Platform.Disposables.Disposable-2.html
+  commentId: T:Platform.Disposables.Disposable`2
+  name.vb: Disposable(Of TPrimary, TAuxiliary)
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary)
+  nameWithType: Disposable<TPrimary, TAuxiliary>
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary)
+- uid: Platform.Disposables.Disposable`2.#ctor(`0)
+  name: Disposable(TPrimary)
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2__ctor__0_
+  commentId: M:Platform.Disposables.Disposable`2.#ctor(`0)
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Disposable(TPrimary)
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Disposable(TPrimary)
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Disposable(TPrimary)
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Disposable(TPrimary)
+- uid: Platform.Disposables.Disposable`2.#ctor(`0,`1)
+  name: Disposable(TPrimary, TAuxiliary)
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2__ctor__0__1_
+  commentId: M:Platform.Disposables.Disposable`2.#ctor(`0,`1)
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Disposable(TPrimary, TAuxiliary)
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Disposable(TPrimary, TAuxiliary)
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Disposable(TPrimary, TAuxiliary)
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Disposable(TPrimary, TAuxiliary)
+- uid: Platform.Disposables.Disposable`2.#ctor(`0,`1,Platform.Disposables.Disposal)
+  name: Disposable(TPrimary, TAuxiliary, Disposal)
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2__ctor__0__1_Platform_Disposables_Disposal_
+  commentId: M:Platform.Disposables.Disposable`2.#ctor(`0,`1,Platform.Disposables.Disposal)
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Disposable(TPrimary, TAuxiliary, Platform.Disposables.Disposal)
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Disposable(TPrimary, TAuxiliary, Platform.Disposables.Disposal)
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Disposable(TPrimary, TAuxiliary, Disposal)
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Disposable(TPrimary, TAuxiliary, Disposal)
+- uid: Platform.Disposables.Disposable`2.#ctor(`0,`1,System.Action)
+  name: Disposable(TPrimary, TAuxiliary, Action)
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2__ctor__0__1_System_Action_
+  commentId: M:Platform.Disposables.Disposable`2.#ctor(`0,`1,System.Action)
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Disposable(TPrimary, TAuxiliary, System.Action)
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Disposable(TPrimary, TAuxiliary, System.Action)
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Disposable(TPrimary, TAuxiliary, Action)
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Disposable(TPrimary, TAuxiliary, Action)
+- uid: Platform.Disposables.Disposable`2.#ctor(`0,`1,System.Action{`0,`1})
+  name: Disposable(TPrimary, TAuxiliary, Action<TPrimary, TAuxiliary>)
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2__ctor__0__1_System_Action__0__1__
+  commentId: M:Platform.Disposables.Disposable`2.#ctor(`0,`1,System.Action{`0,`1})
+  name.vb: Disposable(TPrimary, TAuxiliary, Action(Of TPrimary, TAuxiliary))
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Disposable(TPrimary, TAuxiliary, System.Action<TPrimary, TAuxiliary>)
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Disposable(TPrimary, TAuxiliary, System.Action(Of TPrimary, TAuxiliary))
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Disposable(TPrimary, TAuxiliary, Action<TPrimary, TAuxiliary>)
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Disposable(TPrimary, TAuxiliary, Action(Of TPrimary, TAuxiliary))
+- uid: Platform.Disposables.Disposable`2.#ctor*
+  name: Disposable
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2__ctor_
+  commentId: Overload:Platform.Disposables.Disposable`2.#ctor
+  isSpec: "True"
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Disposable
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Disposable
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Disposable
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Disposable
+- uid: Platform.Disposables.Disposable`2.AuxiliaryObject
+  name: AuxiliaryObject
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2_AuxiliaryObject
+  commentId: P:Platform.Disposables.Disposable`2.AuxiliaryObject
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.AuxiliaryObject
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).AuxiliaryObject
+  nameWithType: Disposable<TPrimary, TAuxiliary>.AuxiliaryObject
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).AuxiliaryObject
+- uid: Platform.Disposables.Disposable`2.AuxiliaryObject*
+  name: AuxiliaryObject
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2_AuxiliaryObject_
+  commentId: Overload:Platform.Disposables.Disposable`2.AuxiliaryObject
+  isSpec: "True"
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.AuxiliaryObject
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).AuxiliaryObject
+  nameWithType: Disposable<TPrimary, TAuxiliary>.AuxiliaryObject
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).AuxiliaryObject
+- uid: Platform.Disposables.Disposable`2.Dispose(System.Boolean,System.Boolean)
+  name: Dispose(Boolean, Boolean)
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2_Dispose_System_Boolean_System_Boolean_
+  commentId: M:Platform.Disposables.Disposable`2.Dispose(System.Boolean,System.Boolean)
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Dispose(System.Boolean, System.Boolean)
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Dispose(System.Boolean, System.Boolean)
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Dispose(Boolean, Boolean)
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Dispose(Boolean, Boolean)
+- uid: Platform.Disposables.Disposable`2.Dispose*
+  name: Dispose
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2_Dispose_
+  commentId: Overload:Platform.Disposables.Disposable`2.Dispose
+  isSpec: "True"
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Dispose
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Dispose
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Dispose
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Dispose
+- uid: Platform.Disposables.Disposable`2.op_Implicit(Platform.Disposables.Disposable{`0,`1})~`0
+  name: Implicit(Disposable<TPrimary, TAuxiliary> to TPrimary)
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2_op_Implicit_Platform_Disposables_Disposable__0__1____0
+  commentId: M:Platform.Disposables.Disposable`2.op_Implicit(Platform.Disposables.Disposable{`0,`1})~`0
+  name.vb: Widening(Disposable(Of TPrimary, TAuxiliary) to TPrimary)
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Implicit(Platform.Disposables.Disposable<TPrimary, TAuxiliary> to TPrimary)
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Widening(Platform.Disposables.Disposable(Of TPrimary, TAuxiliary) to TPrimary)
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Implicit(Disposable<TPrimary, TAuxiliary> to TPrimary)
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Widening(Disposable(Of TPrimary, TAuxiliary) to TPrimary)
+- uid: Platform.Disposables.Disposable`2.op_Implicit(Platform.Disposables.Disposable{`0,`1})~`1
+  name: Implicit(Disposable<TPrimary, TAuxiliary> to TAuxiliary)
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2_op_Implicit_Platform_Disposables_Disposable__0__1____1
+  commentId: M:Platform.Disposables.Disposable`2.op_Implicit(Platform.Disposables.Disposable{`0,`1})~`1
+  name.vb: Widening(Disposable(Of TPrimary, TAuxiliary) to TAuxiliary)
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Implicit(Platform.Disposables.Disposable<TPrimary, TAuxiliary> to TAuxiliary)
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Widening(Platform.Disposables.Disposable(Of TPrimary, TAuxiliary) to TAuxiliary)
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Implicit(Disposable<TPrimary, TAuxiliary> to TAuxiliary)
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Widening(Disposable(Of TPrimary, TAuxiliary) to TAuxiliary)
+- uid: Platform.Disposables.Disposable`2.op_Implicit(System.ValueTuple{`0,`1,Platform.Disposables.Disposal})~Platform.Disposables.Disposable{`0,`1}
+  name: Implicit((TPrimary, TAuxiliary, Disposal) to Disposable<TPrimary, TAuxiliary>)
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2_op_Implicit_System_ValueTuple__0__1_Platform_Disposables_Disposal___Platform_Disposables_Disposable__0__1_
+  commentId: M:Platform.Disposables.Disposable`2.op_Implicit(System.ValueTuple{`0,`1,Platform.Disposables.Disposal})~Platform.Disposables.Disposable{`0,`1}
+  name.vb: Widening((TPrimary, TAuxiliary, Disposal) to Disposable(Of TPrimary, TAuxiliary))
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Implicit(System.ValueTuple<TPrimary, TAuxiliary, Platform.Disposables.Disposal> to Platform.Disposables.Disposable<TPrimary, TAuxiliary>)
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Widening(System.ValueTuple(Of TPrimary, TAuxiliary, Platform.Disposables.Disposal) to Platform.Disposables.Disposable(Of TPrimary, TAuxiliary))
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Implicit((TPrimary, TAuxiliary, Disposal) to Disposable<TPrimary, TAuxiliary>)
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Widening((TPrimary, TAuxiliary, Disposal) to Disposable(Of TPrimary, TAuxiliary))
+- uid: Platform.Disposables.Disposable`2.op_Implicit(System.ValueTuple{`0,`1,System.Action{`0,`1}})~Platform.Disposables.Disposable{`0,`1}
+  name: Implicit((TPrimary, TAuxiliary, Action<TPrimary, TAuxiliary>) to Disposable<TPrimary, TAuxiliary>)
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2_op_Implicit_System_ValueTuple__0__1_System_Action__0__1____Platform_Disposables_Disposable__0__1_
+  commentId: M:Platform.Disposables.Disposable`2.op_Implicit(System.ValueTuple{`0,`1,System.Action{`0,`1}})~Platform.Disposables.Disposable{`0,`1}
+  name.vb: Widening((TPrimary, TAuxiliary, Action(Of TPrimary, TAuxiliary)) to Disposable(Of TPrimary, TAuxiliary))
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Implicit(System.ValueTuple<TPrimary, TAuxiliary, System.Action<TPrimary, TAuxiliary>> to Platform.Disposables.Disposable<TPrimary, TAuxiliary>)
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Widening(System.ValueTuple(Of TPrimary, TAuxiliary, System.Action(Of TPrimary, TAuxiliary)) to Platform.Disposables.Disposable(Of TPrimary, TAuxiliary))
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Implicit((TPrimary, TAuxiliary, Action<TPrimary, TAuxiliary>) to Disposable<TPrimary, TAuxiliary>)
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Widening((TPrimary, TAuxiliary, Action(Of TPrimary, TAuxiliary)) to Disposable(Of TPrimary, TAuxiliary))
+- uid: Platform.Disposables.Disposable`2.op_Implicit(System.ValueTuple{`0,`1,System.Action})~Platform.Disposables.Disposable{`0,`1}
+  name: Implicit((TPrimary, TAuxiliary, Action) to Disposable<TPrimary, TAuxiliary>)
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2_op_Implicit_System_ValueTuple__0__1_System_Action___Platform_Disposables_Disposable__0__1_
+  commentId: M:Platform.Disposables.Disposable`2.op_Implicit(System.ValueTuple{`0,`1,System.Action})~Platform.Disposables.Disposable{`0,`1}
+  name.vb: Widening((TPrimary, TAuxiliary, Action) to Disposable(Of TPrimary, TAuxiliary))
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Implicit(System.ValueTuple<TPrimary, TAuxiliary, System.Action> to Platform.Disposables.Disposable<TPrimary, TAuxiliary>)
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Widening(System.ValueTuple(Of TPrimary, TAuxiliary, System.Action) to Platform.Disposables.Disposable(Of TPrimary, TAuxiliary))
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Implicit((TPrimary, TAuxiliary, Action) to Disposable<TPrimary, TAuxiliary>)
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Widening((TPrimary, TAuxiliary, Action) to Disposable(Of TPrimary, TAuxiliary))
+- uid: Platform.Disposables.Disposable`2.op_Implicit(System.ValueTuple{`0,`1})~Platform.Disposables.Disposable{`0,`1}
+  name: Implicit((TPrimary, TAuxiliary) to Disposable<TPrimary, TAuxiliary>)
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2_op_Implicit_System_ValueTuple__0__1___Platform_Disposables_Disposable__0__1_
+  commentId: M:Platform.Disposables.Disposable`2.op_Implicit(System.ValueTuple{`0,`1})~Platform.Disposables.Disposable{`0,`1}
+  name.vb: Widening((TPrimary, TAuxiliary) to Disposable(Of TPrimary, TAuxiliary))
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Implicit(System.ValueTuple<TPrimary, TAuxiliary> to Platform.Disposables.Disposable<TPrimary, TAuxiliary>)
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Widening(System.ValueTuple(Of TPrimary, TAuxiliary) to Platform.Disposables.Disposable(Of TPrimary, TAuxiliary))
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Implicit((TPrimary, TAuxiliary) to Disposable<TPrimary, TAuxiliary>)
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Widening((TPrimary, TAuxiliary) to Disposable(Of TPrimary, TAuxiliary))
+- uid: Platform.Disposables.Disposable`2.op_Implicit*
+  name: Implicit
+  href: api/Platform.Disposables.Disposable-2.html#Platform_Disposables_Disposable_2_op_Implicit_
+  commentId: Overload:Platform.Disposables.Disposable`2.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Platform.Disposables.Disposable<TPrimary, TAuxiliary>.Implicit
+  fullName.vb: Platform.Disposables.Disposable(Of TPrimary, TAuxiliary).Widening
+  nameWithType: Disposable<TPrimary, TAuxiliary>.Implicit
+  nameWithType.vb: Disposable(Of TPrimary, TAuxiliary).Widening
+- uid: Platform.Disposables.DisposableBase
+  name: DisposableBase
+  href: api/Platform.Disposables.DisposableBase.html
+  commentId: T:Platform.Disposables.DisposableBase
+  fullName: Platform.Disposables.DisposableBase
+  nameWithType: DisposableBase
+- uid: Platform.Disposables.DisposableBase.#ctor
+  name: DisposableBase()
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase__ctor
+  commentId: M:Platform.Disposables.DisposableBase.#ctor
+  fullName: Platform.Disposables.DisposableBase.DisposableBase()
+  nameWithType: DisposableBase.DisposableBase()
+- uid: Platform.Disposables.DisposableBase.#ctor*
+  name: DisposableBase
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase__ctor_
+  commentId: Overload:Platform.Disposables.DisposableBase.#ctor
+  isSpec: "True"
+  fullName: Platform.Disposables.DisposableBase.DisposableBase
+  nameWithType: DisposableBase.DisposableBase
+- uid: Platform.Disposables.DisposableBase.AllowMultipleDisposeAttempts
+  name: AllowMultipleDisposeAttempts
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_AllowMultipleDisposeAttempts
+  commentId: P:Platform.Disposables.DisposableBase.AllowMultipleDisposeAttempts
+  fullName: Platform.Disposables.DisposableBase.AllowMultipleDisposeAttempts
+  nameWithType: DisposableBase.AllowMultipleDisposeAttempts
+- uid: Platform.Disposables.DisposableBase.AllowMultipleDisposeAttempts*
+  name: AllowMultipleDisposeAttempts
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_AllowMultipleDisposeAttempts_
+  commentId: Overload:Platform.Disposables.DisposableBase.AllowMultipleDisposeAttempts
+  isSpec: "True"
+  fullName: Platform.Disposables.DisposableBase.AllowMultipleDisposeAttempts
+  nameWithType: DisposableBase.AllowMultipleDisposeAttempts
+- uid: Platform.Disposables.DisposableBase.AllowMultipleDisposeCalls
+  name: AllowMultipleDisposeCalls
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_AllowMultipleDisposeCalls
+  commentId: P:Platform.Disposables.DisposableBase.AllowMultipleDisposeCalls
+  fullName: Platform.Disposables.DisposableBase.AllowMultipleDisposeCalls
+  nameWithType: DisposableBase.AllowMultipleDisposeCalls
+- uid: Platform.Disposables.DisposableBase.AllowMultipleDisposeCalls*
+  name: AllowMultipleDisposeCalls
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_AllowMultipleDisposeCalls_
+  commentId: Overload:Platform.Disposables.DisposableBase.AllowMultipleDisposeCalls
+  isSpec: "True"
+  fullName: Platform.Disposables.DisposableBase.AllowMultipleDisposeCalls
+  nameWithType: DisposableBase.AllowMultipleDisposeCalls
+- uid: Platform.Disposables.DisposableBase.Destruct
+  name: Destruct()
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_Destruct
+  commentId: M:Platform.Disposables.DisposableBase.Destruct
+  fullName: Platform.Disposables.DisposableBase.Destruct()
+  nameWithType: DisposableBase.Destruct()
+- uid: Platform.Disposables.DisposableBase.Destruct*
+  name: Destruct
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_Destruct_
+  commentId: Overload:Platform.Disposables.DisposableBase.Destruct
+  isSpec: "True"
+  fullName: Platform.Disposables.DisposableBase.Destruct
+  nameWithType: DisposableBase.Destruct
+- uid: Platform.Disposables.DisposableBase.Dispose
+  name: Dispose()
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_Dispose
+  commentId: M:Platform.Disposables.DisposableBase.Dispose
+  fullName: Platform.Disposables.DisposableBase.Dispose()
+  nameWithType: DisposableBase.Dispose()
+- uid: Platform.Disposables.DisposableBase.Dispose(System.Boolean,System.Boolean)
+  name: Dispose(Boolean, Boolean)
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_Dispose_System_Boolean_System_Boolean_
+  commentId: M:Platform.Disposables.DisposableBase.Dispose(System.Boolean,System.Boolean)
+  fullName: Platform.Disposables.DisposableBase.Dispose(System.Boolean, System.Boolean)
+  nameWithType: DisposableBase.Dispose(Boolean, Boolean)
+- uid: Platform.Disposables.DisposableBase.Dispose*
+  name: Dispose
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_Dispose_
+  commentId: Overload:Platform.Disposables.DisposableBase.Dispose
+  isSpec: "True"
+  fullName: Platform.Disposables.DisposableBase.Dispose
+  nameWithType: DisposableBase.Dispose
+- uid: Platform.Disposables.DisposableBase.Finalize
+  name: Finalize()
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_Finalize
+  commentId: M:Platform.Disposables.DisposableBase.Finalize
+  fullName: Platform.Disposables.DisposableBase.Finalize()
+  nameWithType: DisposableBase.Finalize()
+- uid: Platform.Disposables.DisposableBase.Finalize*
+  name: Finalize
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_Finalize_
+  commentId: Overload:Platform.Disposables.DisposableBase.Finalize
+  isSpec: "True"
+  fullName: Platform.Disposables.DisposableBase.Finalize
+  nameWithType: DisposableBase.Finalize
+- uid: Platform.Disposables.DisposableBase.IsDisposed
+  name: IsDisposed
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_IsDisposed
+  commentId: P:Platform.Disposables.DisposableBase.IsDisposed
+  fullName: Platform.Disposables.DisposableBase.IsDisposed
+  nameWithType: DisposableBase.IsDisposed
+- uid: Platform.Disposables.DisposableBase.IsDisposed*
+  name: IsDisposed
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_IsDisposed_
+  commentId: Overload:Platform.Disposables.DisposableBase.IsDisposed
+  isSpec: "True"
+  fullName: Platform.Disposables.DisposableBase.IsDisposed
+  nameWithType: DisposableBase.IsDisposed
+- uid: Platform.Disposables.DisposableBase.ObjectName
+  name: ObjectName
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_ObjectName
+  commentId: P:Platform.Disposables.DisposableBase.ObjectName
+  fullName: Platform.Disposables.DisposableBase.ObjectName
+  nameWithType: DisposableBase.ObjectName
+- uid: Platform.Disposables.DisposableBase.ObjectName*
+  name: ObjectName
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_ObjectName_
+  commentId: Overload:Platform.Disposables.DisposableBase.ObjectName
+  isSpec: "True"
+  fullName: Platform.Disposables.DisposableBase.ObjectName
+  nameWithType: DisposableBase.ObjectName
+- uid: Platform.Disposables.DisposableBaseExtensions
+  name: DisposableBaseExtensions
+  href: api/Platform.Disposables.DisposableBaseExtensions.html
+  commentId: T:Platform.Disposables.DisposableBaseExtensions
+  fullName: Platform.Disposables.DisposableBaseExtensions
+  nameWithType: DisposableBaseExtensions
+- uid: Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed(Platform.Disposables.DisposableBase)
+  name: DisposeIfNotDisposed(DisposableBase)
+  href: api/Platform.Disposables.DisposableBaseExtensions.html#Platform_Disposables_DisposableBaseExtensions_DisposeIfNotDisposed_Platform_Disposables_DisposableBase_
+  commentId: M:Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed(Platform.Disposables.DisposableBase)
+  fullName: Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed(Platform.Disposables.DisposableBase)
+  nameWithType: DisposableBaseExtensions.DisposeIfNotDisposed(DisposableBase)
+- uid: Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed*
+  name: DisposeIfNotDisposed
+  href: api/Platform.Disposables.DisposableBaseExtensions.html#Platform_Disposables_DisposableBaseExtensions_DisposeIfNotDisposed_
+  commentId: Overload:Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed
+  isSpec: "True"
+  fullName: Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed
+  nameWithType: DisposableBaseExtensions.DisposeIfNotDisposed
+- uid: Platform.Disposables.Disposal
+  name: Disposal
+  href: api/Platform.Disposables.Disposal.html
+  commentId: T:Platform.Disposables.Disposal
+  fullName: Platform.Disposables.Disposal
+  nameWithType: Disposal
+- uid: Platform.Disposables.EnsureExtensions
+  name: EnsureExtensions
+  href: api/Platform.Disposables.EnsureExtensions.html
+  commentId: T:Platform.Disposables.EnsureExtensions
+  fullName: Platform.Disposables.EnsureExtensions
+  nameWithType: EnsureExtensions
+- uid: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable)
+  name: NotDisposed(EnsureAlwaysExtensionRoot, IDisposable)
+  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_Platform_Disposables_IDisposable_
+  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable)
+  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, Platform.Disposables.IDisposable)
+  nameWithType: EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot, IDisposable)
+- uid: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable,System.String)
+  name: NotDisposed(EnsureAlwaysExtensionRoot, IDisposable, String)
+  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_Platform_Disposables_IDisposable_System_String_
+  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable,System.String)
+  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, Platform.Disposables.IDisposable, System.String)
+  nameWithType: EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot, IDisposable, String)
+- uid: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable,System.String,System.String)
+  name: NotDisposed(EnsureAlwaysExtensionRoot, IDisposable, String, String)
+  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_Platform_Disposables_IDisposable_System_String_System_String_
+  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable,System.String,System.String)
+  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, Platform.Disposables.IDisposable, System.String, System.String)
+  nameWithType: EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot, IDisposable, String, String)
+- uid: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable)
+  name: NotDisposed(EnsureOnDebugExtensionRoot, IDisposable)
+  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_Platform_Disposables_IDisposable_
+  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable)
+  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, Platform.Disposables.IDisposable)
+  nameWithType: EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot, IDisposable)
+- uid: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable,System.String)
+  name: NotDisposed(EnsureOnDebugExtensionRoot, IDisposable, String)
+  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_Platform_Disposables_IDisposable_System_String_
+  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable,System.String)
+  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, Platform.Disposables.IDisposable, System.String)
+  nameWithType: EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot, IDisposable, String)
+- uid: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable,System.String,System.String)
+  name: NotDisposed(EnsureOnDebugExtensionRoot, IDisposable, String, String)
+  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_Platform_Disposables_IDisposable_System_String_System_String_
+  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable,System.String,System.String)
+  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, Platform.Disposables.IDisposable, System.String, System.String)
+  nameWithType: EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot, IDisposable, String, String)
+- uid: Platform.Disposables.EnsureExtensions.NotDisposed*
+  name: NotDisposed
+  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_
+  commentId: Overload:Platform.Disposables.EnsureExtensions.NotDisposed
+  isSpec: "True"
+  fullName: Platform.Disposables.EnsureExtensions.NotDisposed
+  nameWithType: EnsureExtensions.NotDisposed
+- uid: Platform.Disposables.GenericObjectExtensions
+  name: GenericObjectExtensions
+  href: api/Platform.Disposables.GenericObjectExtensions.html
+  commentId: T:Platform.Disposables.GenericObjectExtensions
+  fullName: Platform.Disposables.GenericObjectExtensions
+  nameWithType: GenericObjectExtensions
+- uid: Platform.Disposables.GenericObjectExtensions.DisposeIfPossible*
+  name: DisposeIfPossible
+  href: api/Platform.Disposables.GenericObjectExtensions.html#Platform_Disposables_GenericObjectExtensions_DisposeIfPossible_
+  commentId: Overload:Platform.Disposables.GenericObjectExtensions.DisposeIfPossible
+  isSpec: "True"
+  fullName: Platform.Disposables.GenericObjectExtensions.DisposeIfPossible
+  nameWithType: GenericObjectExtensions.DisposeIfPossible
+- uid: Platform.Disposables.GenericObjectExtensions.DisposeIfPossible``1(``0)
+  name: DisposeIfPossible<T>(T)
+  href: api/Platform.Disposables.GenericObjectExtensions.html#Platform_Disposables_GenericObjectExtensions_DisposeIfPossible__1___0_
+  commentId: M:Platform.Disposables.GenericObjectExtensions.DisposeIfPossible``1(``0)
+  name.vb: DisposeIfPossible(Of T)(T)
+  fullName: Platform.Disposables.GenericObjectExtensions.DisposeIfPossible<T>(T)
+  fullName.vb: Platform.Disposables.GenericObjectExtensions.DisposeIfPossible(Of T)(T)
+  nameWithType: GenericObjectExtensions.DisposeIfPossible<T>(T)
+  nameWithType.vb: GenericObjectExtensions.DisposeIfPossible(Of T)(T)
+- uid: Platform.Disposables.GenericObjectExtensions.TryDispose*
+  name: TryDispose
+  href: api/Platform.Disposables.GenericObjectExtensions.html#Platform_Disposables_GenericObjectExtensions_TryDispose_
+  commentId: Overload:Platform.Disposables.GenericObjectExtensions.TryDispose
+  isSpec: "True"
+  fullName: Platform.Disposables.GenericObjectExtensions.TryDispose
+  nameWithType: GenericObjectExtensions.TryDispose
+- uid: Platform.Disposables.GenericObjectExtensions.TryDispose``1(``0)
+  name: TryDispose<T>(T)
+  href: api/Platform.Disposables.GenericObjectExtensions.html#Platform_Disposables_GenericObjectExtensions_TryDispose__1___0_
+  commentId: M:Platform.Disposables.GenericObjectExtensions.TryDispose``1(``0)
+  name.vb: TryDispose(Of T)(T)
+  fullName: Platform.Disposables.GenericObjectExtensions.TryDispose<T>(T)
+  fullName.vb: Platform.Disposables.GenericObjectExtensions.TryDispose(Of T)(T)
+  nameWithType: GenericObjectExtensions.TryDispose<T>(T)
+  nameWithType.vb: GenericObjectExtensions.TryDispose(Of T)(T)
+- uid: Platform.Disposables.IDisposable
+  name: IDisposable
+  href: api/Platform.Disposables.IDisposable.html
+  commentId: T:Platform.Disposables.IDisposable
+  fullName: Platform.Disposables.IDisposable
+  nameWithType: IDisposable
+- uid: Platform.Disposables.IDisposable.Destruct
+  name: Destruct()
+  href: api/Platform.Disposables.IDisposable.html#Platform_Disposables_IDisposable_Destruct
+  commentId: M:Platform.Disposables.IDisposable.Destruct
+  fullName: Platform.Disposables.IDisposable.Destruct()
+  nameWithType: IDisposable.Destruct()
+- uid: Platform.Disposables.IDisposable.Destruct*
+  name: Destruct
+  href: api/Platform.Disposables.IDisposable.html#Platform_Disposables_IDisposable_Destruct_
+  commentId: Overload:Platform.Disposables.IDisposable.Destruct
+  isSpec: "True"
+  fullName: Platform.Disposables.IDisposable.Destruct
+  nameWithType: IDisposable.Destruct
+- uid: Platform.Disposables.IDisposable.IsDisposed
+  name: IsDisposed
+  href: api/Platform.Disposables.IDisposable.html#Platform_Disposables_IDisposable_IsDisposed
+  commentId: P:Platform.Disposables.IDisposable.IsDisposed
+  fullName: Platform.Disposables.IDisposable.IsDisposed
+  nameWithType: IDisposable.IsDisposed
+- uid: Platform.Disposables.IDisposable.IsDisposed*
+  name: IsDisposed
+  href: api/Platform.Disposables.IDisposable.html#Platform_Disposables_IDisposable_IsDisposed_
+  commentId: Overload:Platform.Disposables.IDisposable.IsDisposed
+  isSpec: "True"
+  fullName: Platform.Disposables.IDisposable.IsDisposed
+  nameWithType: IDisposable.IsDisposed
