@@ -28,7 +28,7 @@ Closes three issues.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Platform.Exceptions" Version="0.1.0" />
+    <PackageReference Include="Platform.Exceptions" Version="0.1.1" />
   </ItemGroup>
 
 </Project>
