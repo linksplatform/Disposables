@@ -100,7 +100,7 @@ namespace Examples
 ## Depend on
 * [Platform.Exceptions](https://github.com/linksplatform/Exceptions)
 
-# Mystery files
+## Mystery files
 * `.travis.yml` - Travis CI build configuration.
 * `docfx.json` and `toc.yml` - DocFX build configuration.
 * `fvextra.sty` - package required for LaTeX document generation.

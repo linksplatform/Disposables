@@ -100,7 +100,7 @@ namespace Examples
 ## Зависит от
 * [Platform.Exceptions](https://github.com/linksplatform/Exceptions)
 
-# Загадочные файлы
+## Загадочные файлы
 * `.travis.yml` - конфигурация сборки Travis CI.
 * `docfx.json` and `toc.yml` - конфигурация сборки DocFX.
 * `fvextra.sty` - пакет, необходимый для генерации документов LaTeX.
