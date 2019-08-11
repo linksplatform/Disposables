@@ -89,3 +89,14 @@ namespace Examples
     }
 }
 ```
+
+# Mystery files
+* `.travis.yml` - Travis CI build configuration.
+* `docfx.json` and `toc.yml` - DocFX build configuration.
+* `fvextra.sty` - package required for LaTeX document generation.
+* `fmt.sh` - script for formating `tex` file for generating PDF from it.
+* `fmt.py` - script for formating single `.cs` file as a part of `tex` file.
+* `Makefile` - PDF build configuration.
+* `generate-pdf.sh` - script that generates PDF with code for e-readers.
+* `publish-docs.sh` - script that publishes generated documentation and PDF with code for e-readers to `gh-pages` branch.
+* `push-nuget.bat` - Windows script for publishing current version of NuGet package.
