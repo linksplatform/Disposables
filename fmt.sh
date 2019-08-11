@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e # Exit with nonzero exit code if anything fails
 
+wget https://raw.githubusercontent.com/gpoore/fvextra/cc1c0c5f7b92023cfec67084e2a87bdac520414c/fvextra/fvextra.sty
+
 echo """
 \\documentclass[11pt,a4paper,fleqn]{report}
 \\usepackage[left=5mm,top=5mm,right=5mm,bottom=5mm]{geometry}
