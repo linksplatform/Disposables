@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "yO6kVyCDVf7fq4e9vHaiaA=="
+          "hash": "wjocGkJ0nYC/8Bjn+6szOQ=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "README.ru.html",
-          "hash": "Yw4bHytQGYkOVN1kgVRclw=="
+          "hash": "OBRyzvl2w8bXP5va77Ekcg=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable-1.html",
-          "hash": "wp9SdhOkErg08B2Kbl8MsQ=="
+          "hash": "ijxehPKXqW2sbhsKB1NTUw=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable-2.html",
-          "hash": "laLM0d8tqUb2CbAbbcsvkg=="
+          "hash": "7tzIxE6uH0Ed3Yt4PI1q3Q=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable.html",
-          "hash": "MqG2raWIA+mmS8xfHBd8WA=="
+          "hash": "UylcReo7fgX0MhTQd2oR1w=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.DisposableBase.html",
-          "hash": "BtnSMa2bFdGkIsYSy75YGg=="
+          "hash": "wug9YEHggLQ89nMs4e5F7A=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.DisposableBaseExtensions.html",
-          "hash": "TPMWPy0LyUEByyHFAQ8/ig=="
+          "hash": "Q68X5AmDWY4g9BuhWmOshA=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposal.html",
-          "hash": "awIzfAItNyQkzZix6T+76A=="
+          "hash": "9xrRRcsQfwmr5zEGj/4yBw=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.EnsureExtensions.html",
-          "hash": "yyaxd5ct7oWjMMqmBkj4qA=="
+          "hash": "dEmllUns2e/DPBXGIb6Ilw=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.GenericObjectExtensions.html",
-          "hash": "XtrAmF2zps4qnznvqKnyZw=="
+          "hash": "G8AOSLP+TXT83pFgRAQOJg=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.IDisposable.html",
-          "hash": "OMEVJ8/6kLvCGdexYItnIg=="
+          "hash": "inOcLuPyFhyh+7+aQ5RCuA=="
         }
       },
       "is_incremental": false,
@@ -195,10 +195,11 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 2,
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
@@ -207,11 +208,10 @@
           "total_file_count": 10,
           "skipped_file_count": 0
         },
-        "TocDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 2,
           "skipped_file_count": 0
         }
       }
