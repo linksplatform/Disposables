@@ -5,8 +5,8 @@
 namespace Platform.Disposables
 {
     /// <summary>
-    /// Represents disposable object that contains OnDispose event which is raised when the object itself is disposed.
-    /// Представляет высвобождаемый объект, который содержит событие OnDispose, которое возникает при высвобождении самого объекта.
+    /// <para>Represents disposable object that contains OnDispose event which is raised when the object itself is disposed.</para>
+    /// <para>Представляет высвобождаемый объект, который содержит событие OnDispose, которое возникает при высвобождении самого объекта.</para>
     /// </summary>
     public class Disposable : DisposableBase
     {

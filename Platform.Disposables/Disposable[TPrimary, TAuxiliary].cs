@@ -5,8 +5,8 @@
 namespace Platform.Disposables
 {
     /// <summary>
-    /// Represents disposable container that disposes two contained objects when the container itself is disposed.
-    /// Представляет высвобождаемый контейнер, который высвобождает два содержащийхся в нём объектов при высвобождении самого контейнера.
+    /// <para>Represents disposable container that disposes two contained objects when the container itself is disposed.</para>
+    /// <para>Представляет высвобождаемый контейнер, который высвобождает два содержащийхся в нём объектов при высвобождении самого контейнера.</para>
     /// </summary>
     public class Disposable<TPrimary, TAuxiliary> : Disposable<TPrimary>
     {

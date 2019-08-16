@@ -5,8 +5,8 @@
 namespace Platform.Disposables
 {
     /// <summary>
-    /// Represents disposable container that disposes contained object when the container itself is disposed.
-    /// Представляет высвобождаемый контейнер, который высвобождает содержащийся в нём объект при высвобождении самого контейнера.
+    /// <para>Represents disposable container that disposes contained object when the container itself is disposed.</para>
+    /// <para>Представляет высвобождаемый контейнер, который высвобождает содержащийся в нём объект при высвобождении самого контейнера.</para>
     /// </summary>
     public class Disposable<T> : Disposable
     {
