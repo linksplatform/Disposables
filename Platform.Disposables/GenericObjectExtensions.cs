@@ -5,6 +5,10 @@ using Platform.Exceptions;
 
 namespace Platform.Disposables
 {
+    /// <summary>
+    /// <para>Provides a set of static methods that help dispose an object.</para>
+    /// <para>Предоставляет набор статических методов которые помогают высвободить объект.</para>
+    /// </summary>
     static public class GenericObjectExtensions
     {
         public static bool TryDispose<T>(this T @object)
