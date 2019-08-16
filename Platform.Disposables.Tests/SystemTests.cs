@@ -1,10 +1,10 @@
-using Xunit;
+п»їusing Xunit;
 
 namespace Platform.Disposables.Tests
 {
     /// <summary>
     /// <para>Contains tests for features of .NET Framework itself, that are required by current implementations.</para>
-    /// <para>Содержит тесты для функций самой .NET Framework, которые требуются для текущих реализаций.</para>
+    /// <para>РЎРѕРґРµСЂР¶РёС‚ С‚РµСЃС‚С‹ РґР»СЏ С„СѓРЅРєС†РёР№ СЃР°РјРѕР№ .NET Framework, РєРѕС‚РѕСЂС‹Рµ С‚СЂРµР±СѓСЋС‚СЃСЏ РґР»СЏ С‚РµРєСѓС‰РёС… СЂРµР°Р»РёР·Р°С†РёР№.</para>
     /// </summary>
     public class SystemTests
     {
