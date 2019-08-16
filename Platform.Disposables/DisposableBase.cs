@@ -3,6 +3,8 @@ using System.Diagnostics;
 using System.Threading;
 using Platform.Exceptions;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+
 namespace Platform.Disposables
 {
     /// <summary>

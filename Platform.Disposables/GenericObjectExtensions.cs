@@ -1,6 +1,8 @@
 ﻿using System;
 using Platform.Exceptions;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+
 namespace Platform.Disposables
 {
     static public class GenericObjectExtensions
