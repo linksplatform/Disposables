@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Disposables", "Platform.Disposables.csproj", "{23D48511-6B32-4412-98EE-8AFC8980D3D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Disposables", "Platform.Disposables\Platform.Disposables.csproj", "{48547499-8DC8-4A9D-BDA7-BE04B97E2CE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{23D48511-6B32-4412-98EE-8AFC8980D3D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23D48511-6B32-4412-98EE-8AFC8980D3D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23D48511-6B32-4412-98EE-8AFC8980D3D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23D48511-6B32-4412-98EE-8AFC8980D3D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48547499-8DC8-4A9D-BDA7-BE04B97E2CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48547499-8DC8-4A9D-BDA7-BE04B97E2CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48547499-8DC8-4A9D-BDA7-BE04B97E2CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48547499-8DC8-4A9D-BDA7-BE04B97E2CE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
