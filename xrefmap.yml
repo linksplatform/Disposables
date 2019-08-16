@@ -671,3 +671,28 @@ references:
   isSpec: "True"
   fullName: Platform.Disposables.IDisposable.IsDisposed
   nameWithType: IDisposable.IsDisposed
+- uid: Platform.Disposables.Tests
+  name: Platform.Disposables.Tests
+  href: api/Platform.Disposables.Tests.html
+  commentId: N:Platform.Disposables.Tests
+  fullName: Platform.Disposables.Tests
+  nameWithType: Platform.Disposables.Tests
+- uid: Platform.Disposables.Tests.SystemTests
+  name: SystemTests
+  href: api/Platform.Disposables.Tests.SystemTests.html
+  commentId: T:Platform.Disposables.Tests.SystemTests
+  fullName: Platform.Disposables.Tests.SystemTests
+  nameWithType: SystemTests
+- uid: Platform.Disposables.Tests.SystemTests.UsingSupportsNullTest
+  name: UsingSupportsNullTest()
+  href: api/Platform.Disposables.Tests.SystemTests.html#Platform_Disposables_Tests_SystemTests_UsingSupportsNullTest
+  commentId: M:Platform.Disposables.Tests.SystemTests.UsingSupportsNullTest
+  fullName: Platform.Disposables.Tests.SystemTests.UsingSupportsNullTest()
+  nameWithType: SystemTests.UsingSupportsNullTest()
+- uid: Platform.Disposables.Tests.SystemTests.UsingSupportsNullTest*
+  name: UsingSupportsNullTest
+  href: api/Platform.Disposables.Tests.SystemTests.html#Platform_Disposables_Tests_SystemTests_UsingSupportsNullTest_
+  commentId: Overload:Platform.Disposables.Tests.SystemTests.UsingSupportsNullTest
+  isSpec: "True"
+  fullName: Platform.Disposables.Tests.SystemTests.UsingSupportsNullTest
+  nameWithType: SystemTests.UsingSupportsNullTest
