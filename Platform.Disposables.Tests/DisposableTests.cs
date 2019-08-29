@@ -33,7 +33,6 @@ namespace Platform.Disposables.Tests
             {
                 Thread.Sleep(1000);
                 process.Kill();
-                process.Close();
             }
             var result = File.ReadAllText(logPath);
             Assert.Equal("", result); // Currently process termination will not release resources
