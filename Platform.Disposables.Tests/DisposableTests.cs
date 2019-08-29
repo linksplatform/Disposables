@@ -33,7 +33,6 @@ namespace Platform.Disposables.Tests
             {
                 Thread.Sleep(1000);
                 process.Kill();
-                process.WaitForExit();
                 process.Close();
             }
             var result = File.ReadAllText(logPath);
