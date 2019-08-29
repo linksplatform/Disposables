@@ -527,25 +527,6 @@ references:
   isSpec: "True"
   fullName: Platform.Disposables.DisposableBase.ObjectName
   nameWithType: DisposableBase.ObjectName
-- uid: Platform.Disposables.DisposableBaseExtensions
-  name: DisposableBaseExtensions
-  href: api/Platform.Disposables.DisposableBaseExtensions.html
-  commentId: T:Platform.Disposables.DisposableBaseExtensions
-  fullName: Platform.Disposables.DisposableBaseExtensions
-  nameWithType: DisposableBaseExtensions
-- uid: Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed(Platform.Disposables.DisposableBase)
-  name: DisposeIfNotDisposed(DisposableBase)
-  href: api/Platform.Disposables.DisposableBaseExtensions.html#Platform_Disposables_DisposableBaseExtensions_DisposeIfNotDisposed_Platform_Disposables_DisposableBase_
-  commentId: M:Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed(Platform.Disposables.DisposableBase)
-  fullName: Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed(Platform.Disposables.DisposableBase)
-  nameWithType: DisposableBaseExtensions.DisposeIfNotDisposed(DisposableBase)
-- uid: Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed*
-  name: DisposeIfNotDisposed
-  href: api/Platform.Disposables.DisposableBaseExtensions.html#Platform_Disposables_DisposableBaseExtensions_DisposeIfNotDisposed_
-  commentId: Overload:Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed
-  isSpec: "True"
-  fullName: Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed
-  nameWithType: DisposableBaseExtensions.DisposeIfNotDisposed
 - uid: Platform.Disposables.Disposal
   name: Disposal
   href: api/Platform.Disposables.Disposal.html
@@ -671,6 +652,25 @@ references:
   isSpec: "True"
   fullName: Platform.Disposables.IDisposable.IsDisposed
   nameWithType: IDisposable.IsDisposed
+- uid: Platform.Disposables.IDisposableExtensions
+  name: IDisposableExtensions
+  href: api/Platform.Disposables.IDisposableExtensions.html
+  commentId: T:Platform.Disposables.IDisposableExtensions
+  fullName: Platform.Disposables.IDisposableExtensions
+  nameWithType: IDisposableExtensions
+- uid: Platform.Disposables.IDisposableExtensions.DisposeIfNotDisposed(Platform.Disposables.IDisposable)
+  name: DisposeIfNotDisposed(IDisposable)
+  href: api/Platform.Disposables.IDisposableExtensions.html#Platform_Disposables_IDisposableExtensions_DisposeIfNotDisposed_Platform_Disposables_IDisposable_
+  commentId: M:Platform.Disposables.IDisposableExtensions.DisposeIfNotDisposed(Platform.Disposables.IDisposable)
+  fullName: Platform.Disposables.IDisposableExtensions.DisposeIfNotDisposed(Platform.Disposables.IDisposable)
+  nameWithType: IDisposableExtensions.DisposeIfNotDisposed(IDisposable)
+- uid: Platform.Disposables.IDisposableExtensions.DisposeIfNotDisposed*
+  name: DisposeIfNotDisposed
+  href: api/Platform.Disposables.IDisposableExtensions.html#Platform_Disposables_IDisposableExtensions_DisposeIfNotDisposed_
+  commentId: Overload:Platform.Disposables.IDisposableExtensions.DisposeIfNotDisposed
+  isSpec: "True"
+  fullName: Platform.Disposables.IDisposableExtensions.DisposeIfNotDisposed
+  nameWithType: IDisposableExtensions.DisposeIfNotDisposed
 - uid: Platform.Disposables.Tests
   name: Platform.Disposables.Tests
   href: api/Platform.Disposables.Tests.html

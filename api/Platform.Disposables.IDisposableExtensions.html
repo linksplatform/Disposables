@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class DisposableBaseExtensions
+    <title>Class IDisposableExtensions
    | LinksPlatform's Platform.Disposables Library </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class DisposableBaseExtensions
+    <meta name="title" content="Class IDisposableExtensions
    | LinksPlatform's Platform.Disposables Library ">
     <meta name="generator" content="docfx 2.45.0.0">
     
@@ -78,17 +78,19 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Platform.Disposables.DisposableBaseExtensions">
+            <article class="content wrap" id="_content" data-uid="Platform.Disposables.IDisposableExtensions">
   
   
-  <h1 id="Platform_Disposables_DisposableBaseExtensions" data-uid="Platform.Disposables.DisposableBaseExtensions" class="text-break">Class DisposableBaseExtensions
+  <h1 id="Platform_Disposables_IDisposableExtensions" data-uid="Platform.Disposables.IDisposableExtensions" class="text-break">Class IDisposableExtensions
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides a set of extension methods for <a class="xref" href="Platform.Disposables.IDisposable.html">IDisposable</a> objects.</p>
+<p>Предоставляет набор методов расширения для объектов <a class="xref" href="Platform.Disposables.IDisposable.html">IDisposable</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">DisposableBaseExtensions</span></div>
+    <div class="level1"><span class="xref">IDisposableExtensions</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -116,26 +118,28 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Platform.Disposables.html">Platform.Disposables</a></h6>
   <h6><strong>Assembly</strong>: Platform.Disposables.dll</h6>
-  <h5 id="Platform_Disposables_DisposableBaseExtensions_syntax">Syntax</h5>
+  <h5 id="Platform_Disposables_IDisposableExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class DisposableBaseExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public static class IDisposableExtensions</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/linksplatform/Disposables/new/master/apiSpec/new?filename=Platform_Disposables_DisposableBaseExtensions_DisposeIfNotDisposed_Platform_Disposables_DisposableBase_.md&amp;value=---%0Auid%3A%20Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed(Platform.Disposables.DisposableBase)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/linksplatform/Disposables/new/master/apiSpec/new?filename=Platform_Disposables_IDisposableExtensions_DisposeIfNotDisposed_Platform_Disposables_IDisposable_.md&amp;value=---%0Auid%3A%20Platform.Disposables.IDisposableExtensions.DisposeIfNotDisposed(Platform.Disposables.IDisposable)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/Disposables/blob/9512b6cfa09f3a3ecdc9e2320eb1e9b531409b9a/Platform.Disposables/DisposableBaseExtensions.cs/#L7">View Source</a>
+    <a href="https://github.com/linksplatform/Disposables/blob/b6413c96fb618337b84c0302eff385ee9de14cf4/Platform.Disposables/IDisposableExtensions.cs/#L16">View Source</a>
   </span>
-  <a id="Platform_Disposables_DisposableBaseExtensions_DisposeIfNotDisposed_" data-uid="Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed*"></a>
-  <h4 id="Platform_Disposables_DisposableBaseExtensions_DisposeIfNotDisposed_Platform_Disposables_DisposableBase_" data-uid="Platform.Disposables.DisposableBaseExtensions.DisposeIfNotDisposed(Platform.Disposables.DisposableBase)">DisposeIfNotDisposed(DisposableBase)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Platform_Disposables_IDisposableExtensions_DisposeIfNotDisposed_" data-uid="Platform.Disposables.IDisposableExtensions.DisposeIfNotDisposed*"></a>
+  <h4 id="Platform_Disposables_IDisposableExtensions_DisposeIfNotDisposed_Platform_Disposables_IDisposable_" data-uid="Platform.Disposables.IDisposableExtensions.DisposeIfNotDisposed(Platform.Disposables.IDisposable)">DisposeIfNotDisposed(IDisposable)</h4>
+  <div class="markdown level1 summary"><p>Attempts to dispose the specified object.</p>
+<p>Выполняет попытку высвободить указанный объект.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void DisposeIfNotDisposed(this DisposableBase disposable)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void DisposeIfNotDisposed(this IDisposable disposable)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,9 +152,10 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Platform.Disposables.DisposableBase.html">DisposableBase</a></td>
+        <td><a class="xref" href="Platform.Disposables.IDisposable.html">IDisposable</a></td>
         <td><span class="parametername">disposable</span></td>
-        <td></td>
+        <td><p>The object implementing the <a class="xref" href="Platform.Disposables.IDisposable.html">IDisposable</a> interface.</p><p>Объект, реализующий интерфейс <a class="xref" href="Platform.Disposables.IDisposable.html">IDisposable</a></p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -162,10 +167,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/linksplatform/Disposables/new/master/apiSpec/new?filename=Platform_Disposables_DisposableBaseExtensions.md&amp;value=---%0Auid%3A%20Platform.Disposables.DisposableBaseExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/linksplatform/Disposables/new/master/apiSpec/new?filename=Platform_Disposables_IDisposableExtensions.md&amp;value=---%0Auid%3A%20Platform.Disposables.IDisposableExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/linksplatform/Disposables/blob/9512b6cfa09f3a3ecdc9e2320eb1e9b531409b9a/Platform.Disposables/DisposableBaseExtensions.cs/#L5" class="contribution-link">View Source</a>
+                    <a href="https://github.com/linksplatform/Disposables/blob/b6413c96fb618337b84c0302eff385ee9de14cf4/Platform.Disposables/IDisposableExtensions.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
