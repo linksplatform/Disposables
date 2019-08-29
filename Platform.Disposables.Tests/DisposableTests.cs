@@ -59,10 +59,7 @@ namespace Platform.Disposables.Tests
             }
             pathParts = newPathParts.ToArray();
             var path = Path.Combine(Path.Combine(pathParts), $"{disposalOrderTestProjectName}.csproj");
-            Console.WriteLine(currentDirectory);
-            Console.WriteLine(Path.IsPathRooted(currentDirectory));
-            Console.WriteLine(Path.IsPathFullyQualified(currentDirectory));
-            if (Path.IsPathRooted(currentDirectory) && !Path.IsPathFullyQualified(currentDirectory))
+            if (!Path.IsPathRooted(path))
             {
                 path = $"{Path.PathSeparator}{path}";
             }
