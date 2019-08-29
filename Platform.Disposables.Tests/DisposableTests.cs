@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Threading;
 using Xunit;
 
@@ -17,7 +18,6 @@ namespace Platform.Disposables.Tests
             using (var process = Process.Start("dotnet", $"run -p \"{path}\" \"{logPath}\" false"))
             {
                 process.WaitForExit();
-                process.Close();
             }
             var result = File.ReadAllText(logPath);
             Assert.Equal("21", result);
@@ -59,6 +59,10 @@ namespace Platform.Disposables.Tests
             }
             pathParts = newPathParts.ToArray();
             var path = Path.Combine(Path.Combine(pathParts), $"{disposalOrderTestProjectName}.csproj");
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            {
+                path = $"{Path.PathSeparator}{path}";
+            }
             return path;
         }
     }
