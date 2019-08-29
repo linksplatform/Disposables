@@ -677,6 +677,38 @@ references:
   commentId: N:Platform.Disposables.Tests
   fullName: Platform.Disposables.Tests
   nameWithType: Platform.Disposables.Tests
+- uid: Platform.Disposables.Tests.DisposableTests
+  name: DisposableTests
+  href: api/Platform.Disposables.Tests.DisposableTests.html
+  commentId: T:Platform.Disposables.Tests.DisposableTests
+  fullName: Platform.Disposables.Tests.DisposableTests
+  nameWithType: DisposableTests
+- uid: Platform.Disposables.Tests.DisposableTests.DisposalAtProcessKillTest
+  name: DisposalAtProcessKillTest()
+  href: api/Platform.Disposables.Tests.DisposableTests.html#Platform_Disposables_Tests_DisposableTests_DisposalAtProcessKillTest
+  commentId: M:Platform.Disposables.Tests.DisposableTests.DisposalAtProcessKillTest
+  fullName: Platform.Disposables.Tests.DisposableTests.DisposalAtProcessKillTest()
+  nameWithType: DisposableTests.DisposalAtProcessKillTest()
+- uid: Platform.Disposables.Tests.DisposableTests.DisposalAtProcessKillTest*
+  name: DisposalAtProcessKillTest
+  href: api/Platform.Disposables.Tests.DisposableTests.html#Platform_Disposables_Tests_DisposableTests_DisposalAtProcessKillTest_
+  commentId: Overload:Platform.Disposables.Tests.DisposableTests.DisposalAtProcessKillTest
+  isSpec: "True"
+  fullName: Platform.Disposables.Tests.DisposableTests.DisposalAtProcessKillTest
+  nameWithType: DisposableTests.DisposalAtProcessKillTest
+- uid: Platform.Disposables.Tests.DisposableTests.DisposalOrderTest
+  name: DisposalOrderTest()
+  href: api/Platform.Disposables.Tests.DisposableTests.html#Platform_Disposables_Tests_DisposableTests_DisposalOrderTest
+  commentId: M:Platform.Disposables.Tests.DisposableTests.DisposalOrderTest
+  fullName: Platform.Disposables.Tests.DisposableTests.DisposalOrderTest()
+  nameWithType: DisposableTests.DisposalOrderTest()
+- uid: Platform.Disposables.Tests.DisposableTests.DisposalOrderTest*
+  name: DisposalOrderTest
+  href: api/Platform.Disposables.Tests.DisposableTests.html#Platform_Disposables_Tests_DisposableTests_DisposalOrderTest_
+  commentId: Overload:Platform.Disposables.Tests.DisposableTests.DisposalOrderTest
+  isSpec: "True"
+  fullName: Platform.Disposables.Tests.DisposableTests.DisposalOrderTest
+  nameWithType: DisposableTests.DisposalOrderTest
 - uid: Platform.Disposables.Tests.SystemTests
   name: SystemTests
   href: api/Platform.Disposables.Tests.SystemTests.html

@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable-1.html",
-          "hash": "sDOD2HjjpFvYTQCRb3Msnw=="
+          "hash": "TQqOZEuv45AZLjRhgG49IQ=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable-2.html",
-          "hash": "NUmJ2d7J+UbFzS3ksbfE+Q=="
+          "hash": "RXtr5WG825s6TZGp9NyJDQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable.html",
-          "hash": "E2nEbC7Cn73EcIIR8JM1yA=="
+          "hash": "AiDQT6OIWNC/Mpc5ULXPqA=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.DisposableBase.html",
-          "hash": "fdkrV9dL8ld2mz9CuELOVA=="
+          "hash": "LfLYih12EtbBoE03RtaIEA=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.DisposableBaseExtensions.html",
-          "hash": "9dgp42oF+IigvzxRnqw+GA=="
+          "hash": "jrwzCdlDixmdEHjhlMD+FA=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposal.html",
-          "hash": "lUwFKxbPSIqTf8UCemgkfg=="
+          "hash": "copct3Sq6QgZ7dwij8rdAg=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.EnsureExtensions.html",
-          "hash": "ioGcA45DUPF6bxONe2FaHA=="
+          "hash": "PwEuaBblfUNY8aUysDKkJw=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.GenericObjectExtensions.html",
-          "hash": "nvRRduCn17Tj2UIqy36m8g=="
+          "hash": "jAXcie8HRRnpER8GzDtq+A=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.IDisposable.html",
-          "hash": "IeK2m+uar2JWfNDhauUFKw=="
+          "hash": "KvyPZF1Sjx7/qfdVldoOQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.Disposables.Tests.DisposableTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.Disposables.Tests.DisposableTests.html",
+          "hash": "5nywCOmf6FRZJ3csfKN5xQ=="
         }
       },
       "is_incremental": false,
@@ -150,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Tests.SystemTests.html",
-          "hash": "qkdlwB69EW1lzfy6uLDh1Q=="
+          "hash": "MCRvQZR14WXhteA8zKzQPg=="
         }
       },
       "is_incremental": false,
@@ -162,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Tests.html",
-          "hash": "eSklAQNblxh1YbMSg6Scjw=="
+          "hash": "yVoSL6UksvngYOPGrojhcA=="
         }
       },
       "is_incremental": false,
@@ -186,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "r++c4fw1mf5+wqE+MmxGeQ=="
+          "hash": "/C9K4terhV3qp8L+3FaGTw=="
         }
       },
       "is_incremental": false,
@@ -226,16 +238,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 12,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 13,
           "skipped_file_count": 0
         }
       }
