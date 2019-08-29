@@ -6,7 +6,8 @@
     <AssemblyTitle>Platform.Disposables</AssemblyTitle>
     <VersionPrefix>0.1.0</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks Condition="'$(OS)' == 'Windows_NT'">netstandard2.0;net47</TargetFrameworks>
+    <TargetFramework Condition="'$(OS)' != 'Windows_NT'">netcoreapp2.0</TargetFramework>
     <AssemblyName>Platform.Disposables</AssemblyName>
     <PackageId>Platform.Disposables</PackageId>
     <PackageTags>Disposable;DisposableBase;Disposable;Disposal;IDisposable</PackageTags>
