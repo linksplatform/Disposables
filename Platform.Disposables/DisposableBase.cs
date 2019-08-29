@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Diagnostics;
+using System.Collections.Concurrent;
 using System.Threading;
 using Platform.Exceptions;
 
@@ -13,7 +13,8 @@ namespace Platform.Disposables
     /// </summary>
     public abstract class DisposableBase : IDisposable
     {
-        private static readonly Process _currentProcess = Process.GetCurrentProcess();
+        private static readonly AppDomain _currentDomain = AppDomain.CurrentDomain;
+        private static readonly ConcurrentStack<WeakReference<DisposableBase>> _disposablesWeekReferencesStack = new ConcurrentStack<WeakReference<DisposableBase>>();
 
         private volatile int _disposed;
 
@@ -25,10 +26,12 @@ namespace Platform.Disposables
 
         protected virtual bool AllowMultipleDisposeCalls => false;
 
+        static DisposableBase() => _currentDomain.ProcessExit += OnProcessExit;
+
         protected DisposableBase()
         {
             _disposed = 0;
-            _currentProcess.Exited += OnProcessExit;
+            _disposablesWeekReferencesStack.Push(new WeakReference<DisposableBase>(this, false));
         }
 
         ~DisposableBase() => Destruct();
@@ -56,20 +59,10 @@ namespace Platform.Disposables
             }
         }
 
-        private void OnProcessExit(object sender, EventArgs e)
-        {
-            GC.SuppressFinalize(this);
-            Destruct();
-        }
-
         private void Dispose(bool manual)
         {
             var originalDisposedValue = Interlocked.CompareExchange(ref _disposed, 1, 0);
             var wasDisposed = originalDisposedValue > 0;
-            if (!wasDisposed)
-            {
-                UnsubscribeFromProcessExitedEventIfPossible();
-            }
             if (wasDisposed && !AllowMultipleDisposeCalls && manual)
             {
                 Ensure.Always.NotDisposed(this, ObjectName, "Multiple dispose calls are now allowed. Override AllowMultipleDisposeCalls property to modify behaviour.");
@@ -80,17 +73,30 @@ namespace Platform.Disposables
             }
         }
 
-        private void UnsubscribeFromProcessExitedEventIfPossible()
+        private static void OnProcessExit(object sender, EventArgs e)
+        {
+            while (_disposablesWeekReferencesStack.TryPop(out WeakReference<DisposableBase> weakReference))
+            {
+                if (weakReference.TryGetTarget(out DisposableBase disposable))
+                {
+                    GC.SuppressFinalize(disposable);
+                    disposable.Destruct();
+                }
+            }
+            UnsubscribeFromProcessExitedEventIfPossible();
+        }
+
+        private static void UnsubscribeFromProcessExitedEventIfPossible()
         {
             try
             {
-                if (_currentProcess != null)
+                if (_currentDomain != null)
                 {
-                    _currentProcess.Exited -= OnProcessExit;
+                    _currentDomain.ProcessExit -= OnProcessExit;
                 }
                 else
                 {
-                    Process.GetCurrentProcess().Exited -= OnProcessExit;
+                    AppDomain.CurrentDomain.ProcessExit -= OnProcessExit;
                 }
             }
             catch (Exception exception)
