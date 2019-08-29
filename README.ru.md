@@ -90,23 +90,25 @@ namespace Examples
 }
 ```
 
-## [Документация](https://linksplatform.github.io/Disposables/)
-* Интерфейс [IDisposable](https://linksplatform.github.io/Disposables/api/Platform.Disposables.IDisposable.html).
-* Абстрактный класс [DisposableBase](https://linksplatform.github.io/Disposables/api/Platform.Disposables.DisposableBase.html).
-* Класс [Disposable](https://linksplatform.github.io/Disposables/api/Platform.Disposables.Disposable.html).
+## [Документация](https://linksplatform.github.io/Disposables)
+*   Интерфейс [IDisposable](https://linksplatform.github.io/Disposables/api/Platform.Disposables.IDisposable.html).
+*   Абстрактный класс [DisposableBase](https://linksplatform.github.io/Disposables/api/Platform.Disposables.DisposableBase.html).
+*   Класс [Disposable](https://linksplatform.github.io/Disposables/api/Platform.Disposables.Disposable.html).
+*   Класс [Disposable\<T\>](https://linksplatform.github.io/Disposables/api/Platform.Disposables.Disposable-1.html).
 
 [PDF файл](https://linksplatform.github.io/Disposables/Platform.Disposables.pdf) с кодом для электронных книг.
 
 ## Зависит от
-* [Platform.Exceptions](https://github.com/linksplatform/Exceptions)
+*   [Platform.Exceptions](https://github.com/linksplatform/Exceptions)
+
+## Зависимые библиотеки
+*   [Platform.Collections](https://github.com/linksplatform/Collections)
 
 ## Загадочные файлы
-* `.travis.yml` - конфигурация сборки Travis CI.
-* `docfx.json` and `toc.yml` - конфигурация сборки DocFX.
-* `fvextra.sty` - пакет, необходимый для генерации документов LaTeX.
-* `fmt.sh` - скрипт для форматирования `tex` файла для генерации PDF из него.
-* `fmt.py` - скрипт для форматирования одного файла `.cs` как части файла `tex`.
-* `Makefile` - конфигурация сборки PDF.
-* `generate-pdf.sh` - скрипт, который генерирует PDF с кодом для электронных книг.
-* `publish-docs.sh` - скрипт, который публикует сгенерированную документацию и PDF с кодом для электронных книг в ветку `gh-pages`.
-* `push-nuget.bat` - Windows-скрипт для публикации текущей версии пакета NuGet.
+*   [.travis.yml](https://github.com/linksplatform/Disposables/blob/master/.travis.yml) - конфигурация сборки Travis CI.
+*   [docfx.json](https://github.com/linksplatform/Disposables/blob/master/docfx.json) и [toc.yml](https://github.com/linksplatform/Disposables/blob/master/toc.yml) - конфигурация сборки DocFX.
+*   [format-document.sh](https://github.com/linksplatform/Disposables/blob/master/format-document.sh) - скрипт для форматирования `tex` файла для генерации PDF из него.
+*   [format-csharp-files.py](https://github.com/linksplatform/Disposables/blob/master/format-csharp-files.py) - скрипт для форматирования файлов `.cs` как части файла `tex`.
+*   [generate-pdf.sh](https://github.com/linksplatform/Disposables/blob/master/generate-pdf.sh) - скрипт, который генерирует PDF с кодом для электронных книг.
+*   [publish-docs.sh](https://github.com/linksplatform/Disposables/blob/master/publish-docs.sh) - скрипт, который публикует сгенерированную документацию и PDF с кодом для электронных книг в ветку `gh-pages`.
+*   [push-nuget.bat](https://github.com/linksplatform/Disposables/blob/master/push-nuget.bat) - Windows-скрипт для публикации текущей версии пакета NuGet.

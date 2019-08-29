@@ -91,23 +91,25 @@ namespace Examples
 }
 ```
 
-## [Documentation](https://linksplatform.github.io/Disposables/)
-* Interface [IDisposable](https://linksplatform.github.io/Disposables/api/Platform.Disposables.IDisposable.html).
-* Abstract class [DisposableBase](https://linksplatform.github.io/Disposables/api/Platform.Disposables.DisposableBase.html).
-* Class [Disposable](https://linksplatform.github.io/Disposables/api/Platform.Disposables.Disposable.html).
+## [Documentation](https://linksplatform.github.io/Disposables)
+*   Interface [IDisposable](https://linksplatform.github.io/Disposables/api/Platform.Disposables.IDisposable.html).
+*   Abstract class [DisposableBase](https://linksplatform.github.io/Disposables/api/Platform.Disposables.DisposableBase.html).
+*   Class [Disposable](https://linksplatform.github.io/Disposables/api/Platform.Disposables.Disposable.html).
+*   Class [Disposable\<T\>](https://linksplatform.github.io/Disposables/api/Platform.Disposables.Disposable-1.html).
 
 [PDF file](https://linksplatform.github.io/Disposables/Platform.Disposables.pdf) with code for e-readers.
 
 ## Depend on
-* [Platform.Exceptions](https://github.com/linksplatform/Exceptions)
+*   [Platform.Exceptions](https://github.com/linksplatform/Exceptions)
+
+## Dependent libraries
+*   [Platform.Collections](https://github.com/linksplatform/Collections)
 
 ## Mystery files
-* `.travis.yml` - Travis CI build configuration.
-* `docfx.json` and `toc.yml` - DocFX build configuration.
-* `fvextra.sty` - package required for LaTeX document generation.
-* `fmt.sh` - script for formating `tex` file for generating PDF from it.
-* `fmt.py` - script for formating single `.cs` file as a part of `tex` file.
-* `Makefile` - PDF build configuration.
-* `generate-pdf.sh` - script that generates PDF with code for e-readers.
-* `publish-docs.sh` - script that publishes generated documentation and PDF with code for e-readers to `gh-pages` branch.
-* `push-nuget.bat` - Windows script for publishing current version of NuGet package.
+*   [.travis.yml](https://github.com/linksplatform/Disposables/blob/master/.travis.yml) - Travis CI build configuration.
+*   [docfx.json](https://github.com/linksplatform/Disposables/blob/master/docfx.json) and [toc.yml](https://github.com/linksplatform/Disposables/blob/master/toc.yml) - DocFX build configuration.
+*   [format-document.sh](https://github.com/linksplatform/Disposables/blob/master/format-document.sh) - script for formating `tex` file for generating PDF from it.
+*   [format-csharp-files.py](https://github.com/linksplatform/Disposables/blob/master/format-csharp-files.py) - script for formating `.cs` files as a part of `tex` file.
+*   [generate-pdf.sh](https://github.com/linksplatform/Disposables/blob/master/generate-pdf.sh) - script that generates PDF with code for e-readers.
+*   [publish-docs.sh](https://github.com/linksplatform/Disposables/blob/master/publish-docs.sh) - script that publishes generated documentation and PDF with code for e-readers to `gh-pages` branch.
+*   [push-nuget.bat](https://github.com/linksplatform/Disposables/blob/master/push-nuget.bat) - Windows script for publishing current version of NuGet package.
