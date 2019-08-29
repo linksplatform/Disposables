@@ -43,7 +43,8 @@ namespace Platform.Disposables.Tests
         {
             const string currentProjectName = "Platform.Disposables.Tests";
             const string disposalOrderTestProjectName = "Platform.Disposables.Tests.DisposalOrderTest";
-            var pathParts = Environment.CurrentDirectory.Split(Path.DirectorySeparatorChar);
+            var currentDirectory = Environment.CurrentDirectory;
+            var pathParts = currentDirectory.Split(Path.DirectorySeparatorChar);
             var newPathParts = new List<string>();
             for (var i = 0; i < pathParts.Length; i++)
             {
@@ -59,7 +60,7 @@ namespace Platform.Disposables.Tests
             }
             pathParts = newPathParts.ToArray();
             var path = Path.Combine(Path.Combine(pathParts), $"{disposalOrderTestProjectName}.csproj");
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            if (Path.IsPathRooted(currentDirectory) && !Path.IsPathFullyQualified(currentDirectory))
             {
                 path = $"{Path.PathSeparator}{path}";
             }
