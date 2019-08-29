@@ -22,8 +22,8 @@ namespace Platform.Disposables.Tests.DisposalOrderTest
             var waitForCancellation = bool.Parse(args[1]);
             using (var consoleCancellationHandler = new ConsoleCancellationHandler())
             {
-                var disposable1 = new Disposable(() => { File.AppendAllText(logPath, "1"); });
-                var disposable2 = new Disposable(() => { File.AppendAllText(logPath, "2"); });
+                var disposable1 = new Disposable(() => { File.AppendAllText(logPath, "1"); }); //-V3114
+                var disposable2 = new Disposable(() => { File.AppendAllText(logPath, "2"); }); //-V3114
                 Console.WriteLine(disposable1.IsDisposed && disposable2.IsDisposed); // Ensure objects are not optimized away
                 if (waitForCancellation)
                 {
