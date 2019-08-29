@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Threading;
 using Xunit;
 
@@ -60,6 +59,9 @@ namespace Platform.Disposables.Tests
             }
             pathParts = newPathParts.ToArray();
             var path = Path.Combine(Path.Combine(pathParts), $"{disposalOrderTestProjectName}.csproj");
+            Console.WriteLine(currentDirectory);
+            Console.WriteLine(Path.IsPathRooted(currentDirectory));
+            Console.WriteLine(Path.IsPathFullyQualified(currentDirectory));
             if (Path.IsPathRooted(currentDirectory) && !Path.IsPathFullyQualified(currentDirectory))
             {
                 path = $"{Path.PathSeparator}{path}";

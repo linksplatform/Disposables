@@ -24,7 +24,7 @@ namespace Platform.Disposables.Tests.DisposalOrderTest
             {
                 var disposable1 = new Disposable(() => { File.AppendAllText(logPath, "1"); });
                 var disposable2 = new Disposable(() => { File.AppendAllText(logPath, "2"); });
-                Console.WriteLine(disposable1.IsDisposed && disposable2.IsDisposed); // ensure objects are not optimized away
+                Console.WriteLine(disposable1.IsDisposed && disposable2.IsDisposed); // Ensure objects are not optimized away
                 if (waitForCancellation)
                 {
                     consoleCancellationHandler.Wait();
