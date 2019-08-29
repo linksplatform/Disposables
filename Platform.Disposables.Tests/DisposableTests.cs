@@ -12,7 +12,7 @@ namespace Platform.Disposables.Tests
         [Fact]
         public static void DisposalOrderTest()
         {
-            string path = GetDisposalObjectTestProjectFilePath();
+            var path = GetDisposalObjectTestProjectFilePath();
             var logPath = Path.GetTempFileName();
             using (var process = Process.Start("dotnet", $"run -p \"{path}\" \"{logPath}\" false"))
             {
@@ -26,7 +26,7 @@ namespace Platform.Disposables.Tests
         [Fact]
         public static void DisposalAtProcessKillTest()
         {
-            string path = GetDisposalObjectTestProjectFilePath();
+            var path = GetDisposalObjectTestProjectFilePath();
             var logPath = Path.GetTempFileName();
             using (var process = Process.Start("dotnet", $"run -p \"{path}\" \"{logPath}\" true"))
             {
@@ -34,14 +34,14 @@ namespace Platform.Disposables.Tests
                 process.Kill();
             }
             var result = File.ReadAllText(logPath);
-            Assert.Equal("", result); // Currently process termination will not release resources
+            Assert.Equal("", result); // Currently, process termination will not release resources
             File.Delete(logPath);
         }
 
         private static string GetDisposalObjectTestProjectFilePath()
         {
-            const string currentProjectName = "Platform.Disposables.Tests";
-            const string disposalOrderTestProjectName = "Platform.Disposables.Tests.DisposalOrderTest";
+            const string currentProjectName = nameof(Platform) + "." + nameof(Disposables) + "." + nameof(Tests);
+            const string disposalOrderTestProjectName = currentProjectName + "." + nameof(DisposalOrderTest);
             var currentDirectory = Environment.CurrentDirectory;
             var pathParts = currentDirectory.Split(Path.DirectorySeparatorChar);
             var newPathParts = new List<string>();
