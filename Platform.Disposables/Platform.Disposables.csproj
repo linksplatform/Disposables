@@ -4,13 +4,13 @@
     <Description>LinksPlatform's Platform.Disposables Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.Disposables</AssemblyTitle>
-    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionPrefix>0.1.1</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFrameworks Condition="'$(OS)' == 'Windows_NT'">netstandard2.0;net47</TargetFrameworks>
     <TargetFramework Condition="'$(OS)' != 'Windows_NT'">netcoreapp2.0</TargetFramework>
     <AssemblyName>Platform.Disposables</AssemblyName>
     <PackageId>Platform.Disposables</PackageId>
-    <PackageTags>Disposable;DisposableBase;Disposable;Disposal;IDisposable</PackageTags>
+    <PackageTags>LinksPlatform;Disposables;DisposableBase;Disposable;Disposal;IDisposable;EnsureExtensions;GenericObjectExtensions;IDisposableExtensions</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/18469f4d033ee9a5b7b84caab9c585acab2ac519/doc/Avatar-rainbow-icon-64x64.png</PackageIconUrl>
     <PackageProjectUrl>https://linksplatform.github.io/Disposables</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -22,16 +22,14 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageReleaseNotes>Platform.Exceptions dependency updated from 0.1.0 to 0.1.1.
-DisposedDelegate renamed to Disposal and moved to separate file.
-Added additional implicit conversions for Disposable classes.
-Added more constructor overloads.
-Disposable.TryDispose renamed to Disposable.TryDisposeAndResetToDefault.
-Added GenericObjectExtensions and DisposableBaseExtensions.
-Abstract method DisposableBase.DisposeCore renamed to Dispose.
-Corrected disposal logic for Disposable containers.
-Disposable containers fields Object and AuxiliaryObject are now public properties.
-Added comments for classes.
+    <PackageReleaseNotes>Platform.Exceptions dependency updated from 0.1.1 to 0.2.0.
+Added support for net47 (.NET Framework 4.7).
+DisposableBaseExtensions renamed to IDisposableExtensions. IDisposableExtensions.DisposeIfNotDisposed method is now uses IDisposable instead of DisposableBase for argument type.
+Using AppDomain.ProcessExit event instead of Process.Exited (it will never be raised inside the process).
+It is now tested that disposal is executed in the right order.
+XML documentation file generation turned on.
+Travis CI connected.
+Added tests.
 Refactoring, issues fix.</PackageReleaseNotes>
   </PropertyGroup>
 
