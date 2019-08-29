@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Reflection;
 using Platform.IO;
 
 #pragma warning disable IDE0067 // Dispose objects before losing scope
@@ -13,11 +12,11 @@ namespace Platform.Disposables.Tests.DisposalOrderTest
         {
             if (args.Length == 0)
             {
-                args = new string[] { "the.log", "false" };
+                args = new[] { "the.log", "false" };
             }
             if (args.Length == 1)
             {
-                args = new string[] { args[0], "false" };
+                args = new[] { args[0], "false" };
             }
             var logPath = args[0];
             var waitForCancellation = bool.Parse(args[1]);
