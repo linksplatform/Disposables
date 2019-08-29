@@ -1,6 +1,4 @@
-﻿#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
-namespace Platform.Disposables
+﻿namespace Platform.Disposables
 {
     /// <summary>
     /// <para>Provides a set of extension methods for <see cref="IDisposable"/> objects.</para>

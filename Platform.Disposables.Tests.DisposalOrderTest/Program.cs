@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 using Platform.IO;
 
 #pragma warning disable IDE0067 // Dispose objects before losing scope
