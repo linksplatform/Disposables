@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Disposables (english version) | LinksPlatform's Platform.Disposables Library </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Disposables (english version) | LinksPlatform's Platform.Disposables Library ">
+    <meta name="generator" content="docfx 2.46.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p><a href="https://travis-ci.com/linksplatform/Disposables"><img src="https://travis-ci.com/linksplatform/Disposables.svg?branch=master" alt="Build Status"></a>
+<a href="https://app.codacy.com/app/drakonard/Disposables?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=linksplatform/Disposables&amp;utm_campaign=Badge_Grade_Dashboard"><img src="https://api.codacy.com/project/badge/Grade/3fdafa7bb9334ea4ac4ce242039d278a" alt="Codacy Badge"></a>
+<a href="https://www.codefactor.io/repository/github/linksplatform/disposables"><img src="https://www.codefactor.io/repository/github/linksplatform/disposables/badge" alt="CodeFactor"></a></p>
+<h1 id="disposables-english-version"><a href="https://github.com/linksplatform/Disposables">Disposables</a> (<a href="README.html">english version</a>)</h1>
+<p>Эта библиотека помогает сделать объекты высвобождаемыми быстрым, коротким, простым и безопасным способом.</p>
+<p>Абстрактный класс <code>Platform.Disposables.DisposableBase</code> пытается удалить объект, даже если метод <code>Dispose</code> нигде не вызывался пользователем, любо при вызове деструктора экземпляра, либо при возникновении события <code>OnProcessExit</code>, в зависимости от того, что произойдет раньше. И позаботится о том, чтобы логика удаления по умолчанию выполнялась только один раз, но, если она вам действительно нужна, вы можете разрешить несколько вызовов и попыток удаления, переопределив соответствующие свойства.</p>
+<p>Интерфейс <code>Platform.Disposables.IDisposable</code> расширяет <code>System.IDisposable</code> добавляя свойство <code>IsDisposed</code> и метод <code>Destruct</code>. Метод <code>Destruct</code> предназначен для того, чтобы не генерировать исключения, что делает его безопасным для использования в деструкторах классов. Все игнорируемые исключения доступны в <code>Platform.Exceptions.IgnoredExceptions</code>, если вам нужно их отладить.</p>
+<p>Пространство имён: <a href="https://linksplatform.github.io/Disposables/api/Platform.Disposables.html">Platform.Disposables</a></p>
+<p>Ответвление от: <a href="https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables">Konard/LinksPlatform/Platform/Platform.Helpers/Disposables</a></p>
+<p>Пакет в NuGet: <a href="https://www.nuget.org/packages/Platform.Disposables">Platform.Disposables</a></p>
+<h2 id="примеры">Примеры</h2>
+<p>Если вы можете использовать наследование в вашем классе. Например, если у вас нет другого наследуемого базового класса.</p>
+<pre><code class="lang-C#">using Platform.Disposables;
+
+namespace Examples
+{
+    public class DisposableBaseUsageExample : DisposableBase
+    {
+        protected override void Dispose(bool manual, bool wasDisposed)
+        {
+            // Логика высвобождения
+        }
+    }
+}
+</code></pre>
+<p>Если вы не можете использовать наследование в вашем классе. Например, если у вас есть другой базовый класс от которого унаследован ваш класс.</p>
+<pre><code class="lang-C#">using Platform.Disposables;
+
+namespace Examples
+{
+    public class DisposableUsageExample : System.IDisposable
+    {
+        private readonly Disposable _disposable;
+
+        public DisposableUsageExample() =&gt; _disposable = new Disposable(Disposed);
+
+        public void Dispose() =&gt; _disposable.Dispose();
+
+        ~DisposableUsageExample() =&gt; _disposable.Destruct();
+
+        private void Disposed(bool manual, bool wasDisposed)
+        {
+            // Логика высвобождения
+        }
+    }
+}
+</code></pre>
+<p>Если у вас нет доступа к внутренней структуре класса объекта. Вы можете использовать высвобождаемый контейнер для вашего объекта. Контейнер может быть преобразован обратно в переданный объект в любое время.</p>
+<pre><code class="lang-C#">using Platform.Disposables;
+
+namespace Examples
+{
+    public class Examples
+    {
+        public static void UseAndDispose()
+        {
+            var array = new int[] { 1, 2, 3 };
+            Disposable&lt;int[]&gt; disposableArray = (array, () =&gt; array = null);
+            WorkWithObjectAndDispose(disposableArray);
+            // Здесь array == null
+        }
+
+        private static void WorkWithObjectAndDispose(Disposable&lt;int[]&gt; disposableArray)
+        {
+            using (disposableArray)
+            {
+                int[] array = disposableArray;
+
+                // Используйте ваш объект здесь
+
+            } // Здесь вызывается () =&gt; array = null
+        }
+    }
+}
+</code></pre>
+<h2 id="документация"><a href="https://linksplatform.github.io/Disposables">Документация</a></h2>
+<ul>
+<li>Интерфейс <a href="https://linksplatform.github.io/Disposables/api/Platform.Disposables.IDisposable.html">IDisposable</a>.</li>
+<li>Абстрактный класс <a href="https://linksplatform.github.io/Disposables/api/Platform.Disposables.DisposableBase.html">DisposableBase</a>.</li>
+<li>Класс <a href="https://linksplatform.github.io/Disposables/api/Platform.Disposables.Disposable.html">Disposable</a>.</li>
+<li>Класс <a href="https://linksplatform.github.io/Disposables/api/Platform.Disposables.Disposable-1.html">Disposable&lt;T&gt;</a>.</li>
+</ul>
+<p><a href="https://linksplatform.github.io/Disposables/Platform.Disposables.pdf">PDF файл</a> с кодом для электронных книг.</p>
+<h2 id="зависит-от">Зависит от</h2>
+<ul>
+<li><a href="https://github.com/linksplatform/Exceptions">Platform.Exceptions</a></li>
+</ul>
+<h2 id="зависимые-библиотеки">Зависимые библиотеки</h2>
+<ul>
+<li><a href="https://github.com/linksplatform/Collections">Platform.Collections</a></li>
+</ul>
+<h2 id="загадочные-файлы">Загадочные файлы</h2>
+<ul>
+<li><a href="https://github.com/linksplatform/Disposables/blob/master/.travis.yml">.travis.yml</a> - конфигурация сборки Travis CI.</li>
+<li><a href="https://github.com/linksplatform/Disposables/blob/master/docfx.json">docfx.json</a> и <a href="https://github.com/linksplatform/Disposables/blob/master/toc.yml">toc.yml</a> - конфигурация сборки DocFX.</li>
+<li><a href="https://github.com/linksplatform/Disposables/blob/master/format-document.sh">format-document.sh</a> - скрипт для форматирования <code>tex</code> файла для генерации PDF из него.</li>
+<li><a href="https://github.com/linksplatform/Disposables/blob/master/format-csharp-files.py">format-csharp-files.py</a> - скрипт для форматирования файлов <code>.cs</code> как части файла <code>tex</code>.</li>
+<li><a href="https://github.com/linksplatform/Disposables/blob/master/generate-pdf.sh">generate-pdf.sh</a> - скрипт, который генерирует PDF с кодом для электронных книг.</li>
+<li><a href="https://github.com/linksplatform/Disposables/blob/master/publish-docs.sh">publish-docs.sh</a> - скрипт, который публикует сгенерированную документацию и PDF с кодом для электронных книг в ветку <code>gh-pages</code>.</li>
+<li><a href="https://github.com/linksplatform/Disposables/blob/master/push-nuget.bat">push-nuget.bat</a> - Windows-скрипт для публикации текущей версии пакета NuGet.</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/linksplatform/Disposables/blob/master/README.ru.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
