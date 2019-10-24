@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable-1.html",
-          "hash": "lPjEFmr3TtNe2bSvUF03Dw=="
+          "hash": "lrHLNz0cyjdzxpK+TKYoZA=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable-2.html",
-          "hash": "614pAD5yiKKkja4FZDS7wQ=="
+          "hash": "LWtwnsUcq2/8XKVKjMu/DQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable.html",
-          "hash": "oJW0AarQt/auRh86+vTucw=="
+          "hash": "mtXh4ZvcUBfIm0Gk7mEnFA=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.DisposableBase.html",
-          "hash": "oJ7ZH8YDvCqYhwQNEYHWaA=="
+          "hash": "o++5BRV1lWx3KCE8DbEtXQ=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposal.html",
-          "hash": "tPWXn1Vw4vdCKNkiGW3ceA=="
+          "hash": "ypGSQizvhqLOvEP0xHLUjg=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.EnsureExtensions.html",
-          "hash": "BafrtTRkyTbAVpzyTf92Gg=="
+          "hash": "YFpFIGFFa19M+CI+GV18zA=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.GenericObjectExtensions.html",
-          "hash": "/ji13iAZb3+XDKGT9BysWA=="
+          "hash": "7w0ok/1YA2MEgeb1fuiB1w=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.IDisposable.html",
-          "hash": "r1V8W3wIGCyKWCnGVhC1jQ=="
+          "hash": "gi9zzKueko1d7MYMDfReqQ=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.IDisposableExtensions.html",
-          "hash": "VNDsq3+CNdRds9O2XFDRfg=="
+          "hash": "FVusy2Mlyxpzdx6e1WoHCw=="
         }
       },
       "is_incremental": false,
@@ -150,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Tests.DisposableTests.html",
-          "hash": "HQ5cP7dLXmmkyLOKWSdtyQ=="
+          "hash": "wX6SmtRGreoEHUlkUgcpYw=="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Tests.SystemTests.html",
-          "hash": "ACub2pvAB6VCZ4qgZ7qZoQ=="
+          "hash": "qJ2RN/ypulh0qPtOJLLOJA=="
         }
       },
       "is_incremental": false,
@@ -186,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.html",
-          "hash": "r/nFvsMlhqKPjesLrtbKDQ=="
+          "hash": "JeRRdWKWxEbd6pao+p9BKw=="
         }
       },
       "is_incremental": false,
