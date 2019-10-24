@@ -475,6 +475,12 @@ references:
   commentId: M:Platform.Disposables.DisposableBase.Dispose
   fullName: Platform.Disposables.DisposableBase.Dispose()
   nameWithType: DisposableBase.Dispose()
+- uid: Platform.Disposables.DisposableBase.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_Dispose_System_Boolean_
+  commentId: M:Platform.Disposables.DisposableBase.Dispose(System.Boolean)
+  fullName: Platform.Disposables.DisposableBase.Dispose(System.Boolean)
+  nameWithType: DisposableBase.Dispose(Boolean)
 - uid: Platform.Disposables.DisposableBase.Dispose(System.Boolean,System.Boolean)
   name: Dispose(Boolean, Boolean)
   href: api/Platform.Disposables.DisposableBase.html#Platform_Disposables_DisposableBase_Dispose_System_Boolean_System_Boolean_
