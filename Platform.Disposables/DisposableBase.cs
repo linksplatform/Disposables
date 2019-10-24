@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using Platform.Exceptions;
 
@@ -20,32 +21,50 @@ namespace Platform.Disposables
         /// <para>Gets a value indicating whether the object was disposed.</para>
         /// <para>Возвращает значение определяющее был ли высвобожден объект.</para>
         /// </summary>
-        public bool IsDisposed => _disposed > 0;
+        public bool IsDisposed
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get => _disposed > 0;
+        }
 
         /// <summary>
         /// <para>Gets the name of an object or a unique string describing this object.</para>
         /// <para>Возвращает имя объекта или уникальную строку описывающую этот объект.</para>
         /// </summary>
-        protected virtual string ObjectName => GetType().Name;
+        protected virtual string ObjectName
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get => GetType().Name;
+        }
 
         /// <summary>
         /// <para>Gets a value indicating whether multiple attempts to dispose this object are allowed.</para>
         /// <para>Возвращает значение определяющие разрешено ли выполнять несколько попыток высвободить этот объект.</para>
         /// </summary>
-        protected virtual bool AllowMultipleDisposeAttempts => false;
+        protected virtual bool AllowMultipleDisposeAttempts
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get => false;
+        }
 
         /// <summary>
         /// <para>Gets a value indicating whether it is allowed to call this object disposal multiple times.</para>
         /// <para>Возвращает значение определяющие разрешено ли несколько раз вызывать высвобождение этого объекта.</para>
         /// </summary>
-        protected virtual bool AllowMultipleDisposeCalls => false;
+        protected virtual bool AllowMultipleDisposeCalls
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get => false;
+        }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         static DisposableBase() => _currentDomain.ProcessExit += OnProcessExit;
 
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="DisposableBase"/> class.</para>
         /// <para>Инициализирует новый экземпляр класса <see cref="DisposableBase"/>.</para>
         /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected DisposableBase()
         {
             _disposed = 0;
@@ -56,6 +75,7 @@ namespace Platform.Disposables
         /// <para>Performs any necessary final clean-up when a class instance is being collected by the garbage collector.</para>
         /// <para>Выполняет любую необходимую окончательную очистку, когда сборщик мусора собирает экземпляр класса.</para>
         /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         ~DisposableBase() => Destruct();
 
         /// <summary>
@@ -70,12 +90,14 @@ namespace Platform.Disposables
         /// <para>A value that determines whether the object was released before calling this method.</para>
         /// <para>Значение определяющие был ли высвобожден объект до вызова этого метода.</para>
         /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected abstract void Dispose(bool manual, bool wasDisposed);
 
         /// <summary>
         /// <para>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</para>
         /// <para>Выполняет определенные пользователем задачи, связанные с освобождением, высвобождением или сбросом неуправляемых ресурсов.</para>
         /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Dispose()
         {
             Dispose(true);
@@ -90,6 +112,7 @@ namespace Platform.Disposables
         /// <para>Should be called only from classes destructors, or in case exceptions should be not thrown.</para>
         /// <para>Должен вызываться только из деструкторов классов, или в случае, если исключения выбрасывать нельзя.</para>
         /// </remarks>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Destruct()
         {
             try

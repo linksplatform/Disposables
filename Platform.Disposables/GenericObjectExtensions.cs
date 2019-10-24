@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using Platform.Exceptions;
 
 namespace Platform.Disposables
@@ -43,6 +44,7 @@ namespace Platform.Disposables
         /// </summary>
         /// <typeparam name="T"><para>Type of the specified object.</para><para>Тип указанного объекта.</para></typeparam>
         /// <param name="object"><para>The object to dispose.</para><para>Объект, который необходимо высвободить.</para></param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DisposeIfPossible<T>(this T @object) => TryDispose(@object);
     }
 }

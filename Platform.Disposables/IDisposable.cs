@@ -1,4 +1,6 @@
-﻿namespace Platform.Disposables
+﻿using System.Runtime.CompilerServices;
+
+namespace Platform.Disposables
 {
     /// <summary>
     /// <para>Представляет расширенный интерфейс <see cref="System.IDisposable"/>.</para>
@@ -10,7 +12,11 @@
         /// <para>Gets a value indicating whether the object was disposed.</para>
         /// <para>Возвращает значение определяющее был ли высвобожден объект.</para>
         /// </summary>
-        bool IsDisposed { get; }
+        bool IsDisposed
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get;
+        }
 
         /// <summary>
         /// <para>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources without throwing any exceptions.</para>
@@ -20,6 +26,7 @@
         /// <para>Should be called only from classes destructors, or in case exceptions should be not thrown.</para>
         /// <para>Должен вызываться только из деструкторов классов, или в случае, если исключения выбрасывать нельзя.</para>
         /// </remarks>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         void Destruct();
     }
 }

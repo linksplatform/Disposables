@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace Platform.Disposables
 {
@@ -21,6 +22,7 @@ namespace Platform.Disposables
         /// <para>Инициализирует новый экземпляр объекта <see cref="Disposable"/>.</para>
         /// </summary>
         /// <param name="action"><para>The <see cref="Action"/> delegate.</para><para>Делегат <see cref="Action"/>.</para></param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Disposable(Action action)
         {
             OnDispose = (manual, wasDisposed) =>
@@ -37,12 +39,14 @@ namespace Platform.Disposables
         /// <para>Инициализирует новый экземпляр объекта <see cref="Disposable"/>.</para>
         /// </summary>
         /// <param name="disposal"><para>The <see cref="Disposal"/> delegate.</para><para>Делегат <see cref="Disposal"/>.</para></param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Disposable(Disposal disposal) => OnDispose = disposal;
 
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="Disposable"/> object.</para>
         /// <para>Инициализирует новый экземпляр объекта <see cref="Disposable"/>.</para>
         /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Disposable() => OnDispose = _emptyDelegate;
 
         /// <summary>
@@ -50,6 +54,7 @@ namespace Platform.Disposables
         /// <para>Создает новый объект <see cref="Disposable"/>, инициализированную с помощью указанного делегата <see cref="Action"/>.</para>
         /// </summary>
         /// <param name="action"><para>The <see cref="Action"/> delegate.</para><para>Делегат <see cref="Action"/>.</para></param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static implicit operator Disposable(Action action) => new Disposable(action);
 
         /// <summary>
@@ -57,6 +62,7 @@ namespace Platform.Disposables
         /// <para>Создает новый объект <see cref="Disposable"/>, инициализированную с помощью указанного делегата <see cref="Disposal"/>.</para>
         /// </summary>
         /// <param name="disposal"><para>The <see cref="Disposal"/> delegate.</para><para>Делегат <see cref="Disposal"/>.</para></param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static implicit operator Disposable(Disposal disposal) => new Disposable(disposal);
 
         /// <summary>
@@ -71,6 +77,7 @@ namespace Platform.Disposables
         /// <para>A value that determines whether the object was released before calling this method.</para>
         /// <para>Значение определяющие был ли высвобожден объект до вызова этого метода.</para>
         /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected override void Dispose(bool manual, bool wasDisposed) => RaiseOnDisposeEvent(manual, wasDisposed);
 
         /// <summary>
@@ -85,6 +92,7 @@ namespace Platform.Disposables
         /// <para>A value that determines whether the object was released before calling this method.</para>
         /// <para>Значение определяющие был ли высвобожден объект до вызова этого метода.</para>
         /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected void RaiseOnDisposeEvent(bool manual, bool wasDisposed) => OnDispose(manual, wasDisposed);
 
         /// <summary>
@@ -94,6 +102,7 @@ namespace Platform.Disposables
         /// <typeparam name="T"><para>Type of the specified object.</para><para>Тип указанного объекта.</para></typeparam>
         /// <param name="object"><para>The object to dispose.</para><para>Объект, который необходимо высвободить.</para></param>
         /// <returns><para>A value that determines whether the attempt to release the specified object was successful.</para><para>Значение, определяющие удачно ли была выполнена попытка высвободить указанный объект.</para></returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool TryDisposeAndResetToDefault<T>(ref T @object)
         {
             var result = @object.TryDispose();
