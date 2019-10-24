@@ -4,12 +4,12 @@
     <Description>LinksPlatform's Platform.Disposables Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.Disposables</AssemblyTitle>
-    <VersionPrefix>0.1.1</VersionPrefix>
+    <VersionPrefix>0.1.2</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFrameworks>net471;netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>Platform.Disposables</AssemblyName>
     <PackageId>Platform.Disposables</PackageId>
-    <PackageTags>LinksPlatform;Disposables;DisposableBase;Disposable;Disposal;IDisposable;EnsureExtensions;GenericObjectExtensions;IDisposableExtensions</PackageTags>
+    <PackageTags>LinksPlatform;Disposables;Disposable;DisposableBase;Disposal;EnsureExtensions;GenericObjectExtensions;IDisposable;IDisposableExtensions</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/18469f4d033ee9a5b7b84caab9c585acab2ac519/doc/Avatar-rainbow-icon-64x64.png</PackageIconUrl>
     <PackageProjectUrl>https://linksplatform.github.io/Disposables</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -24,15 +24,15 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Platform.Exceptions dependency updated from 0.1.1 to 0.2.0.
-Added support for net47 (.NET Framework 4.7).
-DisposableBaseExtensions renamed to IDisposableExtensions. IDisposableExtensions.DisposeIfNotDisposed method is now uses IDisposable instead of DisposableBase for argument type.
-Using AppDomain.ProcessExit event instead of Process.Exited (it will never be raised inside the process).
-It is now tested that disposal is executed in the right order.
-XML documentation file generation turned on.
-Travis CI connected.
-Added tests.
-Refactoring, issues fix.</PackageReleaseNotes>
+    <PackageReleaseNotes>The lowest supported version of .NET Framework is now 4.7.1.
+Added support for .NET Standard 2.1 for the library and the tests.
+Platform.Exceptions dependency updated from 0.2.0 to 0.2.1.
+Platform.IO dependency updated from 0.0.6 to 0.1.1.
+Microsoft.NET.Test.Sdk dependency updated from 16.2.0 to 16.3.0.
+Source link enabled.
+Travis CI disabled.
+GitHub Actions enabled.
+Refactoring, performance optimizations, issues fix.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
