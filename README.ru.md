@@ -104,12 +104,3 @@ namespace Examples
 
 ## Зависимые библиотеки
 *   [Platform.Collections](https://github.com/linksplatform/Collections)
-
-## Загадочные файлы
-*   [.travis.yml](https://github.com/linksplatform/Disposables/blob/master/.travis.yml) - конфигурация сборки Travis CI.
-*   [docfx.json](https://github.com/linksplatform/Disposables/blob/master/docfx.json) и [toc.yml](https://github.com/linksplatform/Disposables/blob/master/toc.yml) - конфигурация сборки DocFX.
-*   [format-document.sh](https://github.com/linksplatform/Disposables/blob/master/format-document.sh) - скрипт для форматирования `tex` файла для генерации PDF из него.
-*   [format-csharp-files.py](https://github.com/linksplatform/Disposables/blob/master/format-csharp-files.py) - скрипт для форматирования файлов `.cs` как части файла `tex`.
-*   [generate-pdf.sh](https://github.com/linksplatform/Disposables/blob/master/generate-pdf.sh) - скрипт, который генерирует PDF с кодом для электронных книг.
-*   [publish-docs.sh](https://github.com/linksplatform/Disposables/blob/master/publish-docs.sh) - скрипт, который публикует сгенерированную документацию и PDF с кодом для электронных книг в ветку `gh-pages`.
-*   [push-nuget.bat](https://github.com/linksplatform/Disposables/blob/master/push-nuget.bat) - Windows-скрипт для публикации текущей версии пакета NuGet.
