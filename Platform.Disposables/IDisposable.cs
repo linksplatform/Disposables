@@ -1,8 +1,8 @@
 ﻿namespace Platform.Disposables
 {
     /// <summary>
-    /// <para>Представляет расширенный интерфейс IDisposable.</para>
-    /// <para>Represents an extended IDisposable interface.</para>
+    /// <para>Представляет расширенный интерфейс <see cref="System.IDisposable"/>.</para>
+    /// <para>Represents an extended <see cref="System.IDisposable"/> interface.</para>
     /// </summary>
     public interface IDisposable : System.IDisposable
     {
