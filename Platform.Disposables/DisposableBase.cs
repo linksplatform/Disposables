@@ -105,7 +105,15 @@ namespace Platform.Disposables
             }
         }
 
-        private void Dispose(bool manual)
+        /// <summary>
+        /// <para>Disposes unmanaged resources.</para>
+        /// <para>Высвобождает неуправляемые ресурсы.</para>
+        /// </summary>
+        /// <param name="manual">
+        /// <para>A value that determines whether the disposal was triggered manually (by the developer's code) or was executed automatically without an explicit indication from the developer.</para>
+        /// <para>Значение определяющие было ли высвобождение вызвано вручную (кодом разработчика) или же выполнилось автоматически без явного указания со стороны разработчика.</para>
+        /// </param>
+        protected virtual void Dispose(bool manual)
         {
             var originalDisposedValue = Interlocked.CompareExchange(ref _disposed, 1, 0);
             var wasDisposed = originalDisposedValue > 0;
