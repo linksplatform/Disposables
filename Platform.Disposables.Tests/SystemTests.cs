@@ -11,10 +11,8 @@ namespace Platform.Disposables.Tests
         [Fact]
         public static void UsingSupportsNullTest()
         {
-            using (var disposable = null as IDisposable)
-            {
-                Assert.True(disposable == null);
-            }
+            using var disposable = null as IDisposable;
+            Assert.True(disposable == null);
         }
     }
 }

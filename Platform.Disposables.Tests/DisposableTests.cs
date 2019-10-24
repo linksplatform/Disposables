@@ -13,19 +13,9 @@ namespace Platform.Disposables.Tests
         [Fact]
         public static void DisposalOrderTest()
         {
-            var path = GetDisposalObjectTestProjectFilePath();
             var logPath = Path.GetTempFileName();
-            var processStartInfo = new ProcessStartInfo
+            using (var process = Process.Start(CreateProcessStartInfo(logPath, waitForCancellation: false)))
             {
-                FileName = "dotnet",
-                Arguments = $"run -p \"{path}\" -f netcoreapp2.1 \"{logPath}\" false",
-                UseShellExecute = false,
-                //RedirectStandardOutput = true,
-                CreateNoWindow = true
-            };
-            using (var process = Process.Start(processStartInfo))
-            {
-                //string line = process.StandardOutput.ReadToEnd();
                 process.WaitForExit();
             }
             var result = File.ReadAllText(logPath);
@@ -36,25 +26,27 @@ namespace Platform.Disposables.Tests
         [Fact]
         public static void DisposalAtProcessKillTest()
         {
-            var path = GetDisposalObjectTestProjectFilePath();
             var logPath = Path.GetTempFileName();
-            var processStartInfo = new ProcessStartInfo
+            using (var process = Process.Start(CreateProcessStartInfo(logPath, waitForCancellation: true)))
             {
-                FileName = "dotnet",
-                Arguments = $"run -p \"{path}\" -f netcoreapp2.1 \"{logPath}\" true",
-                UseShellExecute = false,
-                //RedirectStandardOutput = true,
-                CreateNoWindow = true
-            };
-            using (var process = Process.Start(processStartInfo))
-            {
-                //string line = process.StandardOutput.ReadToEnd();
                 Thread.Sleep(1000);
                 process.Kill();
             }
             var result = File.ReadAllText(logPath);
             Assert.Equal("", result); // Currently, process termination will not release resources
             File.Delete(logPath);
+        }
+
+        private static ProcessStartInfo CreateProcessStartInfo(string logPath, bool waitForCancellation)
+        {
+            var projectPath = GetDisposalObjectTestProjectFilePath();
+            return new ProcessStartInfo
+            {
+                FileName = "dotnet",
+                Arguments = $"run -p \"{projectPath}\" -f netcoreapp2.1 \"{logPath}\" {waitForCancellation.ToString()}",
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
         }
 
         private static string GetDisposalObjectTestProjectFilePath()
@@ -77,7 +69,6 @@ namespace Platform.Disposables.Tests
                 }
             }
             pathParts = newPathParts.ToArray();
-
 #if NET471
             var directory = string.Join(Path.DirectorySeparatorChar.ToString(), pathParts.ToArray());
 #else
