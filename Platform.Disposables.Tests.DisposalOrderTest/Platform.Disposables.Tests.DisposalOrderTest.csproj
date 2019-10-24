@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFrameworks>net471;netcoreapp2.1;netcoreapp3.0</TargetFrameworks>
     <IsPackable>false</IsPackable>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

@@ -23,6 +23,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <LangVersion>latest</LangVersion>
     <PackageReleaseNotes>Platform.Exceptions dependency updated from 0.1.1 to 0.2.0.
 Added support for net47 (.NET Framework 4.7).
 DisposableBaseExtensions renamed to IDisposableExtensions. IDisposableExtensions.DisposeIfNotDisposed method is now uses IDisposable instead of DisposableBase for argument type.
