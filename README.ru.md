@@ -1,5 +1,6 @@
-[![Build Status](https://travis-ci.com/linksplatform/Disposables.svg?branch=master)](https://travis-ci.com/linksplatform/Disposables)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3fdafa7bb9334ea4ac4ce242039d278a)](https://app.codacy.com/app/drakonard/Disposables?utm_source=github.com&utm_medium=referral&utm_content=linksplatform/Disposables&utm_campaign=Badge_Grade_Dashboard)
+[![Версия NuGet и количество загрузок](https://buildstats.info/nuget/Platform.Disposables)](https://www.nuget.org/packages/Platform.Disposables)
+[![Actions](https://github.com/linksplatform/Disposables/workflows/CD/badge.svg)](https://github.com/linksplatform/Disposables/actions?workflow=CD)
+[![Codacy](https://api.codacy.com/project/badge/Grade/3fdafa7bb9334ea4ac4ce242039d278a)](https://app.codacy.com/app/drakonard/Disposables?utm_source=github.com&utm_medium=referral&utm_content=linksplatform/Disposables&utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/disposables/badge)](https://www.codefactor.io/repository/github/linksplatform/disposables)
 
 # [Disposables](https://github.com/linksplatform/Disposables) ([english version](README.md))
@@ -8,7 +9,7 @@
 
 Абстрактный класс `Platform.Disposables.DisposableBase` пытается удалить объект, даже если метод `Dispose` нигде не вызывался пользователем, любо при вызове деструктора экземпляра, либо при возникновении события `OnProcessExit`, в зависимости от того, что произойдет раньше. И позаботится о том, чтобы логика удаления по умолчанию выполнялась только один раз, но, если она вам действительно нужна, вы можете разрешить несколько вызовов и попыток удаления, переопределив соответствующие свойства. 
 
-Интерфейс `Platform.Disposables.IDisposable` расширяет `System.IDisposable` добавляя свойство `IsDisposed` и метод `Destruct`. Метод `Destruct` предназначен для того, чтобы не генерировать исключения, что делает его безопасным для использования в деструкторах классов. Все игнорируемые исключения доступны в `Platform.Exceptions.IgnoredExceptions`, если вам нужно их отладить.
+Интерфейс `Platform.Disposables.IDisposable` расширяет `System.IDisposable` добавляя свойство `IsDisposed` и метод `Destruct`. Метод `Destruct` предназначен для того, чтобы не генерировать исключения, что делает его безопасным для использования в деструкторах классов. Все игнорируемые исключения доступны в `Platform.Disposables.IgnoredDisposables`, если вам нужно их отладить.
 
 Пространство имён: [Platform.Disposables](https://linksplatform.github.io/Disposables/api/Platform.Disposables.html)
 
@@ -100,7 +101,7 @@ namespace Examples
 [PDF файл](https://linksplatform.github.io/Disposables/Platform.Disposables.pdf) с кодом для электронных книг.
 
 ## Зависит от
-*   [Platform.Exceptions](https://github.com/linksplatform/Exceptions)
+*   [Platform.Disposables](https://github.com/linksplatform/Disposables)
 
 ## Зависимые библиотеки
 *   [Platform.Collections](https://github.com/linksplatform/Collections)
