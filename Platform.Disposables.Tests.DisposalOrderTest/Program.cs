@@ -20,7 +20,7 @@ namespace Platform.Disposables.Tests.DisposalOrderTest
             }
             var logPath = args[0];
             var waitForCancellation = bool.Parse(args[1]);
-            using (var consoleCancellationHandler = new ConsoleCancellationHandler())
+            using (var consoleCancellationHandler = new ConsoleCancellation())
             {
                 var disposable1 = new Disposable(() => { File.AppendAllText(logPath, "1"); }); //-V3114
                 var disposable2 = new Disposable(() => { File.AppendAllText(logPath, "2"); }); //-V3114
