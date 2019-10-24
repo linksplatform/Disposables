@@ -539,41 +539,41 @@ references:
   commentId: T:Platform.Disposables.EnsureExtensions
   fullName: Platform.Disposables.EnsureExtensions
   nameWithType: EnsureExtensions
-- uid: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable)
+- uid: Platform.Disposables.EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable)
   name: NotDisposed(EnsureAlwaysExtensionRoot, IDisposable)
-  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_Platform_Disposables_IDisposable_
-  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable)
-  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, Platform.Disposables.IDisposable)
+  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_EnsureAlwaysExtensionRoot_Platform_Disposables_IDisposable_
+  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable)
+  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot, Platform.Disposables.IDisposable)
   nameWithType: EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot, IDisposable)
-- uid: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable,System.String)
+- uid: Platform.Disposables.EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable,System.String)
   name: NotDisposed(EnsureAlwaysExtensionRoot, IDisposable, String)
-  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_Platform_Disposables_IDisposable_System_String_
-  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable,System.String)
-  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, Platform.Disposables.IDisposable, System.String)
+  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_EnsureAlwaysExtensionRoot_Platform_Disposables_IDisposable_System_String_
+  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable,System.String)
+  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot, Platform.Disposables.IDisposable, System.String)
   nameWithType: EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot, IDisposable, String)
-- uid: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable,System.String,System.String)
+- uid: Platform.Disposables.EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable,System.String,System.String)
   name: NotDisposed(EnsureAlwaysExtensionRoot, IDisposable, String, String)
-  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_Platform_Exceptions_ExtensionRoots_EnsureAlwaysExtensionRoot_Platform_Disposables_IDisposable_System_String_System_String_
-  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable,System.String,System.String)
-  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot, Platform.Disposables.IDisposable, System.String, System.String)
+  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_EnsureAlwaysExtensionRoot_Platform_Disposables_IDisposable_System_String_System_String_
+  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot,Platform.Disposables.IDisposable,System.String,System.String)
+  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot, Platform.Disposables.IDisposable, System.String, System.String)
   nameWithType: EnsureExtensions.NotDisposed(EnsureAlwaysExtensionRoot, IDisposable, String, String)
-- uid: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable)
+- uid: Platform.Disposables.EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable)
   name: NotDisposed(EnsureOnDebugExtensionRoot, IDisposable)
-  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_Platform_Disposables_IDisposable_
-  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable)
-  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, Platform.Disposables.IDisposable)
+  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_EnsureOnDebugExtensionRoot_Platform_Disposables_IDisposable_
+  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable)
+  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot, Platform.Disposables.IDisposable)
   nameWithType: EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot, IDisposable)
-- uid: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable,System.String)
+- uid: Platform.Disposables.EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable,System.String)
   name: NotDisposed(EnsureOnDebugExtensionRoot, IDisposable, String)
-  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_Platform_Disposables_IDisposable_System_String_
-  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable,System.String)
-  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, Platform.Disposables.IDisposable, System.String)
+  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_EnsureOnDebugExtensionRoot_Platform_Disposables_IDisposable_System_String_
+  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable,System.String)
+  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot, Platform.Disposables.IDisposable, System.String)
   nameWithType: EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot, IDisposable, String)
-- uid: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable,System.String,System.String)
+- uid: Platform.Disposables.EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable,System.String,System.String)
   name: NotDisposed(EnsureOnDebugExtensionRoot, IDisposable, String, String)
-  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_Platform_Exceptions_ExtensionRoots_EnsureOnDebugExtensionRoot_Platform_Disposables_IDisposable_System_String_System_String_
-  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable,System.String,System.String)
-  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot, Platform.Disposables.IDisposable, System.String, System.String)
+  href: api/Platform.Disposables.EnsureExtensions.html#Platform_Disposables_EnsureExtensions_NotDisposed_EnsureOnDebugExtensionRoot_Platform_Disposables_IDisposable_System_String_System_String_
+  commentId: M:Platform.Disposables.EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot,Platform.Disposables.IDisposable,System.String,System.String)
+  fullName: Platform.Disposables.EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot, Platform.Disposables.IDisposable, System.String, System.String)
   nameWithType: EnsureExtensions.NotDisposed(EnsureOnDebugExtensionRoot, IDisposable, String, String)
 - uid: Platform.Disposables.EnsureExtensions.NotDisposed*
   name: NotDisposed
