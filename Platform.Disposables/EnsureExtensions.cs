@@ -9,8 +9,8 @@ using Platform.Exceptions.ExtensionRoots;
 namespace Platform.Disposables
 {
     /// <summary>
-    /// <para>Provides a set of extension methods for <see cref="EnsureAlwaysExtensionRoot"/> and <see cref="EnsureOnDebugExtensionRoot"/> objects.</para>
-    /// <para>Предоставляет набор методов расширения для объектов <see cref="EnsureAlwaysExtensionRoot"/> и <see cref="EnsureOnDebugExtensionRoot"/>.</para>
+    /// <para>Provides a set of extension methods for <see cref="Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot"/> and <see cref="Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot"/> objects.</para>
+    /// <para>Предоставляет набор методов расширения для объектов <see cref="Platform.Exceptions.ExtensionRoots.EnsureAlwaysExtensionRoot"/> и <see cref="Platform.Exceptions.ExtensionRoots.EnsureOnDebugExtensionRoot"/>.</para>
     /// </summary>
     public static class EnsureExtensions
     {
