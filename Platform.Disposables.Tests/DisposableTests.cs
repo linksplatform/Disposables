@@ -69,7 +69,7 @@ namespace Platform.Disposables.Tests
                 }
             }
             pathParts = newPathParts.ToArray();
-#if NET471
+#if NET472
             var directory = string.Join(Path.DirectorySeparatorChar.ToString(), pathParts.ToArray());
 #else
             var directory = Path.Combine(pathParts);
