@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable-1.html",
-          "hash": "jxaKnHRu8mF1e9r6lkHrqw=="
+          "hash": "P4Ol5YDCiLYnRBeZvcwwSA=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable-2.html",
-          "hash": "NYX5jKJT7WrBdWdr30Tqsg=="
+          "hash": "mVDM3BTZ0vDmUfxiqIyEqQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable.html",
-          "hash": "94TzMdKC4z4Ehhk1anU9lg=="
+          "hash": "i9fe9V/iVLJs5ASkZpbRmg=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.DisposableBase.html",
-          "hash": "PrmL6sxSFD5KRN7Y3f92Ew=="
+          "hash": "ZtB0b09uEhRv/Mfdq/mC2g=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposal.html",
-          "hash": "UGaEI1e7rKy7yfi/i/CENg=="
+          "hash": "l67P5V6uTMizeN97bt89pA=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.EnsureExtensions.html",
-          "hash": "TN961pnn22O3psV//00vfw=="
+          "hash": "3dHc9ufF2zE5NUpad5M+Ag=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.GenericObjectExtensions.html",
-          "hash": "XWIsLDWLw+Ns9ubBLYqvEQ=="
+          "hash": "hMhtQ+3DSKeCaOQqOr7lZw=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.IDisposable.html",
-          "hash": "kEy/MSK3G16wCIj8zixwtw=="
+          "hash": "FBCpXAwajQt5sN9JwCqXUg=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.IDisposableExtensions.html",
-          "hash": "h50KHya65HlT/vA6oge1FA=="
+          "hash": "HsryfqNqbsD6ZnC3jfZnhw=="
         }
       },
       "is_incremental": false,
@@ -195,11 +195,10 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 10,
           "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
@@ -208,10 +207,11 @@
           "total_file_count": 2,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 10,
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }
