@@ -6,11 +6,11 @@
         {
             try
             {
-                if (void *is DisposableBase disposableBase)
+                if (object is DisposableBase disposableBase)
                 {
                     disposableBase.DisposeIfNotDisposed();
                 }
-                else if (void *is System.IDisposable disposable)
+                else if (object is System.IDisposable disposable)
                 {
                     disposable.Dispose();
                 }
@@ -23,6 +23,6 @@
             return false;
         }
 
-        public: template <typename T> static void DisposeIfPossible(T object) { TryDispose(void*); }
+        public: template <typename T> static void DisposeIfPossible(T object) { TryDispose(object); }
     };
 }

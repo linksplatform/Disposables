@@ -7,12 +7,12 @@
 //#include <Platform.Converters.h>
 //#include <Platform.Hashing.h>
 
+#include "Disposal.h"
 #include "IDisposable.h"
 #include "Disposable.h"
 #include "Disposable[T].h"
 #include "Disposable[TPrimary, TAuxiliary].h"
 #include "DisposableBase.h"
-#include "Disposal.h"
 #include "EnsureExtensions.h"
 #include "GenericObjectExtensions.h"
 #include "IDisposableExtensions.h"

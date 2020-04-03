@@ -4,15 +4,15 @@
     {
         private: inline static const Disposal _emptyDelegate = (manual, wasDisposed) { return { }; }
 
-        public: event Disposal OnDispose;
+        public: Platform::Delegates::MulticastDelegate<Disposal> OnDispose;
 
-        public: Disposable(Action action)
+        public: Disposable(std::function<void()> action)
         {
             OnDispose = (manual, wasDisposed) =>
             {
                 if (!wasDisposed)
                 {
-                    this->action();
+                    action();
                 }
             };
         }
@@ -21,7 +21,7 @@
 
         public: Disposable() { OnDispose = _emptyDelegate; }
 
-        public: static implicit operator Disposable(Action action) { return Disposable(action); }
+        public: static implicit operator Disposable(std::function<void()> action) { return Disposable(action); }
 
         public: static implicit operator Disposable(Disposal disposal) { return Disposable(disposal); }
 
@@ -29,12 +29,12 @@
 
         protected: void RaiseOnDisposeEvent(bool manual, bool wasDisposed) { this->OnDispose(manual, wasDisposed); }
 
-        public: template <typename T> static bool TryDisposeAndResetToDefault(T* void*)
+        public: template <typename T> static bool TryDisposeAndResetToDefault(T* object)
         {
-            auto result = void*.TryDispose();
+            auto result = object.TryDispose();
             if (result)
             {
-                *void* = 0;
+                object = 0;
             }
             return result;
         }
