@@ -3,11 +3,11 @@
 #ifndef Platform_Disposables
 #define Platform_Disposables
 
-//#include <Platform.Exceptions.h>
 //#include <Platform.Converters.h>
 //#include <Platform.Hashing.h>
 
 #include <Platform.Delegates.h>
+#include <Platform.Exceptions.h>
 
 #include "Disposal.h"
 #include "IDisposable.h"
