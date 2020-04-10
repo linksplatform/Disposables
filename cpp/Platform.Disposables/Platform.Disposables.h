@@ -7,6 +7,8 @@
 //#include <Platform.Converters.h>
 //#include <Platform.Hashing.h>
 
+#include <Platform.Delegates.h>
+
 #include "Disposal.h"
 #include "IDisposable.h"
 #include "Disposable.h"
