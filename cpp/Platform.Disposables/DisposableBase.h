@@ -7,24 +7,24 @@
 
         private: volatile std::int32_t _disposed;
 
-        public: bool IsDisposed
+        public: bool IsDisposed()
         {
-            get => _disposed > 0;
+            return _disposed > 0;
         }
 
-        protected: virtual std::string ObjectName
+        protected: virtual std::string ObjectName()
         {
-            get => GetType().Name;
+            return typeid(this).name();
         }
 
-        protected: virtual bool AllowMultipleDisposeAttempts
+        protected: virtual bool AllowMultipleDisposeAttempts()
         {
-            get => false;
+            return false;
         }
 
-        protected: virtual bool AllowMultipleDisposeCalls
+        protected: virtual bool AllowMultipleDisposeCalls()
         {
-            get => false;
+            return false;
         }
 
         static DisposableBase() { _currentDomain.ProcessExit += OnProcessExit; }
@@ -35,7 +35,7 @@
             _disposablesWeekReferencesStack.Push(WeakReference<DisposableBase>(this, false));
         }
 
-        ~DisposableBase() { return Destruct(); }
+        ~DisposableBase() { Destruct(); }
 
         protected: virtual void Dispose(bool manual, bool wasDisposed) = 0;
 

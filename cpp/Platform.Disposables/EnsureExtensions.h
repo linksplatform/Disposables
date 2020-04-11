@@ -6,7 +6,7 @@
         {
             if (disposable.IsDisposed)
             {
-                throw ObjectDisposedException(objectName, message);
+                throw std::runtime_error(std::string("Attempt to access disposed object [").append(objectName).append("]: ").append(message).append(1, '.'));
             }
         }
 

@@ -2,10 +2,7 @@
 {
     interface IDisposable : System.IDisposable
     {
-        bool IsDisposed
-        {
-            get;
-        }
+        const bool IsDisposed;
 
         virtual void Destruct() = 0;
     }

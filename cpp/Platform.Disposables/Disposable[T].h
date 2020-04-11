@@ -3,15 +3,12 @@
     template <typename ...> class Disposable;
     template <typename T> class Disposable<T> : public Disposable
     {
-        public: T Object
-        {
-            get;
-        }
+        public: const T Object;
 
         public: Disposable(T object, std::function<void(T)> action)
         {
             Object = object;
-            OnDispose += (manual, wasDisposed) =>
+            OnDispose += [&](auto manual, auto wasDisposed)
             {
                 if (!wasDisposed)
                 {
@@ -28,7 +25,7 @@
 
         public: Disposable(std::tuple<T, Action<T>> tuple) : Disposable(std::get<1-1>(tuple), std::get<2-1>(tuple)) { }
 
-        public: Disposable(std::tuple<T, Action> tuple) : Disposable(std::get<1-1>(tuple), std::get<2-1>(tuple)) { }
+        public: Disposable(std::tuple<T, std::function<void()>> tuple) : Disposable(std::get<1-1>(tuple), std::get<2-1>(tuple)) { }
 
         public: Disposable(std::tuple<T, Disposal> tuple) : Disposable(std::get<1-1>(tuple), std::get<2-1>(tuple)) { }
 

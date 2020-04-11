@@ -1,14 +1,15 @@
 ﻿namespace Platform::Disposables
 {
-    class Disposable : public DisposableBase
+    template <typename ...> class Disposable;
+    template<> class Disposable<> : public DisposableBase
     {
-        private: inline static const Disposal _emptyDelegate = (manual, wasDisposed) { return { }; }
+        private: inline static std::function<Disposal> _emptyDelegate = [](auto manual, auto wasDisposed) { };
 
         public: Platform::Delegates::MulticastDelegate<Disposal> OnDispose;
 
         public: Disposable(std::function<void()> action)
         {
-            OnDispose = (manual, wasDisposed) =>
+            OnDispose = [&](auto manual, auto wasDisposed)
             {
                 if (!wasDisposed)
                 {
@@ -17,13 +18,13 @@
             };
         }
 
-        public: Disposable(Disposal disposal) { OnDispose = disposal; }
+        public: Disposable(std::function<Disposal> disposal) { OnDispose = disposal; }
 
         public: Disposable() { OnDispose = _emptyDelegate; }
 
-        public: static implicit operator Disposable(std::function<void()> action) { return Disposable(action); }
+        public: Disposable(std::function<void()> action) : Disposable(action) { }
 
-        public: static implicit operator Disposable(Disposal disposal) { return Disposable(disposal); }
+        public: Disposable(std::function<Disposal> disposal) : Disposable(disposal) { }
 
         protected: void Dispose(bool manual, bool wasDisposed) override { this->RaiseOnDisposeEvent(manual, wasDisposed); }
 

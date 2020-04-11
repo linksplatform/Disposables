@@ -3,16 +3,13 @@
     template <typename ...> class Disposable;
     template <typename TPrimary, typename TAuxiliary> class Disposable<TPrimary, TAuxiliary> : public Disposable<TPrimary>
     {
-        public: TAuxiliary AuxiliaryObject
-        {
-            get;
-        }
+        public: const TAuxiliary AuxiliaryObject;
 
-        public: Disposable(TPrimary object, TAuxiliary auxiliaryObject, Action<TPrimary, TAuxiliary> action)
+        public: Disposable(TPrimary object, TAuxiliary auxiliaryObject, std::function<void(TPrimary, TAuxiliary)> action)
             : base(object)
         {
             AuxiliaryObject = auxiliaryObject;
-            OnDispose += (manual, wasDisposed) =>
+            OnDispose += [&](auto manual, auto wasDisposed)
             {
                 if (!wasDisposed)
                 {
@@ -29,17 +26,17 @@
 
         public: Disposable(TPrimary object) : base(object) { }
 
-        public: static implicit operator Disposable<TPrimary, TAuxiliary>(std::tuple<TPrimary, TAuxiliary, Action<TPrimary, TAuxiliary>> tuple) { return Disposable<TPrimary, TAuxiliary>(std::get<1-1>(tuple), std::get<2-1>(tuple), std::get<3-1>(tuple)); }
+        public: Disposable(std::tuple<TPrimary, TAuxiliary, std::function<void(TPrimary, TAuxiliary)>> tuple) : Disposable(std::get<1-1>(tuple), std::get<2-1>(tuple), std::get<3-1>(tuple)) { }
 
-        public: static implicit operator Disposable<TPrimary, TAuxiliary>(std::tuple<TPrimary, TAuxiliary, Action> tuple) { return Disposable<TPrimary, TAuxiliary>(std::get<1-1>(tuple), std::get<2-1>(tuple), std::get<3-1>(tuple)); }
+        public: Disposable(std::tuple<TPrimary, TAuxiliary, std::function<void()>> tuple) : Disposable(std::get<1-1>(tuple), std::get<2-1>(tuple), std::get<3-1>(tuple)) { }
 
-        public: static implicit operator Disposable<TPrimary, TAuxiliary>(std::tuple<TPrimary, TAuxiliary, Disposal> tuple) { return Disposable<TPrimary, TAuxiliary>(std::get<1-1>(tuple), std::get<2-1>(tuple), std::get<3-1>(tuple)); }
+        public: Disposable(std::tuple<TPrimary, TAuxiliary, Disposal> tuple) : Disposable(std::get<1-1>(tuple), std::get<2-1>(tuple), std::get<3-1>(tuple)) { }
 
-        public: static implicit operator Disposable<TPrimary, TAuxiliary>(std::tuple<TPrimary, TAuxiliary> tuple) { return Disposable<TPrimary, TAuxiliary>(std::get<1-1>(tuple), std::get<2-1>(tuple)); }
+        public: Disposable(std::tuple<TPrimary, TAuxiliary> tuple) : Disposable(std::get<1-1>(tuple), std::get<2-1>(tuple)) { }
 
-        public: static implicit operator TPrimary(Disposable<TPrimary, TAuxiliary> disposableContainer) { return disposableContainer.Object; }
+        public: operator TPrimary() const { return this->Object; }
 
-        public: static implicit operator TAuxiliary(Disposable<TPrimary, TAuxiliary> disposableContainer) { return disposableContainer.AuxiliaryObject; }
+        public: operator TAuxiliary() const { return this->AuxiliaryObject; }
 
         protected: void Dispose(bool manual, bool wasDisposed) override
         {
