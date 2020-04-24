@@ -45,6 +45,9 @@
     <ClInclude Include="Platform.Disposables.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="System.IDisposable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

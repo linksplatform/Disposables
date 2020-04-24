@@ -1,9 +1,10 @@
 ﻿namespace Platform::Disposables
 {
-    interface IDisposable : System.IDisposable
+    class IDisposable : public System::IDisposable
     {
-        const bool IsDisposed;
+    public:
+        virtual bool IsDisposed() = 0;
 
         virtual void Destruct() = 0;
-    }
+    };
 }

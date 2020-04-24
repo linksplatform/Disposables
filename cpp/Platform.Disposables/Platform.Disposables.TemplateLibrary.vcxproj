@@ -149,6 +149,7 @@
     <ClInclude Include="Disposal.h" />
     <ClInclude Include="EnsureExtensions.h" />
     <ClInclude Include="GenericObjectExtensions.h" />
+    <ClInclude Include="System.IDisposable.h" />
     <ClInclude Include="IDisposable.h" />
     <ClInclude Include="IDisposableExtensions.h" />
     <ClInclude Include="Platform.Disposables.h" />

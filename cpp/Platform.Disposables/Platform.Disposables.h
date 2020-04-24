@@ -1,13 +1,15 @@
 #pragma once
 
-#ifndef Platform_Disposables
-#define Platform_Disposables
+#ifndef PLATFORM_DISPOSABLES
+#define PLATFORM_DISPOSABLES
 
 //#include <Platform.Converters.h>
 //#include <Platform.Hashing.h>
 
 #include <Platform.Delegates.h>
 #include <Platform.Exceptions.h>
+
+#include "System.IDisposable.h"
 
 #include "Disposal.h"
 #include "IDisposable.h"

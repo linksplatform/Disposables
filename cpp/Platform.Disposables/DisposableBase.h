@@ -2,7 +2,6 @@
 {
     class DisposableBase : public IDisposable
     {
-        private: inline static const AppDomain _currentDomain = AppDomain.CurrentDomain;
         private: static readonly ConcurrentStack<WeakReference<DisposableBase>> _disposablesWeekReferencesStack = ConcurrentStack<WeakReference<DisposableBase>>();
 
         private: volatile std::int32_t _disposed;
@@ -27,7 +26,7 @@
             return false;
         }
 
-        static DisposableBase() { _currentDomain.ProcessExit += OnProcessExit; }
+        static DisposableBase() { std::atexit(OnProcessExit); }
 
         protected: DisposableBase()
         {
@@ -66,7 +65,7 @@
             auto wasDisposed = originalDisposedValue > 0;
             if (wasDisposed && !AllowMultipleDisposeCalls && manual)
             {
-                Ensure.Always.NotDisposed(this, ObjectName, "Multiple dispose calls are not allowed. Override AllowMultipleDisposeCalls property to modify behavior.");
+                Platform::Disposables::EnsureExtensions::NotDisposed(Platform::Exceptions::Ensure::Always, this, ObjectName, "Multiple dispose calls are not allowed. Override AllowMultipleDisposeCalls property to modify behavior.");
             }
             if (AllowMultipleDisposeAttempts || !wasDisposed)
             {
@@ -74,7 +73,7 @@
             }
         }
 
-        private: static void OnProcessExit(void *sender, EventArgs e)
+        private: static void OnProcessExit()
         {
             while (_disposablesWeekReferencesStack.TryPop(out WeakReference<DisposableBase> weakReference))
             {
@@ -83,26 +82,6 @@
                     GC.SuppressFinalize(disposable);
                     disposable.Destruct();
                 }
-            }
-            UnsubscribeFromProcessExitedEventIfPossible();
-        }
-
-        private: static void UnsubscribeFromProcessExitedEventIfPossible()
-        {
-            try
-            {
-                if (_currentDomain != nullptr)
-                {
-                    _currentDomain.ProcessExit -= OnProcessExit;
-                }
-                else
-                {
-                    AppDomain.CurrentDomain.ProcessExit -= OnProcessExit;
-                }
-            }
-            catch (const std::exception& exception)
-            {
-                Platform::Exceptions::ExceptionExtensions::Ignore(exception);
             }
         }
     };

@@ -10,7 +10,7 @@
                 {
                     disposableBase.DisposeIfNotDisposed();
                 }
-                else if (object is System.IDisposable disposable)
+                else if (object is System::IDisposable &disposable)
                 {
                     disposable.Dispose();
                 }
