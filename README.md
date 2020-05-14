@@ -11,7 +11,7 @@ This library helps to make objects disposable in a fast, short, easy and safe wa
 
 The `Platform.Disposables.IDisposable` interface extends the `System.IDisposable` with `IsDisposed` property and `Destruct` method. The `Destruct` method is designed to never throw exceptions, that makes it safe to use in class destructors. All ignored exceptions are available at `Platform.Disposables.IgnoredDisposables` if you need to debug them.
 
-Namespace: [Platform.Disposables](https://linksplatform.github.io/Disposables/api/Platform.Disposables.html)
+Namespace: [Platform.Disposables](https://linksplatform.github.io/Disposables/csharp/api/Platform.Disposables.html)
 
 Forked from: [Konard/LinksPlatform/Platform/Platform.Helpers/Disposables](https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables)
 
@@ -93,12 +93,12 @@ namespace Examples
 ```
 
 ## [Documentation](https://linksplatform.github.io/Disposables)
-*   Interface [IDisposable](https://linksplatform.github.io/Disposables/api/Platform.Disposables.IDisposable.html).
-*   Abstract class [DisposableBase](https://linksplatform.github.io/Disposables/api/Platform.Disposables.DisposableBase.html).
-*   Class [Disposable](https://linksplatform.github.io/Disposables/api/Platform.Disposables.Disposable.html).
-*   Class [Disposable\<T\>](https://linksplatform.github.io/Disposables/api/Platform.Disposables.Disposable-1.html).
+*   Interface [IDisposable](https://linksplatform.github.io/Disposables/csharp/api/Platform.Disposables.IDisposable.html).
+*   Abstract class [DisposableBase](https://linksplatform.github.io/Disposables/csharp/api/Platform.Disposables.DisposableBase.html).
+*   Class [Disposable](https://linksplatform.github.io/Disposables/csharp/api/Platform.Disposables.Disposable.html).
+*   Class [Disposable\<T\>](https://linksplatform.github.io/Disposables/csharp/api/Platform.Disposables.Disposable-1.html).
 
-[PDF file](https://linksplatform.github.io/Disposables/Platform.Disposables.pdf) with code for e-readers.
+[PDF file](https://linksplatform.github.io/Disposables/csharp/Platform.Disposables.pdf) with code for e-readers.
 
 ## Depend on
 *   [Platform.Disposables](https://github.com/linksplatform/Disposables)
