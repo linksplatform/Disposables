@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "vCTuq8+Fa6mPk7NEO4v9kg=="
+          "hash": "Zf0laTTrK9hFxeQFXCh0tw=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,139 @@
       "output": {
         ".html": {
           "relative_path": "README.ru.html",
-          "hash": "gMYNQn6Ek99p4jbQ6Fl9xw=="
+          "hash": "W9N23wxaPZV38CAvnTYUiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.Disposables.Disposable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.Disposables.Disposable-1.html",
+          "hash": "yaCv4QA5Q8lBDzqJMJDxJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.Disposables.Disposable-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.Disposables.Disposable-2.html",
+          "hash": "hszP+9U5QFwyPdhlyqR3Cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.Disposables.Disposable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.Disposables.Disposable.html",
+          "hash": "K7Vc0+aLESfoExO2ywql0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.Disposables.DisposableBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.Disposables.DisposableBase.html",
+          "hash": "wnBdYIe+uvvTem9sjGfBWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.Disposables.Disposal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.Disposables.Disposal.html",
+          "hash": "y0W2/ptIEE6Oh7jh4BFoHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.Disposables.EnsureExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.Disposables.EnsureExtensions.html",
+          "hash": "T0wDT3znNdwdbOtZlNlJ7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.Disposables.GenericObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.Disposables.GenericObjectExtensions.html",
+          "hash": "YiwCY4Bw6unMtCHzSZtUVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.Disposables.IDisposable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.Disposables.IDisposable.html",
+          "hash": "1BAN0vgKzuuMdPj8pNOxXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.Disposables.IDisposableExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.Disposables.IDisposableExtensions.html",
+          "hash": "ZsNjalgAbGjcoI1OdMVVLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.Disposables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.Disposables.html",
+          "hash": "J5TrC1DsUk6JSuapPIC5fQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "5H7g6XNdSncDI4oC1Dg0Eg=="
         }
       },
       "is_incremental": false,
@@ -45,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "1dImmeEVzt1Evvd9DZ+nXw=="
+          "hash": "kxqe4A28Jt2hYPDHNET2vQ=="
         }
       },
       "is_incremental": false,
@@ -67,6 +199,12 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 10,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

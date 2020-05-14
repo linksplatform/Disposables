@@ -8,7 +8,7 @@
     <title>Disposables (&#1088;&#1091;&#1089;&#1089;&#1082;&#1072;&#1103; &#1074;&#1077;&#1088;&#1089;&#1080;&#1103;) | LinksPlatform's Platform.Disposables Library </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Disposables (&#1088;&#1091;&#1089;&#1089;&#1082;&#1072;&#1103; &#1074;&#1077;&#1088;&#1089;&#1080;&#1103;) | LinksPlatform's Platform.Disposables Library ">
-    <meta name="generator" content="docfx 2.52.0.0">
+    <meta name="generator" content="docfx 2.51.0.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -79,7 +79,7 @@
 <p>This library helps to make objects disposable in a fast, short, easy and safe way.</p>
 <p><code>Platform.Disposables.DisposableBase</code> abstract class tries to dispose the object at both on instance destruction and <code>OnProcessExit</code> whatever comes first even if <code>Dispose</code> method was not called anywhere by user. And takes care your disposal logic executes only once by default, and if you really need it, you can allow multiple calls and attempts to dispose, by overriding corresponding properties.</p>
 <p>The <code>Platform.Disposables.IDisposable</code> interface extends the <code>System.IDisposable</code> with <code>IsDisposed</code> property and <code>Destruct</code> method. The <code>Destruct</code> method is designed to never throw exceptions, that makes it safe to use in class destructors. All ignored exceptions are available at <code>Platform.Disposables.IgnoredDisposables</code> if you need to debug them.</p>
-<p>Namespace: <a href="https://linksplatform.github.io/Disposables/api/Platform.Disposables.html">Platform.Disposables</a></p>
+<p>Namespace: <a href="https://linksplatform.github.io/Disposables/csharp/api/Platform.Disposables.html">Platform.Disposables</a></p>
 <p>Forked from: <a href="https://github.com/Konard/LinksPlatform/tree/708f6143645333781adae0cad7ae998fefcd6317/Platform/Platform.Helpers/Disposables">Konard/LinksPlatform/Platform/Platform.Helpers/Disposables</a></p>
 <p>Package at NuGet: <a href="https://www.nuget.org/packages/Platform.Disposables">Platform.Disposables</a></p>
 <h2 id="examples">Examples</h2>
@@ -149,12 +149,12 @@ namespace Examples
 </code></pre>
 <h2 id="documentation"><a href="https://linksplatform.github.io/Disposables">Documentation</a></h2>
 <ul>
-<li>Interface <a href="https://linksplatform.github.io/Disposables/api/Platform.Disposables.IDisposable.html">IDisposable</a>.</li>
-<li>Abstract class <a href="https://linksplatform.github.io/Disposables/api/Platform.Disposables.DisposableBase.html">DisposableBase</a>.</li>
-<li>Class <a href="https://linksplatform.github.io/Disposables/api/Platform.Disposables.Disposable.html">Disposable</a>.</li>
-<li>Class <a href="https://linksplatform.github.io/Disposables/api/Platform.Disposables.Disposable-1.html">Disposable&lt;T&gt;</a>.</li>
+<li>Interface <a href="https://linksplatform.github.io/Disposables/csharp/api/Platform.Disposables.IDisposable.html">IDisposable</a>.</li>
+<li>Abstract class <a href="https://linksplatform.github.io/Disposables/csharp/api/Platform.Disposables.DisposableBase.html">DisposableBase</a>.</li>
+<li>Class <a href="https://linksplatform.github.io/Disposables/csharp/api/Platform.Disposables.Disposable.html">Disposable</a>.</li>
+<li>Class <a href="https://linksplatform.github.io/Disposables/csharp/api/Platform.Disposables.Disposable-1.html">Disposable&lt;T&gt;</a>.</li>
 </ul>
-<p><a href="https://linksplatform.github.io/Disposables/Platform.Disposables.pdf">PDF file</a> with code for e-readers.</p>
+<p><a href="https://linksplatform.github.io/Disposables/csharp/Platform.Disposables.pdf">PDF file</a> with code for e-readers.</p>
 <h2 id="depend-on">Depend on</h2>
 <ul>
 <li><a href="https://github.com/linksplatform/Disposables">Platform.Disposables</a></li>
