@@ -55,6 +55,8 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
+    <Import Project="..\..\..\CSharpToCppTranslatorTestSolution\CSharpToCppTranslatorTestSolution\packages\Platform.Delegates.TemplateLibrary.0.0.14\build\native\Platform.Delegates.TemplateLibrary.targets" Condition="Exists('..\..\..\CSharpToCppTranslatorTestSolution\CSharpToCppTranslatorTestSolution\packages\Platform.Delegates.TemplateLibrary.0.0.14\build\native\Platform.Delegates.TemplateLibrary.targets')" />
+    <Import Project="..\..\..\CSharpToCppTranslatorTestSolution\CSharpToCppTranslatorTestSolution\packages\Platform.Exceptions.TemplateLibrary.0.0.15\build\native\Platform.Exceptions.TemplateLibrary.targets" Condition="Exists('..\..\..\CSharpToCppTranslatorTestSolution\CSharpToCppTranslatorTestSolution\packages\Platform.Exceptions.TemplateLibrary.0.0.15\build\native\Platform.Exceptions.TemplateLibrary.targets')" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -158,15 +160,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\..\packages\Platform.Delegates.TemplateLibrary.0.0.14\build\native\Platform.Delegates.TemplateLibrary.targets" Condition="Exists('..\..\packages\Platform.Delegates.TemplateLibrary.0.0.14\build\native\Platform.Delegates.TemplateLibrary.targets')" />
-    <Import Project="..\..\packages\Platform.Exceptions.TemplateLibrary.0.0.15\build\native\Platform.Exceptions.TemplateLibrary.targets" Condition="Exists('..\..\packages\Platform.Exceptions.TemplateLibrary.0.0.15\build\native\Platform.Exceptions.TemplateLibrary.targets')" />
-  </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Platform.Delegates.TemplateLibrary.0.0.14\build\native\Platform.Delegates.TemplateLibrary.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Platform.Delegates.TemplateLibrary.0.0.14\build\native\Platform.Delegates.TemplateLibrary.targets'))" />
-    <Error Condition="!Exists('..\..\packages\Platform.Exceptions.TemplateLibrary.0.0.15\build\native\Platform.Exceptions.TemplateLibrary.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Platform.Exceptions.TemplateLibrary.0.0.15\build\native\Platform.Exceptions.TemplateLibrary.targets'))" />
+    <Error Condition="!Exists('..\..\..\CSharpToCppTranslatorTestSolution\CSharpToCppTranslatorTestSolution\packages\Platform.Delegates.TemplateLibrary.0.0.14\build\native\Platform.Delegates.TemplateLibrary.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\CSharpToCppTranslatorTestSolution\CSharpToCppTranslatorTestSolution\packages\Platform.Delegates.TemplateLibrary.0.0.14\build\native\Platform.Delegates.TemplateLibrary.targets'))" />
+    <Error Condition="!Exists('..\..\..\CSharpToCppTranslatorTestSolution\CSharpToCppTranslatorTestSolution\packages\Platform.Exceptions.TemplateLibrary.0.0.15\build\native\Platform.Exceptions.TemplateLibrary.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\CSharpToCppTranslatorTestSolution\CSharpToCppTranslatorTestSolution\packages\Platform.Exceptions.TemplateLibrary.0.0.15\build\native\Platform.Exceptions.TemplateLibrary.targets'))" />
   </Target>
 </Project>
