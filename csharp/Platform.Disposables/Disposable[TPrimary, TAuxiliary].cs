@@ -5,7 +5,7 @@ namespace Platform.Disposables
 {
     /// <summary>
     /// <para>Represents disposable container that disposes two contained objects when the container itself is disposed.</para>
-    /// <para>Представляет высвобождаемый контейнер, который высвобождает два содержащийхся в нём объектов при высвобождении самого контейнера.</para>
+    /// <para>Представляет высвобождаемый контейнер, который высвобождает два содержащихся в нём объекта при высвобождении самого контейнера.</para>
     /// </summary>
     /// <typeparam name="TPrimary"><para>The primary object type.</para><para>Тип основного объекта.</para></typeparam>
     /// <typeparam name="TAuxiliary"><para>The auxiliary object type.</para><para>Тип вспомогательного объекта.</para></typeparam>

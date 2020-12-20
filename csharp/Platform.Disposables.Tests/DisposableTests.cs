@@ -43,7 +43,7 @@ namespace Platform.Disposables.Tests
             return new ProcessStartInfo
             {
                 FileName = "dotnet",
-                Arguments = $"run -p \"{projectPath}\" -f netcoreapp2.1 \"{logPath}\" {waitForCancellation.ToString()}",
+                Arguments = $"run -p \"{projectPath}\" -f net5 \"{logPath}\" {waitForCancellation.ToString()}",
                 UseShellExecute = false,
                 CreateNoWindow = true
             };
