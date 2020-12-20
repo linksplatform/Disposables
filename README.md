@@ -101,7 +101,7 @@ namespace Examples
 [PDF file](https://linksplatform.github.io/Disposables/csharp/Platform.Disposables.pdf) with code for e-readers.
 
 ## Depend on
-*   [Platform.Disposables](https://github.com/linksplatform/Disposables)
+*   [Platform.Exceptions](https://github.com/linksplatform/Exceptions)
 
 ## Dependent libraries
 *   [Platform.Collections](https://github.com/linksplatform/Collections)
