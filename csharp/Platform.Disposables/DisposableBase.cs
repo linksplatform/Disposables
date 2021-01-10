@@ -7,8 +7,8 @@ using Platform.Exceptions;
 namespace Platform.Disposables
 {
     /// <summary>
-    /// <para>Provides a base implementation for IDisposable interface with the basic logic necessary to increase the likelihood of correct unmanaged resources release.</para>
-    /// <para>Предоставляет базовую реализацию для интерфейса IDisposable с основной логикой необходимой для повышения вероятности корректного высвобождения неуправляемых ресурсов.</para>
+    /// <para>Represents a base implementation for <see cref="Platform.Disposables.IDisposable"/> interface with the basic logic necessary to increase the likelihood of correct unmanaged resources release.</para>
+    /// <para>Представляет базовую реализацию для интерфейса <see cref="Platform.Disposables.IDisposable"/> с основной логикой необходимой для повышения вероятности корректного высвобождения неуправляемых ресурсов.</para>
     /// </summary>
     public abstract class DisposableBase : IDisposable
     {
