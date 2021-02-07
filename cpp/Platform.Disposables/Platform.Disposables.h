@@ -3,11 +3,16 @@
 #ifndef PLATFORM_DISPOSABLES
 #define PLATFORM_DISPOSABLES
 
-//#include <Platform.Converters.h>
-//#include <Platform.Hashing.h>
 
-#include <Platform.Delegates.h>
-#include <Platform.Exceptions.h>
+//TODO: this real includes
+    //#include <Platform.Converters.h>
+    //#include <Platform.Hashing.h>
+//
+
+//TODO: this test includes
+    #include "../../../Delegates/cpp/Platform.Delegates/Platform.Delegates.h"
+    #include "../../../Exceptions/cpp/Platform.Exceptions/Platform.Exceptions.h"
+//
 
 #include "System.IDisposable.h"
 

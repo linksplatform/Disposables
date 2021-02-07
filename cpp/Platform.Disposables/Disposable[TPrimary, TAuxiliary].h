@@ -1,9 +1,17 @@
-﻿namespace Platform::Disposables
+﻿#ifndef DISPOSABLES_DISPOSABLE_T1_T2_H
+#define DISPOSABLES_DISPOSABLE_T1_T2_H
+
+#include "Disposal.h"
+#include "Disposable[T].h"
+
+namespace Platform::Disposables
 {
-    template <typename ...> class Disposable;
+
     template <typename TPrimary, typename TAuxiliary> class Disposable<TPrimary, TAuxiliary> : public Disposable<TPrimary>
     {
         public: const TAuxiliary AuxiliaryObject;
+        public: Platform::Delegates::MulticastDelegate<Disposal> OnDispose;
+        public: const TPrimary Object;
 
         public: Disposable(TPrimary object, TAuxiliary auxiliaryObject, std::function<void(TPrimary, TAuxiliary)> action)
             : Disposable<TPrimary>(object)
@@ -18,11 +26,11 @@
             };
         }
 
-        public: Disposable(TPrimary object, TAuxiliary auxiliaryObject, std::function<void()> action) : Disposable<TPrimary>(object, action) { return AuxiliaryObject = auxiliaryObject; }
+        public: Disposable(TPrimary object, TAuxiliary auxiliaryObject, std::function<void()> action) : Disposable<TPrimary>(object, action) { AuxiliaryObject = auxiliaryObject; }
 
-        public: Disposable(TPrimary object, TAuxiliary auxiliaryObject, Disposal disposal) : Disposable<TPrimary>(object, disposal) { return AuxiliaryObject = auxiliaryObject; }
+        public: Disposable(TPrimary object, TAuxiliary auxiliaryObject, Disposal disposal) : Disposable<TPrimary>(object, disposal) { AuxiliaryObject = auxiliaryObject; }
 
-        public: Disposable(TPrimary object, TAuxiliary auxiliaryObject) : Disposable<TPrimary>(object) { return AuxiliaryObject = auxiliaryObject; }
+        public: Disposable(TPrimary object, TAuxiliary auxiliaryObject) : Disposable<TPrimary>(object) { AuxiliaryObject = auxiliaryObject; }
 
         public: Disposable(TPrimary object) : Disposable<TPrimary>(object) { }
 
@@ -44,5 +52,9 @@
             AuxiliaryObject.TryDispose();
             Object.TryDispose();
         }
+
+
     };
 }
+
+#endif
