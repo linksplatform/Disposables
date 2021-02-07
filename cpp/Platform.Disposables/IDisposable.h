@@ -3,6 +3,7 @@
 
 #include "System.IDisposable.h"
 
+
 namespace Platform::Disposables
 {
     class IDisposable : public System::IDisposable
