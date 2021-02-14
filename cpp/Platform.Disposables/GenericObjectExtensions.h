@@ -9,13 +9,16 @@ namespace Platform::Disposables
         {
             try
             {
-                if (DisposableBase* disposableBase = (DisposableBase*)object)
+                if (std::is_base_of<T, DisposableBase>::value) // до изменения задания: if(disposableBase = (DisposableBase*)object)
                 {
+                    auto disposableBase = (DisposableBase*)object;
+
                     //TODO: add this method
                     //disposableBase->DisposeIfNotDisposed();
                 }
-                else if (System::IDisposable* disposable = (System::IDisposable*)object)
+                else if (std::is_base_of<T, IDisposable>::value) // до изменения задания: if(disposable = (IDisposable*)object)
                 {
+                    auto disposable = (IDisposable*)object;
                     disposable->Dispose();
                 }
                 return true;
