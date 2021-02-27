@@ -42,6 +42,7 @@ namespace Platform.Disposables.Tests
         private static ProcessStartInfo CreateProcessStartInfo(string logPath, bool waitForCancellation)
         {
             var projectPath = GetDisposalObjectTestProjectFilePath();
+            Console.WriteLine(projectPath);
             return new ProcessStartInfo
             {
                 FileName = "dotnet",
