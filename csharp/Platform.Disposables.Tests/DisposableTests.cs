@@ -14,11 +14,13 @@ namespace Platform.Disposables.Tests
         public static void DisposalOrderTest()
         {
             var logPath = Path.GetTempFileName();
+            Console.WriteLine(logPath);
             using (var process = Process.Start(CreateProcessStartInfo(logPath, waitForCancellation: false)))
             {
                 process.WaitForExit();
             }
             var result = File.ReadAllText(logPath);
+            Console.WriteLine(result);
             Assert.Equal("21", result);
             File.Delete(logPath);
         }
