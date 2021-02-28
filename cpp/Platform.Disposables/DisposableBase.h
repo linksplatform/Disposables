@@ -1,12 +1,27 @@
-﻿namespace Platform::Disposables
+﻿#ifndef DISPOSABLES_DISPOSABLE_BASE_H
+#define DISPOSABLES_DISPOSABLE_BASE_H
+
+#include <stack>
+
+
+
+
+#include "IDisposable.h"
+#include "EnsureExtensions.h"
+#include "../../../Exceptions/cpp/Platform.Exceptions/IgnoredExceptions.h"
+#include "../../../Exceptions/cpp/Platform.Exceptions/ExceptionExtensions.h"
+#include "../../../Exceptions/cpp/Platform.Exceptions/Ensure.h"
+
+
+namespace Platform::Disposables
 {
     class DisposableBase : public IDisposable
     {
-        private: static readonly ConcurrentStack<WeakReference<DisposableBase>> _disposablesWeekReferencesStack = ConcurrentStack<WeakReference<DisposableBase>>();
+        private: static std::stack<std::weak_ptr<DisposableBase>> _disposablesWeekReferencesStack;
 
-        private: volatile std::int32_t _disposed;
+        private: volatile std::atomic<std::int32_t> _disposed;
 
-        public: bool IsDisposed()
+        public: bool IsDisposed() override
         {
             return _disposed > 0;
         }
@@ -26,29 +41,34 @@
             return false;
         }
 
-        static DisposableBase() { std::atexit(OnProcessExit); }
 
-        protected: DisposableBase()
+        public: DisposableBase()
         {
+            std::shared_ptr<DisposableBase> this_ptr = std::shared_ptr<DisposableBase>(this);
+            std::weak_ptr<DisposableBase> this_weak = std::weak_ptr<DisposableBase>(this_ptr);
+
+
             _disposed = 0;
-            _disposablesWeekReferencesStack.Push(WeakReference<DisposableBase>(this, false));
+            _disposablesWeekReferencesStack.push(this_weak);
+            std::atexit(OnProcessExit);
         }
 
-        ~DisposableBase() { Destruct(); }
+        //TODO: завязывайте с вызовом всякой виртуальщины в конструкторе/деструкторе
+        //~DisposableBase() { Destruct(); }
 
-        protected: virtual void Dispose(bool manual, bool wasDisposed) = 0;
+        public: virtual void Dispose(bool manual, bool wasDisposed) = 0;
 
-        public: void Dispose()
+
+        public: void Dispose() override
         {
             this->Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
-        public: void Destruct()
+        public: void Destruct() override
         {
             try
             {
-                if (!IsDisposed)
+                if (!IsDisposed())
                 {
                     this->Dispose(false);
                 }
@@ -59,15 +79,16 @@
             }
         }
 
-        protected: virtual void Dispose(bool manual)
+        public: virtual void Dispose(bool manual)
         {
-            auto originalDisposedValue = Interlocked.CompareExchange(ref _disposed, 1, 0);
+            int compare_value = 1;
+            bool originalDisposedValue = _disposed.compare_exchange_weak(compare_value, 0);
             auto wasDisposed = originalDisposedValue > 0;
-            if (wasDisposed && !AllowMultipleDisposeCalls && manual)
+            if (wasDisposed && !AllowMultipleDisposeCalls() && manual)
             {
-                Platform::Disposables::EnsureExtensions::NotDisposed(Platform::Exceptions::Ensure::Always, this, ObjectName, "Multiple dispose calls are not allowed. Override AllowMultipleDisposeCalls property to modify behavior.");
+                Platform::Disposables::EnsureExtensions::NotDisposed(Platform::Exceptions::Ensure::Always, this, ObjectName(), "Multiple dispose calls are not allowed. Override AllowMultipleDisposeCalls property to modify behavior.");
             }
-            if (AllowMultipleDisposeAttempts || !wasDisposed)
+            if (AllowMultipleDisposeAttempts() || !wasDisposed)
             {
                 this->Dispose(manual, wasDisposed);
             }
@@ -75,14 +96,20 @@
 
         private: static void OnProcessExit()
         {
-            while (_disposablesWeekReferencesStack.TryPop(out WeakReference<DisposableBase> weakReference))
+            while (!_disposablesWeekReferencesStack.empty())
             {
-                if (weakReference.TryGetTarget(out DisposableBase disposable))
+                auto weakReference = _disposablesWeekReferencesStack.top();
+                _disposablesWeekReferencesStack.pop();
+
+                if (auto disposable = weakReference.lock())
                 {
-                    GC.SuppressFinalize(disposable);
-                    disposable.Destruct();
+                    disposable->Destruct();
                 }
             }
         }
     };
 }
+
+std::stack<std::weak_ptr<Platform::Disposables::DisposableBase>> Platform::Disposables::DisposableBase::_disposablesWeekReferencesStack = std::stack<std::weak_ptr<DisposableBase>>();
+
+#endif
