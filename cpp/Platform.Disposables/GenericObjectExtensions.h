@@ -1,4 +1,7 @@
-﻿namespace Platform::Disposables
+﻿#ifndef DISPOSABLES_GENERIC_DISPOSABLE_H
+#define DISPOSABLES_GENERIC_DISPOSABLE_H
+
+namespace Platform::Disposables
 {
     class GenericObjectExtensions
     {
@@ -6,13 +9,14 @@
         {
             try
             {
-                if (object is DisposableBase disposableBase)
+                if (DisposableBase* disposableBase = (DisposableBase*)object)
                 {
-                    disposableBase.DisposeIfNotDisposed();
+                    //TODO: add this method
+                    //disposableBase->DisposeIfNotDisposed();
                 }
-                else if (object is System::IDisposable &disposable)
+                else if (System::IDisposable* disposable = (System::IDisposable*)object)
                 {
-                    disposable.Dispose();
+                    disposable->Dispose();
                 }
                 return true;
             }
@@ -26,3 +30,5 @@
         public: template <typename T> static void DisposeIfPossible(T object) { TryDispose(object); }
     };
 }
+
+#endif

@@ -1,4 +1,10 @@
-﻿namespace Platform::Disposables
+﻿#ifndef DISPOSABLES_IDISPOSABLE_H
+#define DISPOSABLES_IDISPOSABLE_H
+
+#include "System.IDisposable.h"
+
+
+namespace Platform::Disposables
 {
     class IDisposable : public System::IDisposable
     {
@@ -8,3 +14,5 @@
         virtual void Destruct() = 0;
     };
 }
+
+#endif
