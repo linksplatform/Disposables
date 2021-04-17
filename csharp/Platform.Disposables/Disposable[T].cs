@@ -109,7 +109,7 @@ namespace Platform.Disposables
         /// <para>Высвобождает неуправляемые ресурсы.</para>
         /// </summary>
         /// <param name="manual">
-        /// <para>A value that determines whether the disposal was triggered manually (by the developer's code) or was executed automatically without an explicit indication from the developer.</para>
+        /// <para>A value that determines whether the disposal was triggered manually (by the developer's code) or was executed automatically without an explicit indication from a developer.</para>
         /// <para>Значение определяющие было ли высвобождение вызвано вручную (кодом разработчика) или же выполнилось автоматически без явного указания со стороны разработчика.</para>
         /// </param>
         /// <param name="wasDisposed">
