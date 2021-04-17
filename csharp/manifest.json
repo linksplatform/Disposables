@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable-1.html",
-          "hash": "1Q7kOFPr37OTKOuvAfXDYw=="
+          "hash": "j0P1r9z2IG3UjqZRaH4hbQ=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable-2.html",
-          "hash": "ZjHwTsSZLJAWnZjL30vFGw=="
+          "hash": "jQNJkjlTeLDMLRhzL4nK0Q=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposable.html",
-          "hash": "B8I6mA6BiTndSHXv6sUZ7w=="
+          "hash": "emdKSbrUFCxjQ3jYbJWPhw=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.DisposableBase.html",
-          "hash": "iAtKM9tTv7e/57yOnE4Q1g=="
+          "hash": "NWBDSNAyh7ywtgCgWcNhew=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.Disposal.html",
-          "hash": "FvLEgWQsT9rnSwE2K/TOLQ=="
+          "hash": "aZR9mfj/TUS/6oFZ7V2XRg=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.EnsureExtensions.html",
-          "hash": "PNrf6MUnTK0fmpRX/Xyc9g=="
+          "hash": "PmS6K0SXMym3txKufQPHyg=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.GenericObjectExtensions.html",
-          "hash": "8z/TU3UeNbNqymyVGrAX0g=="
+          "hash": "rkTEBFcXH4vt0KiMpWY0/w=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.IDisposable.html",
-          "hash": "WrtT4OICLwPc7Rm7DThC+w=="
+          "hash": "3AEDPDE1nA7JU66fe1bisA=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Disposables.IDisposableExtensions.html",
-          "hash": "6lK5ZKIBA4z0Bt+THpuMZg=="
+          "hash": "abEBrlYVq1SaSCkfahJxQQ=="
         }
       },
       "is_incremental": false,
