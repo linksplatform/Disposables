@@ -1,7 +1,6 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8fba2263c6a34204afc56553293d8225)](https://app.codacy.com/gh/linksplatform/Disposables?utm_source=github.com&utm_medium=referral&utm_content=linksplatform/Disposables&utm_campaign=Badge_Grade_Settings)
 [![NuGet Version and Downloads count](https://buildstats.info/nuget/Platform.Disposables)](https://www.nuget.org/packages/Platform.Disposables)
 [![Actions Status](https://github.com/linksplatform/Disposables/workflows/CD/badge.svg)](https://github.com/linksplatform/Disposables/actions?workflow=CD)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3fdafa7bb9334ea4ac4ce242039d278a)](https://app.codacy.com/app/drakonard/Disposables?utm_source=github.com&utm_medium=referral&utm_content=linksplatform/Disposables&utm_campaign=Badge_Grade_Dashboard)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8fba2263c6a34204afc56553293d8225)](https://app.codacy.com/gh/linksplatform/Disposables?utm_source=github.com&utm_medium=referral&utm_content=linksplatform/Disposables&utm_campaign=Badge_Grade_Settings)
 [![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/disposables/badge)](https://www.codefactor.io/repository/github/linksplatform/disposables)
 
 # [Disposables](https://github.com/linksplatform/Disposables) ([русская версия](README.ru.md))
