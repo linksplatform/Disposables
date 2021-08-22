@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using Platform.IO;
 
@@ -6,8 +6,24 @@ using Platform.IO;
 
 namespace Platform.Disposables.Tests.DisposalOrderTest
 {
+    /// <summary>
+    /// <para>
+    /// Represents the program.
+    /// </para>
+    /// <para></para>
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// <para>
+        /// Main the args.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="args">
+        /// <para>The args.</para>
+        /// <para></para>
+        /// </param>
         static void Main(string[] args)
         {
             if (args.Length == 0)

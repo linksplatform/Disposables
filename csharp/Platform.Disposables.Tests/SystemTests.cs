@@ -1,4 +1,4 @@
-﻿using Xunit;
+using Xunit;
 
 namespace Platform.Disposables.Tests
 {
@@ -8,6 +8,12 @@ namespace Platform.Disposables.Tests
     /// </summary>
     public static class SystemTests
     {
+        /// <summary>
+        /// <para>
+        /// Tests that using supports null test.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         [Fact]
         public static void UsingSupportsNullTest()
         {

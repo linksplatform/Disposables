@@ -1,4 +1,4 @@
-﻿namespace Platform.Disposables
+namespace Platform.Disposables
 {
     /// <summary>
     /// <para>Encapsulates a method that is used to dispose unmanaged resources.</para>

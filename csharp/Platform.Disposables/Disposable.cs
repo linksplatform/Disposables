@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 
 namespace Platform.Disposables
@@ -9,6 +9,12 @@ namespace Platform.Disposables
     /// </summary>
     public class Disposable : DisposableBase
     {
+        /// <summary>
+        /// <para>
+        /// The was disposed.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         private static readonly Disposal _emptyDelegate = (manual, wasDisposed) => { };
 
         /// <summary>
