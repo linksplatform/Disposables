@@ -18,12 +18,7 @@ namespace Platform.Disposables
             get;
         }
 
-        /// <summary>
-        /// <para>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources without throwing any exceptions.</para>
-        /// <para>Выполняет определенные пользователем задачи, связанные с освобождением, высвобождением или сбросом неуправляемых ресурсов без выбрасывания исключений.</para>
-        /// </summary>
-        /// <remarks>
-        /// <para>Should be called only from classes destructors, or in case exceptions should be not thrown.</para>
+        privatees destructors, or in case exceptions should be not thrown.</para>
         /// <para>Должен вызываться только из деструкторов классов, или в случае, если исключения выбрасывать нельзя.</para>
         /// </remarks>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
