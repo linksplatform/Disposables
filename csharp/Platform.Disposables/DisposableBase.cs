@@ -12,9 +12,27 @@ namespace Platform.Disposables
     /// </summary>
     public abstract class DisposableBase : IDisposable
     {
+        /// <summary>
+        /// <para>
+        /// The current domain.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         private static readonly AppDomain _currentDomain = AppDomain.CurrentDomain;
+        /// <summary>
+        /// <para>
+        /// The disposable base.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         private static readonly ConcurrentStack<WeakReference<DisposableBase>> _disposablesWeekReferencesStack = new ConcurrentStack<WeakReference<DisposableBase>>();
 
+        /// <summary>
+        /// <para>
+        /// The disposed.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         private volatile int _disposed;
 
         /// <summary>
@@ -66,7 +84,8 @@ namespace Platform.Disposables
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         static DisposableBase() => _currentDomain.ProcessExit += OnProcessExit;
 
-        private.</para>
+        /// <summary>
+        /// <para>Initializes a new instance of the <see cref="DisposableBase"/> class.</para>
         /// <para>Инициализирует новый экземпляр класса <see cref="DisposableBase"/>.</para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -76,7 +95,8 @@ namespace Platform.Disposables
             _disposablesWeekReferencesStack.Push(new WeakReference<DisposableBase>(this, false));
         }
 
-        private instance is being collected by the garbage collector.</para>
+        /// <summary>
+        /// <para>Performs any necessary final clean-up when a class instance is being collected by the garbage collector.</para>
         /// <para>Выполняет любую необходимую окончательную очистку, когда сборщик мусора собирает экземпляр класса.</para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -108,7 +128,12 @@ namespace Platform.Disposables
             GC.SuppressFinalize(this);
         }
 
-        privatees destructors, or in case exceptions should be not thrown.</para>
+        /// <summary>
+        /// <para>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources without throwing any exceptions.</para>
+        /// <para>Выполняет определенные пользователем задачи, связанные с освобождением, высвобождением или сбросом неуправляемых ресурсов без выбрасывания исключений.</para>
+        /// </summary>
+        /// <remarks>
+        /// <para>Should be called only from classes destructors, or in case exceptions should be not thrown.</para>
         /// <para>Должен вызываться только из деструкторов классов, или в случае, если исключения выбрасывать нельзя.</para>
         /// </remarks>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -149,6 +174,20 @@ namespace Platform.Disposables
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Ons the process exit using the specified sender.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="sender">
+        /// <para>The sender.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="e">
+        /// <para>The .</para>
+        /// <para></para>
+        /// </param>
         private static void OnProcessExit(object sender, EventArgs e)
         {
             while (_disposablesWeekReferencesStack.TryPop(out WeakReference<DisposableBase> weakReference))
@@ -162,6 +201,12 @@ namespace Platform.Disposables
             UnsubscribeFromProcessExitedEventIfPossible();
         }
 
+        /// <summary>
+        /// <para>
+        /// Unsubscribes the from process exited event if possible.
+        /// </para>
+        /// <para></para>
+        /// </summary>
         private static void UnsubscribeFromProcessExitedEventIfPossible()
         {
             try

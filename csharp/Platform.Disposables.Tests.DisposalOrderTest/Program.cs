@@ -6,7 +6,13 @@ using Platform.IO;
 
 namespace Platform.Disposables.Tests.DisposalOrderTest
 {
-    private Program
+    /// <summary>
+    /// <para>
+    /// Represents the program.
+    /// </para>
+    /// <para></para>
+    /// </summary>
+    class Program
     {
         /// <summary>
         /// <para>
