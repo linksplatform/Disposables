@@ -1,8 +1,5 @@
 #pragma once
 
-#ifndef PLATFORM_DISPOSABLES
-#define PLATFORM_DISPOSABLES
-
 //#include <Platform.Converters.h>
 //#include <Platform.Hashing.h>
 
@@ -20,5 +17,3 @@
 #include "EnsureExtensions.h"
 #include "GenericObjectExtensions.h"
 #include "IDisposableExtensions.h"
-
-#endif

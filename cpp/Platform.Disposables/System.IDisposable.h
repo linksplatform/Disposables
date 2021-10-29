@@ -1,8 +1,5 @@
 #pragma once
 
-#ifndef PLATFORM_SYSTEM_IDISPOSABLE
-#define PLATFORM_SYSTEM_IDISPOSABLE
-
 namespace System
 {
     class IDisposable
@@ -11,5 +8,3 @@ namespace System
         virtual void Dispose() = 0;
     };
 }
-
-#endif
