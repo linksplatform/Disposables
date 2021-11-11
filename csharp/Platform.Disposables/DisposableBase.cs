@@ -12,27 +12,8 @@ namespace Platform.Disposables
     /// </summary>
     public abstract class DisposableBase : IDisposable
     {
-        /// <summary>
-        /// <para>
-        /// The current domain.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         private static readonly AppDomain _currentDomain = AppDomain.CurrentDomain;
-        /// <summary>
-        /// <para>
-        /// The disposable base.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         private static readonly ConcurrentStack<WeakReference<DisposableBase>> _disposablesWeekReferencesStack = new ConcurrentStack<WeakReference<DisposableBase>>();
-
-        /// <summary>
-        /// <para>
-        /// The disposed.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         private volatile int _disposed;
 
         /// <summary>
@@ -173,21 +154,6 @@ namespace Platform.Disposables
                 Dispose(manual, wasDisposed);
             }
         }
-
-        /// <summary>
-        /// <para>
-        /// Ons the process exit using the specified sender.
-        /// </para>
-        /// <para></para>
-        /// </summary>
-        /// <param name="sender">
-        /// <para>The sender.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="e">
-        /// <para>The .</para>
-        /// <para></para>
-        /// </param>
         private static void OnProcessExit(object sender, EventArgs e)
         {
             while (_disposablesWeekReferencesStack.TryPop(out WeakReference<DisposableBase> weakReference))
@@ -200,13 +166,6 @@ namespace Platform.Disposables
             }
             UnsubscribeFromProcessExitedEventIfPossible();
         }
-
-        /// <summary>
-        /// <para>
-        /// Unsubscribes the from process exited event if possible.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         private static void UnsubscribeFromProcessExitedEventIfPossible()
         {
             try

@@ -9,12 +9,6 @@ namespace Platform.Disposables
     /// </summary>
     public class Disposable : DisposableBase
     {
-        /// <summary>
-        /// <para>
-        /// The was disposed.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         private static readonly Disposal _emptyDelegate = (manual, wasDisposed) => { };
 
         /// <summary>
