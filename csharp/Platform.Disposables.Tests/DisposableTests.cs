@@ -54,6 +54,25 @@ namespace Platform.Disposables.Tests
             Assert.Equal("", result); // Currently, process termination will not release resources
             File.Delete(logPath);
         }
+
+        /// <summary>
+        /// <para>
+        /// Creates the process start info using the specified log path.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="logPath">
+        /// <para>The log path.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="waitForCancellation">
+        /// <para>The wait for cancellation.</para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para>The process start info</para>
+        /// <para></para>
+        /// </returns>
         private static ProcessStartInfo CreateProcessStartInfo(string logPath, bool waitForCancellation)
         {
             var projectPath = GetDisposalObjectTestProjectFilePath();
@@ -65,6 +84,17 @@ namespace Platform.Disposables.Tests
                 CreateNoWindow = true
             };
         }
+
+        /// <summary>
+        /// <para>
+        /// Gets the disposal object test project file path.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <returns>
+        /// <para>The path.</para>
+        /// <para></para>
+        /// </returns>
         private static string GetDisposalObjectTestProjectFilePath()
         {
             const string currentProjectName = nameof(Platform) + "." + nameof(Disposables) + "." + nameof(Tests);
