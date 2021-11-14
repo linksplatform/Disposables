@@ -30,7 +30,22 @@ namespace Examples
     {
         protected override void Dispose(bool manual, bool wasDisposed)
         {
-            // Dispose logic
+            if (!wasDisposed) 
+            {
+                // Dispose logic on first call from Dispose or Destructor
+            }
+            else 
+            {
+                // (IsDisposed == true) here, Dispose called twise, or Dispose and Destructor were called
+                if (manual)
+                {
+                    // Call from IDisposable.Dispose()
+                }
+                else
+                {
+                    // Call from Destructor
+                }
+            }
         }
     }
 }
