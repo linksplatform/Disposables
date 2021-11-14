@@ -37,6 +37,7 @@ namespace Examples
             else 
             {
                 // (IsDisposed == true) here, Dispose called twise, or Dispose and Destructor were called
+
                 if (manual)
                 {
                     // Call from IDisposable.Dispose()
