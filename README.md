@@ -30,7 +30,8 @@ namespace Examples
     {
         protected override void Dispose(bool manual, bool wasDisposed)
         {
-            // Put tour dispose logic in thise method
+            // Put tour dispose logic in this method
+
             if (!wasDisposed) 
             {
                 // First call from Dispose or Destructor
