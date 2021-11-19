@@ -8,20 +8,8 @@ using Xunit;
 
 namespace Platform.Disposables.Tests
 {
-    /// <summary>
-    /// <para>
-    /// Represents the disposable tests.
-    /// </para>
-    /// <para></para>
-    /// </summary>
     public static class DisposableTests
     {
-        /// <summary>
-        /// <para>
-        /// Tests that disposal order test.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         [Fact]
         public static void DisposalOrderTest()
         {
@@ -35,12 +23,6 @@ namespace Platform.Disposables.Tests
             File.Delete(logPath);
         }
 
-        /// <summary>
-        /// <para>
-        /// Tests that disposal at process kill test.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         [Fact]
         public static void DisposalAtProcessKillTest()
         {
