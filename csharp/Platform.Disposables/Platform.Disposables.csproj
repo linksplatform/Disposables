@@ -6,7 +6,7 @@
     <AssemblyTitle>Platform.Disposables</AssemblyTitle>
     <VersionPrefix>0.3.0</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
-    <TargetFrameworks>net472;netstandard2.0;netstandard2.1;net5;net6</TargetFrameworks>
+    <TargetFrameworks>net472;netstandard2.0;netstandard2.1;net5</TargetFrameworks>
     <AssemblyName>Platform.Disposables</AssemblyName>
     <PackageId>Platform.Disposables</PackageId>
     <PackageTags>LinksPlatform;Disposables;Disposable;DisposableBase;Disposal;EnsureExtensions;GenericObjectExtensions;IDisposable;IDisposableExtensions</PackageTags>
