@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.Disposables Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.Disposables</AssemblyTitle>
-    <VersionPrefix>0.3.0</VersionPrefix>
+    <VersionPrefix>0.4.0</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFramework>net7</TargetFramework>
     <AssemblyName>Platform.Disposables</AssemblyName>
@@ -23,7 +23,9 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Added support for .NET 5.</PackageReleaseNotes>
+    <PackageReleaseNotes>Target frameworks are changed to net7.
+Platform.Exceptions dependency is updated from 0.4.0 to 0.5.0.
+Microsoft.NETFramework.ReferenceAssemblies dependency is updated from 1.0.0 to 1.0.2.</PackageReleaseNotes>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
@@ -36,7 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Platform.Exceptions" Version="0.4.0" />
+    <PackageReference Include="Platform.Exceptions" Version="0.5.0" />
   </ItemGroup>
 
   <!--
