@@ -4,15 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Disposables", "Platform.Disposables\Platform.Disposables.csproj", "{D4B75DCB-FABD-48D1-8BB3-3943F683278B}"
-	ProjectSection(ProjectDependencies) = postProject
-		{9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64} = {9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Disposables.Tests", "Platform.Disposables.Tests\Platform.Disposables.Tests.csproj", "{D555B4F5-A565-4B85-9EA6-7108C0E4B2C1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Disposables.Tests.DisposalOrderTest", "Platform.Disposables.Tests.DisposalOrderTest\Platform.Disposables.Tests.DisposalOrderTest.csproj", "{7A56B315-42A0-4B19-A3A1-38D47844C99E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpToCppTranslator", "CSharpToCppTranslator\CSharpToCppTranslator.csproj", "{9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Platform.Disposables.TemplateLibrary", "cpp\Platform.Disposables\Platform.Disposables.TemplateLibrary.vcxproj", "{6EFA579F-D58E-445A-9E16-ACE9413FE8CA}"
 EndProject
@@ -62,18 +57,6 @@ Global
 		{7A56B315-42A0-4B19-A3A1-38D47844C99E}.Release|x64.Build.0 = Release|Any CPU
 		{7A56B315-42A0-4B19-A3A1-38D47844C99E}.Release|x86.ActiveCfg = Release|Any CPU
 		{7A56B315-42A0-4B19-A3A1-38D47844C99E}.Release|x86.Build.0 = Release|Any CPU
-		{9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64}.Debug|x64.Build.0 = Debug|Any CPU
-		{9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64}.Debug|x86.Build.0 = Debug|Any CPU
-		{9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64}.Release|x64.ActiveCfg = Release|Any CPU
-		{9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64}.Release|x64.Build.0 = Release|Any CPU
-		{9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64}.Release|x86.ActiveCfg = Release|Any CPU
-		{9C6E2BB4-65A4-4495-AAF4-64F3B79E7F64}.Release|x86.Build.0 = Release|Any CPU
 		{6EFA579F-D58E-445A-9E16-ACE9413FE8CA}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{6EFA579F-D58E-445A-9E16-ACE9413FE8CA}.Debug|x64.ActiveCfg = Debug|x64
 		{6EFA579F-D58E-445A-9E16-ACE9413FE8CA}.Debug|x64.Build.0 = Debug|x64
