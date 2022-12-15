@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Disposables.Tests"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.Disposables.Tests.DisposalOrderTest", "Platform.Disposables.Tests.DisposalOrderTest\Platform.Disposables.Tests.DisposalOrderTest.csproj", "{7A56B315-42A0-4B19-A3A1-38D47844C99E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Platform.Disposables.TemplateLibrary", "cpp\Platform.Disposables\Platform.Disposables.TemplateLibrary.vcxproj", "{6EFA579F-D58E-445A-9E16-ACE9413FE8CA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
