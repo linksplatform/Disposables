@@ -5,7 +5,7 @@
 
 # [Disposables](https://github.com/linksplatform/Disposables) ([русская версия](README.ru.md))
 
-This library helps to make objects disposable in a fast, short, easy and safe way.
+This library helps to make objects disposable in a fast, short, easy and safe way. Say goodbye to memory leaks one at time :)
 
 `Platform.Disposables.DisposableBase` abstract class tries to dispose the object at both on instance destruction and `OnProcessExit` whatever comes first even if `Dispose` method was not called anywhere by user. And takes care your disposal logic executes only once by default, and if you really need it, you can allow multiple calls and attempts to dispose, by overriding corresponding properties.
 
