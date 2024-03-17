@@ -154,6 +154,7 @@ namespace Platform.Disposables
                 Dispose(manual, wasDisposed);
             }
         }
+
         private static void OnProcessExit(object sender, EventArgs e)
         {
             while (_disposablesWeekReferencesStack.TryPop(out WeakReference<DisposableBase> weakReference))
@@ -166,6 +167,7 @@ namespace Platform.Disposables
             }
             UnsubscribeFromProcessExitedEventIfPossible();
         }
+
         private static void UnsubscribeFromProcessExitedEventIfPossible()
         {
             try
