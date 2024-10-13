@@ -1,4 +1,4 @@
-[![Версия NuGet и количество загрузок](https://buildstats.info/nuget/Platform.Disposables)](https://www.nuget.org/packages/Platform.Disposables)
+[![Версия NuGet и количество загрузок](https://img.shields.io/nuget/v/Platform.Disposables?label=nuget&style=flat)](https://www.nuget.org/packages/Platform.Disposables)
 [![Actions](https://github.com/linksplatform/Disposables/workflows/CD/badge.svg)](https://github.com/linksplatform/Disposables/actions?workflow=CD)
 [![Codacy](https://api.codacy.com/project/badge/Grade/3fdafa7bb9334ea4ac4ce242039d278a)](https://app.codacy.com/app/drakonard/Disposables?utm_source=github.com&utm_medium=referral&utm_content=linksplatform/Disposables&utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/disposables/badge)](https://www.codefactor.io/repository/github/linksplatform/disposables)
