@@ -1,14 +1,19 @@
-﻿namespace Platform::Disposables
+﻿#pragma once
+#include <atomic>
+#include <string>
+#include <typeinfo>
+#include <cstdint>
+
+namespace Platform::Disposables
 {
     class DisposableBase : public IDisposable
     {
-        private: static readonly ConcurrentStack<WeakReference<DisposableBase>> _disposablesWeekReferencesStack = ConcurrentStack<WeakReference<DisposableBase>>();
 
-        private: volatile std::int32_t _disposed;
+        private: std::atomic<std::int32_t> _disposed;
 
         public: bool IsDisposed()
         {
-            return _disposed > 0;
+            return _disposed.load() > 0;
         }
 
         protected: virtual std::string ObjectName()
@@ -26,12 +31,10 @@
             return false;
         }
 
-        static DisposableBase() { std::atexit(OnProcessExit); }
 
         protected: DisposableBase()
         {
             _disposed = 0;
-            _disposablesWeekReferencesStack.Push(WeakReference<DisposableBase>(this, false));
         }
 
         ~DisposableBase() { Destruct(); }
@@ -41,14 +44,13 @@
         public: void Dispose()
         {
             this->Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
         public: void Destruct()
         {
             try
             {
-                if (!IsDisposed)
+                if (!IsDisposed())
                 {
                     this->Dispose(false);
                 }
@@ -61,28 +63,17 @@
 
         protected: virtual void Dispose(bool manual)
         {
-            auto originalDisposedValue = Interlocked.CompareExchange(ref _disposed, 1, 0);
-            auto wasDisposed = originalDisposedValue > 0;
-            if (wasDisposed && !AllowMultipleDisposeCalls && manual)
+            std::int32_t expected = 0;
+            auto wasDisposed = !_disposed.compare_exchange_strong(expected, 1);
+            if (wasDisposed && !AllowMultipleDisposeCalls() && manual)
             {
-                Platform::Disposables::EnsureExtensions::NotDisposed(Platform::Exceptions::Ensure::Always, this, ObjectName, "Multiple dispose calls are not allowed. Override AllowMultipleDisposeCalls property to modify behavior.");
+                Platform::Disposables::EnsureExtensions::NotDisposed(Platform::Exceptions::Ensure::Always, this, ObjectName(), "Multiple dispose calls are not allowed. Override AllowMultipleDisposeCalls property to modify behavior.");
             }
-            if (AllowMultipleDisposeAttempts || !wasDisposed)
+            if (AllowMultipleDisposeAttempts() || !wasDisposed)
             {
                 this->Dispose(manual, wasDisposed);
             }
         }
 
-        private: static void OnProcessExit()
-        {
-            while (_disposablesWeekReferencesStack.TryPop(out WeakReference<DisposableBase> weakReference))
-            {
-                if (weakReference.TryGetTarget(out DisposableBase disposable))
-                {
-                    GC.SuppressFinalize(disposable);
-                    disposable.Destruct();
-                }
-            }
-        }
     };
 }
