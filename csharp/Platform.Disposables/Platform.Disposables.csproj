@@ -41,7 +41,13 @@
 
   <!--
 
+  <Target Name="CSharpToCppTranslation" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Windows_NT' AND $(TargetFramework) == 'net8' AND !('$(SolutionDir)'=='' OR '$(SolutionDir)'=='*Undefined*')">
+    <Exec Command="..\..\CSharpToCppTranslator\bin\$(Configuration)\net8\CSharpToCppTranslator.exe $(ProjectDir) $(SolutionDir)..\cpp\$(ProjectName)\"></Exec>
+  </Target>
 
+  <Target Name="CSharpToCppTranslation" AfterTargets="PostBuildEvent" Condition="'$(OS)' == 'Unix' AND $(TargetFramework) == 'net8' AND !('$(SolutionDir)'=='' OR '$(SolutionDir)'=='*Undefined*')">
+    <Exec Command="../../CSharpToCppTranslator/bin/$(Configuration)/net8/CSharpToCppTranslator $(ProjectDir) $(SolutionDir)../cpp/$(ProjectName)/"></Exec>
+  </Target>
 
   -->
 
