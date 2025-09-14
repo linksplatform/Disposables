@@ -60,7 +60,9 @@ namespace Platform.Disposables
         /// <para>
         /// Initializes a new <see cref="DisposableBase"/> instance.
         /// </para>
-        /// <para></para>
+        /// <para>
+        /// Инициализирует новый экземпляр <see cref="DisposableBase"/>.
+        /// </para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         static DisposableBase() => _currentDomain.ProcessExit += OnProcessExit;
