@@ -112,6 +112,14 @@ namespace Platform.Disposables
         public static implicit operator Disposable<TPrimary, TAuxiliary>(ValueTuple<TPrimary, TAuxiliary> tuple) => new Disposable<TPrimary, TAuxiliary>(tuple.Item1, tuple.Item2);
 
         /// <summary>
+        /// <para>Creates a new <see cref="Disposable{TPrimary, TAuxiliary}"/> object that wraps two <see cref="System.IDisposable"/> objects and calls their Dispose methods when disposed.</para>
+        /// <para>Создает новый объект <see cref="Disposable{TPrimary, TAuxiliary}"/>, который оборачивает два объекта <see cref="System.IDisposable"/> и вызывает их методы Dispose при высвобождении.</para>
+        /// </summary>
+        /// <param name="disposables"><para>The tuple containing two <see cref="System.IDisposable"/> objects to wrap.</para><para>Кортеж, содержащий два объекта <see cref="System.IDisposable"/> для оборачивания.</para></param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Disposable<System.IDisposable, System.IDisposable> Create(ValueTuple<System.IDisposable, System.IDisposable> disposables) => new Disposable<System.IDisposable, System.IDisposable>(disposables.Item1, disposables.Item2, (obj1, obj2) => { obj1?.Dispose(); obj2?.Dispose(); });
+
+        /// <summary>
         /// <para>Creates a new copy of the primary object (<see cref="Disposable{TPrimary}.Object"/>).</para>
         /// <para>Создаёт новую копию основного объекта (<see cref="Disposable{TPrimary}.Object"/>).</para>
         /// </summary>

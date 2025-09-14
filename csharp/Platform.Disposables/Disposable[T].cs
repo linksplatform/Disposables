@@ -97,6 +97,14 @@ namespace Platform.Disposables
         public static implicit operator Disposable<T>(T @object) => new Disposable<T>(@object);
 
         /// <summary>
+        /// <para>Creates a new <see cref="Disposable{T}"/> object that wraps the specified <see cref="System.IDisposable"/> object and calls its Dispose method when disposed.</para>
+        /// <para>Создает новый объект <see cref="Disposable{T}"/>, который оборачивает указанный объект <see cref="System.IDisposable"/> и вызывает его метод Dispose при высвобождении.</para>
+        /// </summary>
+        /// <param name="disposable"><para>The <see cref="System.IDisposable"/> object to wrap.</para><para>Объект <see cref="System.IDisposable"/> для оборачивания.</para></param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static new Disposable<System.IDisposable> Create(System.IDisposable disposable) => new Disposable<System.IDisposable>(disposable, obj => obj?.Dispose());
+
+        /// <summary>
         /// <para>Creates a new copy of the primary object (<see cref="Disposable{T}.Object"/>).</para>
         /// <para>Создаёт новую копию основного объекта (<see cref="Disposable{T}.Object"/>).</para>
         /// </summary>

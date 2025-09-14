@@ -21,5 +21,23 @@ namespace Platform.Disposables
                 disposable.Dispose();
             }
         }
+
+        /// <summary>
+        /// <para>Wraps a <see cref="System.IDisposable"/> object in a <see cref="Disposable"/> wrapper.</para>
+        /// <para>Оборачивает объект <see cref="System.IDisposable"/> в обёртку <see cref="Disposable"/>.</para>
+        /// </summary>
+        /// <param name="disposable"><para>The <see cref="System.IDisposable"/> object to wrap.</para><para>Объект <see cref="System.IDisposable"/> для оборачивания.</para></param>
+        /// <returns><para>A new <see cref="Disposable"/> wrapper.</para><para>Новая обёртка <see cref="Disposable"/>.</para></returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Disposable AsDisposable(this System.IDisposable disposable) => Disposable.Create(disposable);
+
+        /// <summary>
+        /// <para>Wraps a <see cref="System.IDisposable"/> object in a <see cref="Disposable{T}"/> wrapper.</para>
+        /// <para>Оборачивает объект <see cref="System.IDisposable"/> в обёртку <see cref="Disposable{T}"/>.</para>
+        /// </summary>
+        /// <param name="disposable"><para>The <see cref="System.IDisposable"/> object to wrap.</para><para>Объект <see cref="System.IDisposable"/> для оборачивания.</para></param>
+        /// <returns><para>A new <see cref="Disposable{T}"/> wrapper.</para><para>Новая обёртка <see cref="Disposable{T}"/>.</para></returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Disposable<System.IDisposable> AsDisposableContainer(this System.IDisposable disposable) => Disposable<System.IDisposable>.Create(disposable);
     }
 }
