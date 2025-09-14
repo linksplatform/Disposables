@@ -147,7 +147,7 @@ namespace Platform.Disposables
             var wasDisposed = originalDisposedValue > 0;
             if (wasDisposed && !AllowMultipleDisposeCalls && manual)
             {
-                Ensure.Always.NotDisposed(this, ObjectName, "Multiple dispose calls are not allowed. Override AllowMultipleDisposeCalls property to modify behavior.");
+                Ensure.Always.NotDisposed(this, ObjectName, Resources.MultipleDisposeCallsNotAllowed);
             }
             if (AllowMultipleDisposeAttempts || !wasDisposed)
             {

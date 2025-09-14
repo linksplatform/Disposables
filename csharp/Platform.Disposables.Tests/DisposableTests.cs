@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -42,7 +43,7 @@ namespace Platform.Disposables.Tests
             return new ProcessStartInfo
             {
                 FileName = "dotnet",
-                Arguments = $"run -p \"{projectPath}\" -f net7 \"{logPath}\" {waitForCancellation.ToString()}",
+                Arguments = $"run -p \"{projectPath}\" -f net8 \"{logPath}\" {waitForCancellation.ToString()}",
                 UseShellExecute = false,
                 CreateNoWindow = true
             };
@@ -78,6 +79,39 @@ namespace Platform.Disposables.Tests
                 path = $"{Path.DirectorySeparatorChar}{path}";
             }
             return path;
+        }
+
+        [Fact]
+        public static void MultipleDisposeExceptionMessageInternationalizationTest()
+        {
+            var testDisposable = new TestDisposable();
+            testDisposable.Dispose();
+
+            // Test English (default) culture
+            var originalCulture = CultureInfo.CurrentUICulture;
+            try
+            {
+                CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
+                var englishException = Assert.Throws<ObjectDisposedException>(() => testDisposable.Dispose());
+                Assert.Contains("Multiple dispose calls are not allowed", englishException.Message);
+
+                // Test Russian culture
+                CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo("ru-RU");
+                var russianException = Assert.Throws<ObjectDisposedException>(() => testDisposable.Dispose());
+                Assert.Contains("Множественные вызовы Dispose не разрешены", russianException.Message);
+            }
+            finally
+            {
+                CultureInfo.CurrentUICulture = originalCulture;
+            }
+        }
+
+        private class TestDisposable : DisposableBase
+        {
+            protected override void Dispose(bool manual, bool wasDisposed)
+            {
+                // Empty implementation for testing
+            }
         }
     }
 }
