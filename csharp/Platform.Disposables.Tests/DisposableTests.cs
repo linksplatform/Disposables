@@ -42,7 +42,7 @@ namespace Platform.Disposables.Tests
             return new ProcessStartInfo
             {
                 FileName = "dotnet",
-                Arguments = $"run -p \"{projectPath}\" -f net7 \"{logPath}\" {waitForCancellation.ToString()}",
+                Arguments = $"run -p \"{projectPath}\" -f net8 \"{logPath}\" {waitForCancellation.ToString()}",
                 UseShellExecute = false,
                 CreateNoWindow = true
             };
@@ -78,6 +78,115 @@ namespace Platform.Disposables.Tests
                 path = $"{Path.DirectorySeparatorChar}{path}";
             }
             return path;
+        }
+
+        [Fact]
+        public static void AllowMultipleDisposeCallsConstructorTest()
+        {
+            var disposeCount = 0;
+            Action incrementCount = () => disposeCount++;
+
+            var disposable = new Disposable(incrementCount, allowMultipleDisposeCalls: true);
+            
+            disposable.Dispose();
+            disposable.Dispose();
+            disposable.Dispose();
+            
+            Assert.Equal(1, disposeCount);
+        }
+
+        [Fact]
+        public static void AllowMultipleDisposeAttemptsConstructorTest()
+        {
+            var disposeCount = 0;
+            Disposal incrementCount = (manual, wasDisposed) =>
+            {
+                if (!wasDisposed) disposeCount++;
+            };
+
+            var disposable = new Disposable(incrementCount, allowMultipleDisposeCalls: true, allowMultipleDisposeAttempts: true);
+            
+            disposable.Dispose();
+            disposable.Dispose();
+            
+            Assert.Equal(1, disposeCount);
+        }
+
+        [Fact]
+        public static void ParameterlessConstructorWithAllowMultipleDisposeCallsTest()
+        {
+            var disposable = new Disposable(allowMultipleDisposeCalls: true);
+            
+            disposable.Dispose();
+            disposable.Dispose();
+        }
+
+        [Fact]
+        public static void ParameterlessConstructorWithAllowMultipleDisposeAttemptsTest()
+        {
+            var disposable = new Disposable(allowMultipleDisposeCalls: true, allowMultipleDisposeAttempts: true);
+            
+            disposable.Dispose();
+            disposable.Dispose();
+        }
+
+        [Fact]
+        public static void DefaultParameterlessConstructorTest()
+        {
+            var disposable = new Disposable();
+            
+            disposable.Dispose();
+            
+            Assert.Throws<ObjectDisposedException>(() => disposable.Dispose());
+        }
+
+        [Fact]
+        public static void DefaultActionConstructorTest()
+        {
+            var disposeCount = 0;
+            Action incrementCount = () => disposeCount++;
+
+            var disposable = new Disposable(incrementCount);
+            
+            disposable.Dispose();
+            
+            Assert.Equal(1, disposeCount);
+            Assert.Throws<ObjectDisposedException>(() => disposable.Dispose());
+        }
+
+        [Fact]
+        public static void DefaultDisposalConstructorTest()
+        {
+            var disposeCount = 0;
+            Disposal incrementCount = (manual, wasDisposed) =>
+            {
+                if (!wasDisposed) disposeCount++;
+            };
+
+            var disposable = new Disposable(incrementCount);
+            
+            disposable.Dispose();
+            
+            Assert.Equal(1, disposeCount);
+            Assert.Throws<ObjectDisposedException>(() => disposable.Dispose());
+        }
+
+        [Fact]
+        public static void ReplacesWorkaroundFromIssueTest()
+        {
+            var disposeCount = 0;
+            Disposal incrementCount = (manual, wasDisposed) =>
+            {
+                if (!wasDisposed) disposeCount++;
+            };
+
+            var disposableWithNewConstructor = new Disposable(incrementCount, allowMultipleDisposeCalls: true);
+            
+            disposableWithNewConstructor.Dispose();
+            disposableWithNewConstructor.Dispose();
+            disposableWithNewConstructor.Dispose();
+            
+            Assert.Equal(1, disposeCount);
         }
     }
 }

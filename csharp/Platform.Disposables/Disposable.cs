@@ -11,6 +11,9 @@ namespace Platform.Disposables
     {
         private static readonly Disposal _emptyDelegate = (manual, wasDisposed) => { };
 
+        private readonly bool? _allowMultipleDisposeCalls;
+        private readonly bool? _allowMultipleDisposeAttempts;
+
         /// <summary>
         /// <para>Occurs when the object is being disposed.</para>
         /// <para>Возникает, когда объект высвобождается.</para>
@@ -18,13 +21,37 @@ namespace Platform.Disposables
         public event Disposal OnDispose;
 
         /// <summary>
+        /// <para>Gets a value indicating whether multiple attempts to dispose this object are allowed.</para>
+        /// <para>Возвращает значение определяющие разрешено ли выполнять несколько попыток высвободить этот объект.</para>
+        /// </summary>
+        protected override bool AllowMultipleDisposeAttempts
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get => _allowMultipleDisposeAttempts ?? base.AllowMultipleDisposeAttempts;
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether it is allowed to call this object disposal multiple times.</para>
+        /// <para>Возвращает значение определяющие разрешено ли несколько раз вызывать высвобождение этого объекта.</para>
+        /// </summary>
+        protected override bool AllowMultipleDisposeCalls
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get => _allowMultipleDisposeCalls ?? base.AllowMultipleDisposeCalls;
+        }
+
+        /// <summary>
         /// <para>Initializes a new instance of the <see cref="Disposable"/> object.</para>
         /// <para>Инициализирует новый экземпляр объекта <see cref="Disposable"/>.</para>
         /// </summary>
         /// <param name="action"><para>The <see cref="Action"/> delegate.</para><para>Делегат <see cref="Action"/>.</para></param>
+        /// <param name="allowMultipleDisposeCalls"><para>A value indicating whether it is allowed to call this object disposal multiple times.</para><para>Значение, определяющее разрешено ли несколько раз вызывать высвобождение этого объекта.</para></param>
+        /// <param name="allowMultipleDisposeAttempts"><para>A value indicating whether multiple attempts to dispose this object are allowed.</para><para>Значение, определяющее разрешено ли выполнять несколько попыток высвободить этот объект.</para></param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Disposable(Action action)
+        public Disposable(Action action, bool allowMultipleDisposeCalls = false, bool allowMultipleDisposeAttempts = false)
         {
+            _allowMultipleDisposeCalls = allowMultipleDisposeCalls;
+            _allowMultipleDisposeAttempts = allowMultipleDisposeAttempts;
             OnDispose = (manual, wasDisposed) =>
             {
                 if (!wasDisposed)
@@ -39,8 +66,15 @@ namespace Platform.Disposables
         /// <para>Инициализирует новый экземпляр объекта <see cref="Disposable"/>.</para>
         /// </summary>
         /// <param name="disposal"><para>The <see cref="Disposal"/> delegate.</para><para>Делегат <see cref="Disposal"/>.</para></param>
+        /// <param name="allowMultipleDisposeCalls"><para>A value indicating whether it is allowed to call this object disposal multiple times.</para><para>Значение, определяющее разрешено ли несколько раз вызывать высвобождение этого объекта.</para></param>
+        /// <param name="allowMultipleDisposeAttempts"><para>A value indicating whether multiple attempts to dispose this object are allowed.</para><para>Значение, определяющее разрешено ли выполнять несколько попыток высвободить этот объект.</para></param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public Disposable(Disposal disposal) => OnDispose = disposal;
+        public Disposable(Disposal disposal, bool allowMultipleDisposeCalls = false, bool allowMultipleDisposeAttempts = false)
+        {
+            _allowMultipleDisposeCalls = allowMultipleDisposeCalls;
+            _allowMultipleDisposeAttempts = allowMultipleDisposeAttempts;
+            OnDispose = disposal;
+        }
 
         /// <summary>
         /// <para>Initializes a new instance of the <see cref="Disposable"/> object.</para>
@@ -48,6 +82,20 @@ namespace Platform.Disposables
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Disposable() => OnDispose = _emptyDelegate;
+
+        /// <summary>
+        /// <para>Initializes a new instance of the <see cref="Disposable"/> object.</para>
+        /// <para>Инициализирует новый экземпляр объекта <see cref="Disposable"/>.</para>
+        /// </summary>
+        /// <param name="allowMultipleDisposeCalls"><para>A value indicating whether it is allowed to call this object disposal multiple times.</para><para>Значение, определяющее разрешено ли несколько раз вызывать высвобождение этого объекта.</para></param>
+        /// <param name="allowMultipleDisposeAttempts"><para>A value indicating whether multiple attempts to dispose this object are allowed.</para><para>Значение, определяющее разрешено ли выполнять несколько попыток высвободить этот объект.</para></param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public Disposable(bool allowMultipleDisposeCalls, bool allowMultipleDisposeAttempts = false)
+        {
+            _allowMultipleDisposeCalls = allowMultipleDisposeCalls;
+            _allowMultipleDisposeAttempts = allowMultipleDisposeAttempts;
+            OnDispose = _emptyDelegate;
+        }
 
         /// <summary>
         /// <para>Creates a new <see cref="Disposable"/> object initialized with specified delegate <see cref="Action"/>.</para>
