@@ -42,7 +42,7 @@ namespace Platform.Disposables.Tests
             return new ProcessStartInfo
             {
                 FileName = "dotnet",
-                Arguments = $"run -p \"{projectPath}\" -f net7 \"{logPath}\" {waitForCancellation.ToString()}",
+                Arguments = $"run -p \"{projectPath}\" -f net8 \"{logPath}\" {waitForCancellation.ToString()}",
                 UseShellExecute = false,
                 CreateNoWindow = true
             };
@@ -67,11 +67,7 @@ namespace Platform.Disposables.Tests
                 }
             }
             pathParts = newPathParts.ToArray();
-#if NET472
-            var directory = string.Join(Path.DirectorySeparatorChar.ToString(), pathParts.ToArray());
-#else
             var directory = Path.Combine(pathParts);
-#endif
             var path = Path.Combine(directory, $"{disposalOrderTestProjectName}.csproj");
             if (!Path.IsPathRooted(path))
             {
