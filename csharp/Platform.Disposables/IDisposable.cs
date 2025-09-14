@@ -3,8 +3,8 @@ using System.Runtime.CompilerServices;
 namespace Platform.Disposables
 {
     /// <summary>
-    /// <para>Представляет расширенный интерфейс <see cref="System.IDisposable"/>.</para>
     /// <para>Represents an extended <see cref="System.IDisposable"/> interface.</para>
+    /// <para>Представляет расширенный интерфейс <see cref="System.IDisposable"/>.</para>
     /// </summary>
     public interface IDisposable : System.IDisposable
     {
